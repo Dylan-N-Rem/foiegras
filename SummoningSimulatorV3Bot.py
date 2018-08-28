@@ -314,9 +314,9 @@ async def rarity(context, rarity, amount):
 async def say(context):
     possible_responses = [
         'For me, for you, destiny is inescapable.',
-        'What exactly is different about you? Why does Heaven always show a special concern for you',
+        'What exactly is different about you? Why does Heaven always show a special concern for you?',
         "If... there really is a way to change fate... No... it's impossible...",
-        "I feel a warmth in my heart. I've never felt this before",
+        "I feel a warmth in my heart. I've never felt this before.",
     ]
     await client.say(random.choice(possible_responses))
 
@@ -348,7 +348,7 @@ IBeta Tester: Madara#0483")
 @client.event
 async def on_command_error(error, context):
     if isinstance(error, commands.CommandOnCooldown):
-        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle")
+        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle.")
 
 @client.event
 async def on_ready():
