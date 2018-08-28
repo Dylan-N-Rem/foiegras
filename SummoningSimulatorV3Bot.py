@@ -310,7 +310,7 @@ async def rarity(context, rarity, amount):
                 description = "Says a random quote from Foie Gras.",
                 brief = "Words of wisdom from Foie Gras.",
                 pass_context = True)
-@commands.cooldown(1, 7, commands.BucketType.user)
+@commands.cooldown(1, 5, commands.BucketType.user)
 async def say(context):
     possible_responses = [
         'For me, for you, destiny is inescapable.',
@@ -324,7 +324,7 @@ async def say(context):
                 description = "Gives a paragraph of information about Foie Gras",
                 brief = "All about Foie Gras")
 @commands.cooldown(1, 60, commands.BucketType.user)
-async def infocard(context):
+async def infocard():
     await client.say("\
 Nice to meet you. I am Foie Gras, a delicacy and rare dish in France, born in the 18th century.\
  You may not find me in your local restaurant, but do have a try if you enjoy exotic tastes.\
@@ -336,10 +336,9 @@ Nice to meet you. I am Foie Gras, a delicacy and rare dish in France, born in th
 
 @client.command(name = "credits",
                 description = "Reveals three amazing people behind the bot.",
-                brief = "Show the creators and contributors of the bot.",
-                pass_context = True)
+                brief = "Show the creators and contributors of the bot.")
 @commands.cooldown(1, 30, commands.BucketType.user)
-async def credits(context):
+async def credits():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
 Developer: Dylanime#2353 AKA ディラン\n\
