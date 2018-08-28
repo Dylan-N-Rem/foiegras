@@ -1,1 +1,1 @@
-worker: python SummoningSimulatorV3Bot.py
+worker: "python SummoningSimulatorV3Bot.py"
