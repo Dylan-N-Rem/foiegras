@@ -203,7 +203,7 @@ async def summon(context, number):
         await client.say(bigline)
 
 @client.command(name = 'foodsoul',
-                description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "-" instead of spaces (eg. f!summonsoul Bamboo-Rice 5)',
+                description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "." instead of spaces (eg. f!summonsoul Bamboo.Rice 5)',
                 brief = 'Summons continuously until a specified food soul has been summoned.',
                 pass_context = True)
 @commands.cooldown(1, 10, commands.BucketType.user)
