@@ -165,7 +165,7 @@ def output(summoned, valid, ur, sr, r, m, number, context):
         return "Summoning results of {}:".format(context.message.author.mention) + urline + srline + rline + mline + stats + stats2 + stats3 + stats4 + stats5 + stats6
 
 @client.command(name = 'summon',
-                description = "Summons a desired amount of food souls.",
+                description = "Summons a desired amount of food souls. Has a limit of 1000000 per summon",
                 brief = "Summon food souls for FREE!",
                 pass_context = True)
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -180,7 +180,7 @@ async def summon(context, number):
     if not(number.isdigit()):
         await client.say("Error - Invalid input: Must be a positive integer")
     elif int(number) > 1000000:
-        await client.say("Error - Invalid number: Must be less than 1 000 000")
+        await client.say("Error - Invalid number: Must be less than 1000000")
     elif int(number) <= 0:
         await client.say("Error - Invalid number: Must be more than 0")
     elif int(number) >= 1:
@@ -203,7 +203,7 @@ async def summon(context, number):
         await client.say(bigline)
 
 @client.command(name = 'foodsoul',
-                description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "." instead of spaces (eg. f!summonsoul Bamboo.Rice 5)',
+                description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Specified amount has a limit of 10000. Use "." instead of spaces (eg. f!summonsoul Bamboo.Rice 5)',
                 brief = 'Summons continuously until a specified food soul has been summoned.',
                 pass_context = True)
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -221,7 +221,7 @@ async def afoodsoul(context, food_soul, amount):
     if not(amount.isdigit()):
         await client.say('Error - Invalid 1st input: Use "." instead of space')
     elif int(amount) > 10000:
-        await client.say("Error - Invalid 2nd input: Number must be less than 10 000")
+        await client.say("Error - Invalid 2nd input: Number must be less than 10000")
     if int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
     elif lfood_soul not in lsummon_pool:
@@ -253,7 +253,7 @@ async def afoodsoul(context, food_soul, amount):
     await client.say(bigline)
 
 @client.command(name = 'rarity',
-               description = 'Summons continuously until a specified amount of foods souls with a specified rarity has been summoned.',
+               description = 'Summons continuously until a specified amount of foods souls with a specified rarity has been summoned. Specified amount has a limit of 10000.',
                brief = 'Summons until a food soul of specified rarity has been summoned',
                pass_context = True)
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -272,7 +272,7 @@ async def rarity(context, rarity, amount):
     if not(amount.isdigit()):
         await client.say("Error - Invalid 2nd input: Must be a positive integer")
     elif int(amount) > 10000:
-        await client.say("Error - Invalid 2nd input: Number must be less than 10 000")
+        await client.say("Error - Invalid 2nd input: Number must be less than 10000")
     elif int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
     elif lrarity in lrarity_pool and int(amount) >= 1:
