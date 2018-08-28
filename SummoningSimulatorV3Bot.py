@@ -314,7 +314,7 @@ async def rarity(context, rarity, amount):
 async def say(context):
     possible_responses = [
         'For me, for you, destiny is inescapable.',
-        'What exactly is different about you? Why does Heaven alwats show a special concern for you',
+        'What exactly is different about you? Why does Heaven always show a special concern for you',
         "If... there really is a way to change fate... No... it's impossible...",
         "I feel a warmth in my heart. I've never felt this before",
     ]
