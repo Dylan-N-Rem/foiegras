@@ -214,14 +214,16 @@ async def afoodsoul(context, food_soul, amount):
     m = 0
     number = 0
     valid = False
-    food_soul = food_soul.replace("-", " ")
+    ffood_soul = food_soul.replace(".", " ")
     lfood_soul = food_soul.lower()
     if not(amount.isdigit()):
-        await client.say('Error - Invalid 1st input: Use "-" instead of space')
-    elif int(amount) <= 0:
+        await client.say('Error - Invalid 1st input: Use "." instead of space')
+    if int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
-    if lfood_soul not in lsummon_pool:
+    elif lfood_soul not in lsummon_pool:
         await client.say("Error - Invalid 1st input: Food Soul does not exsist or improper spelling")
+    elif lfood_soul in lsummon_pool and int(amount) >= 1:
+        await client.say("Summoning food souls...\n")
     elif lfood_soul in lsummon_pool and int(amount) >= 1:
         await client.say("Summoning food souls...\n")
         time.sleep(2)
