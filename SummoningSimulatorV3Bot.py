@@ -179,6 +179,8 @@ async def summon(context, number):
     valid = False
     if not(number.isdigit()):
         await client.say("Error - Invalid input: Must be a positive integer")
+    elif int(number) > 1000000:
+        await client.say("Error - Invalid number: Must be less than 1 000 000")
     elif int(number) <= 0:
         await client.say("Error - Invalid number: Must be more than 0")
     elif int(number) >= 1:
@@ -218,6 +220,8 @@ async def afoodsoul(context, food_soul, amount):
     lfood_soul = food_soul.lower()
     if not(amount.isdigit()):
         await client.say('Error - Invalid 1st input: Use "." instead of space')
+    elif int(amount) > 10000:
+        await client.say("Error - Invalid 2nd input: Number must be less than 10 000")
     if int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
     elif lfood_soul not in lsummon_pool:
@@ -267,6 +271,8 @@ async def rarity(context, rarity, amount):
         await client.say("Error - Invalid 1st input: Rarity does not exsist or improper spelling")
     if not(amount.isdigit()):
         await client.say("Error - Invalid 2nd input: Must be a positive integer")
+    elif int(amount) > 10000:
+        await client.say("Error - Invalid 2nd input: Number must be less than 10 000")
     elif int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
     elif lrarity in lrarity_pool and int(amount) >= 1:
