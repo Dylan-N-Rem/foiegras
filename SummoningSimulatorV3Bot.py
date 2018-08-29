@@ -220,10 +220,10 @@ async def afoodsoul(context, food_soul, amount):
     lfood_soul = food_soul.lower()
     if not(amount.isdigit()):
         await client.say('Error - Invalid 1st input: Use "." instead of space')
-    elif int(amount) > 10000:
-        await client.say("Error - Invalid 2nd input: Number must be less than 10000")
     if int(amount) <= 0:
         await client.say("Error - Invalid 2nd input: Number must be more than 0")
+    elif int(amount) > 10000:
+        await client.say("Error - Invalid 2nd input: Number must be less than 10000")
     elif lfood_soul not in lsummon_pool:
         await client.say("Error - Invalid 1st input: Food Soul does not exsist or improper spelling")
     elif lfood_soul in lsummon_pool and int(amount) >= 1:
