@@ -343,7 +343,7 @@ async def credits():
 **All nicknames are from the Food Fantasy Discord Server.**\n\
 Developer: Dylanime#2353 AKA ディラン\n\
 Subdeveloper: cyn#1598 AKA Just Marisa\n\
-IBeta Tester: Madara#0483")
+Beta Tester: Madara#0483")
 
 @client.event
 async def on_command_error(error, context):
