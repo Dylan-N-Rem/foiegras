@@ -117,7 +117,7 @@ for m4 in range(47):
     roll += ["Popcorn", ]
 lsummon_pool = [items.lower() for items in summon_pool]
 lrarity_pool = [itemr.lower() for itemr in rarity_pool]
-prefix = ("f!")
+prefix = ("f!", "F!")
 client = Bot(command_prefix = prefix)
 
 def output(summoned, valid, ur, sr, r, m, number, context):
@@ -164,6 +164,26 @@ def output(summoned, valid, ur, sr, r, m, number, context):
         stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*150) + " Soul Embers or " + str(number*100) + " Crystals."
         return "Summoning results of {}:".format(context.message.author.mention) + urline + srline + rline + mline + stats + stats2 + stats3 + stats4 + stats5 + stats6
 
+@client.command(name = "channel",
+                pass_context = True)
+async def channel(ctx):
+    global onlychannel
+    if ctx.message.author.server_permissions.administrator:
+        onlychannel = ctx.message.channel.id
+        await client.say("Very well. Commands should only be used here.")
+    else:
+        await client.say("You do not have permission to use this command.")
+
+onlychannel = ""
+def restriction(context):
+    if onlychannel == "":
+        return True
+    elif context.message.channel.id != onlychannel:
+        return False
+    elif context.message.channel.id == onlychannel:
+        return True
+    
+@client.check(restriction)
 @client.command(name = 'summon',
                 description = "Summons a desired amount of food souls. Has a limit of 1000000 per summon",
                 brief = "Summon food souls for FREE!",
@@ -202,6 +222,7 @@ async def summon(context, number):
         bigline = output(summoned, valid, ur, sr, r, m, number, context)
         await client.say(bigline)
 
+@client.check(restriction)
 @client.command(name = 'foodsoul',
                 description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Specified amount has a limit of 1000. Use "." instead of spaces (eg. f!summonsoul Bamboo.Rice 5)',
                 brief = 'Summons continuously until a specified food soul has been summoned.',
@@ -252,6 +273,7 @@ async def afoodsoul(context, food_soul, amount):
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
+@client.check(restriction)
 @client.command(name = 'rarity',
                description = 'Summons continuously until a specified amount of foods souls with a specified rarity has been summoned. Specified amount has a limit of 1000.',
                brief = 'Summons until a food soul of specified rarity has been summoned',
@@ -306,6 +328,7 @@ async def rarity(context, rarity, amount):
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
+@client.check(restriction)
 @client.command(name = 'dialogue',
                 description = "Says a random quote from Foie Gras.",
                 brief = "Words of wisdom from Foie Gras.",
@@ -320,6 +343,7 @@ async def say(context):
     ]
     await client.say(random.choice(possible_responses))
 
+@client.check(restriction)
 @client.command(name = "info",
                 description = "Gives a paragraph of information about Foie Gras",
                 brief = "All about Foie Gras")
@@ -334,6 +358,7 @@ Nice to meet you. I am Foie Gras, a delicacy and rare dish in France, born in th
  I treat myself to an occasional Mango Wrap once in a while. As a food soul, we don't really have to eat to stay alive. But it's a treat once in a while that I can't resist.\
  I hope to see you fellow Master Attendants in the future.")
 
+@client.check(restriction)
 @client.command(name = "credits",
                 description = "Reveals three amazing people behind the bot.",
                 brief = "Show the creators and contributors of the bot.")
