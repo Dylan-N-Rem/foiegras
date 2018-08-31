@@ -370,10 +370,10 @@ Developer: Dylanime#2353 AKA ディラン\n\
 Subdeveloper: cyn#1598 AKA Just Marisa\n\
 Beta Tester: Madara#0483")
 
-@client.event
-async def on_command_error(error, context):
-    if isinstance(error, commands.CommandOnCooldown):
-        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle.")
+##@client.event
+##async def on_command_error(error, context):
+##    if isinstance(error, commands.CommandOnCooldown):
+##        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle.")
 
 @client.event
 async def on_ready():
