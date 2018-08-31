@@ -169,13 +169,13 @@ def output(summoned, valid, ur, sr, r, m, number, context):
                 pass_context = True)
 async def channel(ctx):
     global onlychannel
-##    if ctx.message.author.server_permissions.administrator:
-    onlychannel = ctx.message.channel.id
-    with open("channelfile.txt", "w") as xfile:
-        json.dump(onlychannel, xfile)
-    await client.say("Very well. Commands should only be used here.")
-##    else:
-##        await client.say("You do not have the permission to use this command.")
+    if ctx.message.author.server_permissions.administrator:
+        onlychannel = ctx.message.channel.id
+        with open("channelfile.txt", "w") as xfile:
+            json.dump(onlychannel, xfile)
+        await client.say("Very well. Commands should only be used here.")
+    else:
+        await client.say("You do not have the permission to use this command.")
 
 def restriction(context):
     with open("channelfile.txt") as file:
