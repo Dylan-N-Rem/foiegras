@@ -6,6 +6,7 @@ import time
 import traceback
 import sys
 import os
+import json
 
 TOKEN = os.getenv("TOKEN")
 summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
@@ -170,20 +171,19 @@ async def channel(ctx):
     global onlychannel
     if ctx.message.author.server_permissions.administrator:
         onlychannel = ctx.message.channel.id
+        with open("channelfile.txt", "w") as xfile:
+            json.dump(onlychannel, xfile)
         await client.say("Very well. Commands should only be used here.")
-    else:
-        await client.say("You do not have permission to use this command.")
 
-onlychannel = ""
 def restriction(context):
-    if onlychannel == "":
-        return True
-    elif context.message.channel.id != onlychannel:
+    with open("channelfile.txt") as file:
+        onlychannel = json.load(file)
+    if context.message.channel.id != onlychannel:
         return False
     elif context.message.channel.id == onlychannel:
         return True
     
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = 'summon',
                 description = "Summons a desired amount of food souls. Has a limit of 1000000 per summon",
                 brief = "Summon food souls for FREE!",
@@ -222,7 +222,7 @@ async def summon(context, number):
         bigline = output(summoned, valid, ur, sr, r, m, number, context)
         await client.say(bigline)
 
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = 'foodsoul',
                 description = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Specified amount has a limit of 1000. Use "." instead of spaces (eg. f!summonsoul Bamboo.Rice 5)',
                 brief = 'Summons continuously until a specified food soul has been summoned.',
@@ -273,7 +273,7 @@ async def afoodsoul(context, food_soul, amount):
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = 'rarity',
                description = 'Summons continuously until a specified amount of foods souls with a specified rarity has been summoned. Specified amount has a limit of 1000.',
                brief = 'Summons until a food soul of specified rarity has been summoned',
@@ -328,7 +328,7 @@ async def rarity(context, rarity, amount):
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = 'dialogue',
                 description = "Says a random quote from Foie Gras.",
                 brief = "Words of wisdom from Foie Gras.",
@@ -343,7 +343,7 @@ async def say(context):
     ]
     await client.say(random.choice(possible_responses))
 
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = "info",
                 description = "Gives a paragraph of information about Foie Gras",
                 brief = "All about Foie Gras")
@@ -358,7 +358,7 @@ Nice to meet you. I am Foie Gras, a delicacy and rare dish in France, born in th
  I treat myself to an occasional Mango Wrap once in a while. As a food soul, we don't really have to eat to stay alive. But it's a treat once in a while that I can't resist.\
  I hope to see you fellow Master Attendants in the future.")
 
-@client.check(restriction)
+@commands.check(restriction)
 @client.command(name = "credits",
                 description = "Reveals three amazing people behind the bot.",
                 brief = "Show the creators and contributors of the bot.")
