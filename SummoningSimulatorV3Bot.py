@@ -926,7 +926,7 @@ async def eventhelp():
 client.remove_command('help')
 
 @commands.check(restriction)
-@client.command()
+@client.command(name = "help")
 @commands.cooldown(1, 20, commands.BucketType.user)
 async def help():
     embed = discord.Embed(title = "Foie Gras", description = "Hello. My name is Foie Gras. How may I help you today? I will await your command", color = 0x3498db)
