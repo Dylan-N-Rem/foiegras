@@ -846,25 +846,25 @@ async def event2(context, event_index, number):
         eroll += ["Boston Lobster", ]
         for e1 in range(120):
             eroll += ["Raindrop Cake", ]
-        for e2 in range(26):
+        for e2 in range(25):
             eroll.remove("B-52")
-        for e3 in range(22):
+        for e3 in range(25):
             eroll.remove("Foie Gras")
-        for e4 in range(21):
+        for e4 in range(8):
             eroll.remove("Crab Long Bao")
-        for e5 in range(17):
+        for e5 in range(26):
             eroll.remove("Bamboo Rice")
-        for e6 in range(26):
+        for e6 in range(25):
             eroll.remove("Peking Duck")
-        for e7 in range(9):
+        for e7 in range(8):
             eroll.remove("Gingerbread")
-        for e8 in range(9):
+        for e8 in range(7):
             eroll.remove("Pancake")
         for e9 in range(8):
             eroll.remove("Popcorn")
-        for e10 in range(7):
+        for e10 in range(8):
             eroll.remove("Jello")
-        for e11 in range(7):
+        for e11 in range(8):
             eroll.remove("Skewer")
         for e12 in range(31):
             eroll += ["Strawberry Daifuku", ]
