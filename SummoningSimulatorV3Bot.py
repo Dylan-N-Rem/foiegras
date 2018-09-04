@@ -761,7 +761,200 @@ async def crarity(context, rarity, amount):
                 pass_context = True)
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
-    pass
+    vaalid = False
+    eroll = []
+    eroll += roll
+    esummon_pool = []
+    esummon_pool += summon_pool
+    eur_pool = []
+    eur_pool += ur_pool
+    esr_pool = []
+    esr_pool += sr_pool
+    er_pool = []
+    er_pool += r_pool
+    em_pool = []
+    em_pool += m_pool
+    if event_index == "0":
+        vaalid = True
+        esummon_pool += ["Toso", "Sweet Tofu", ]
+        eur_pool += ["Toso", ]
+        esr_pool += ["Sweet Tofu", ]
+        for e1 in range(15):
+            eroll += ["Toso", ]
+        for e2 in range(3):
+            eroll.remove("B-52")
+        for e3 in range(3):
+            eroll.remove("Foie Gras")
+        for e4 in range(3):
+            eroll.remove("Crab Long Bao")
+        for e5 in range(3):
+            eroll.remove("Bamboo Rice")
+        for e6 in range(3):
+            eroll.remove("Peking Duck")
+        for e7 in range(641):
+            eroll += ["Sweet Tofu", ]
+        for e8 in range(65):
+            eroll.remove("Pineapple Cake")
+        for e9 in range(66):
+            eroll.remove("Eggette")
+        for e10 in range(3):
+            eroll.remove("Tiramisu")
+        for e11 in range(3):
+            eroll.remove("Escargot")
+        for e12 in range(3):
+            eroll.remove("Hotdog")
+        for e13 in range(3):
+            eroll.remove("Mango Pudding")
+        for e14 in range(3):
+            eroll.remove("Hamburger")
+        for e15 in range(3):
+            eroll.remove("Steak")
+        for e16 in range(3):
+            eroll.remove("Tangyuan")
+        for e17 in range(3):
+            eroll.remove("Sanma")
+        for e18 in range(3):
+            eroll.remove("Napoleon Cake")
+        for e19 in range(3):
+            eroll.remove("Salad")
+        for e20 in range(3):
+            eroll.remove("Pastel de nata")
+        for e21 in range(3):
+            eroll.remove("Yuxiang")
+        for e22 in range(3):
+            eroll.remove("Sukiyaki")
+        for e23 in range(3):
+            eroll.remove("Brownie")
+        for e24 in range(3):
+            eroll.remove("Red Wine")
+        for e25 in range(3):
+            eroll.remove("Gyoza")
+        for e26 in range(3):
+            eroll.remove("Chocolate")
+    elif event_index == "1":
+        vaalid = True
+        esummon_pool += ["Raindrop Cake", "Strawberry Daifuku", ]
+        eur_pool += ["Raindrop Cake", ]
+        em_pool += ["Strawberry Daifuku", ]
+        for e1 in range(120):
+            eroll += ["Raindrop Cake", ]
+        for e2 in range(25):
+            eroll.remove("B-52")
+        for e3 in range(25):
+            eroll.remove("Foie Gras")
+        for e4 in range(8):
+            eroll.remove("Crab Long Bao")
+        for e5 in range(26):
+            eroll.remove("Bamboo Rice")
+        for e6 in range(25):
+            eroll.remove("Peking Duck")
+        for e7 in range(8):
+            eroll.remove("Gingerbread")
+        for e8 in range(7):
+            eroll.remove("Pancake")
+        for e9 in range(8):
+            eroll.remove("Popcorn")
+        for e10 in range(8):
+            eroll.remove("Jello")
+        for e11 in range(8):
+            eroll.remove("Skewer")
+        for e12 in range(31):
+            eroll += ["Strawberry Daifuku", ]
+    if vaalid == True:
+        if mode != "rarity" and mode != "foodsoul":
+            await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
+        elif mode == "foodsoul":
+            lesummon_pool = [iteme.lower() for iteme in esummon_pool]
+            summoned = []
+            eachsummoned = []
+            ur = 0
+            sr = 0
+            r = 0
+            m = 0
+            number = 0
+            valid = False
+            food_soul = foodsoul_or_rarity
+            food_soul = food_soul.replace(".", " ")
+            lfood_soul = food_soul.lower()
+            if not(amount.isdigit()):
+                await client.say('Error - Invalid 3rd input: Use "." instead of space')
+            if int(amount) <= 0:
+                await client.say("Error - Invalid 4th input: Number must be more than 0")
+            elif lfood_soul not in lesummon_pool:
+                await client.say("Error - Invalid 3rd input: Food Soul does not exsist or improper spelling")
+            elif lfood_soul in lesummon_pool and int(amount) >= 1:
+                await client.say("Summoning food souls...\n")
+                time.sleep(2)
+                count_foodsoul = 0
+                while int(amount) != count_foodsoul:
+                    foodsoul = random.choice(eroll)
+                    valid = True
+                    lfoodsoul = foodsoul.lower()
+                    summoned += [foodsoul, ]
+                    if foodsoul in ur_pool:
+                        ur += 1
+                        number += 1
+                    if lfood_soul == lfoodsoul:
+                        count_foodsoul += 1
+                    elif foodsoul in sr_pool:
+                        sr += 1
+                        number += 1
+                    elif foodsoul in r_pool:
+                        r += 1
+                        number += 1
+                    elif foodsoul in m_pool:
+                        m += 1
+                        number += 1
+            bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
+            await client.say(bigline)
+        elif mode == "rarity":
+            summoned = []
+            eachsummoned = []
+            ur = 0
+            sr = 0
+            r = 0
+            m = 0
+            number = 0
+            valid = False
+            rarity = foodsoul_or_rarity
+            lrarity = rarity.lower()
+            if lrarity not in lrarity_pool:
+                await client.say("Error - Invalid 3rd input: Rarity does not exsist or improper spelling")
+            if not(amount.isdigit()):
+                await client.say("Error - Invalid 4th input: Must be a positive integer")
+            elif int(amount) <= 0:
+                await client.say("Error - Invalid 4th input: Number must be more than 0")
+            elif lrarity in lrarity_pool and int(amount) >= 1:
+                valid = True
+                await client.say("Summoning food souls...\n")
+                time.sleep(2)
+                count_foodsoul = 0
+                while int(amount) != count_foodsoul:
+                    foodsoul = random.choice(eroll)
+                    summoned += [foodsoul, ]
+                    if foodsoul in ur_pool:
+                        ur += 1
+                        number += 1
+                        if lrarity == "ur":
+                            count_foodsoul += 1
+                    elif foodsoul in sr_pool:
+                        sr += 1
+                        number += 1
+                        if lrarity == "sr":
+                            count_foodsoul += 1
+                    elif foodsoul in r_pool:
+                        r += 1
+                        number += 1
+                        if lrarity == "r":
+                            count_foodsoul += 1
+                    elif foodsoul in m_pool:
+                        m += 1
+                        number += 1
+                        if lrarity == "m":
+                            count_foodsoul += 1
+            bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
+            await client.say(bigline)
+
 @commands.check(restriction)
 @client.command(name = "summonevent",
                 pass_context = True)
