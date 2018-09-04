@@ -780,7 +780,7 @@ async def event2(context, event_index, number):
     er_pool = []
     er_pool += r_pool
     em_pool = []
-    em_pool += cm_pool
+    em_pool += m_pool
     if event_index == "0":
         vaalid = True
         esummon_pool += ["Toso", "Sweet Tofu", ]
@@ -843,7 +843,6 @@ async def event2(context, event_index, number):
         esummon_pool += ["Raindrop Cake", "Strawberry Daifuku", ]
         eur_pool += ["Raindrop Cake", ]
         em_pool += ["Strawberry Daifuku", ]
-        eroll += ["Boston Lobster", ]
         for e1 in range(120):
             eroll += ["Raindrop Cake", ]
         for e2 in range(25):
