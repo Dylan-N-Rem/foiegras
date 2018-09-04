@@ -891,16 +891,16 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                     valid = True
                     lfoodsoul = foodsoul.lower()
                     summoned += [foodsoul, ]
-                    if foodsoul in ur_pool:
+                    if foodsoul in eur_pool:
                         ur += 1
                         number += 1
-                    if foodsoul in sr_pool:
+                    if foodsoul in esr_pool:
                         sr += 1
                         number += 1
-                    if foodsoul in r_pool:
+                    if foodsoul in er_pool:
                         r += 1
                         number += 1
-                    if foodsoul in m_pool:
+                    if foodsoul in em_pool:
                         m += 1
                         number += 1
                     if lfood_soul == lfoodsoul:
@@ -932,22 +932,22 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                 while int(amount) != count_foodsoul:
                     foodsoul = random.choice(eroll)
                     summoned += [foodsoul, ]
-                    if foodsoul in ur_pool:
+                    if foodsoul in eur_pool:
                         ur += 1
                         number += 1
                         if lrarity == "ur":
                             count_foodsoul += 1
-                    elif foodsoul in sr_pool:
+                    elif foodsoul in esr_pool:
                         sr += 1
                         number += 1
                         if lrarity == "sr":
                             count_foodsoul += 1
-                    elif foodsoul in r_pool:
+                    elif foodsoul in er_pool:
                         r += 1
                         number += 1
                         if lrarity == "r":
                             count_foodsoul += 1
-                    elif foodsoul in m_pool:
+                    elif foodsoul in em_pool:
                         m += 1
                         number += 1
                         if lrarity == "m":
