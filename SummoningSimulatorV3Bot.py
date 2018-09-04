@@ -350,8 +350,6 @@ async def afoodsoul(context, food_soul, amount):
             if foodsoul in ur_pool:
                 ur += 1
                 number += 1
-            if lfood_soul == lfoodsoul:
-                count_foodsoul += 1
             if foodsoul in sr_pool:
                 sr += 1
                 number += 1
@@ -361,6 +359,8 @@ async def afoodsoul(context, food_soul, amount):
             if foodsoul in m_pool:
                 m += 1
                 number += 1
+            if lfood_soul == lfoodsoul:
+                count_foodsoul += 1
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
@@ -691,8 +691,6 @@ async def cafoodsoul(context, food_soul, amount):
             if foodsoul in cur_pool:
                 ur += 1
                 number += 1
-            if lfood_soul == lfoodsoul:
-                count_foodsoul += 1
             if foodsoul in csr_pool:
                 sr += 1
                 number += 1
@@ -702,6 +700,8 @@ async def cafoodsoul(context, food_soul, amount):
             if foodsoul in cm_pool:
                 m += 1
                 number += 1
+            if lfood_soul == lfoodsoul:
+                count_foodsoul += 1
     bigline = output3(summoned, valid, ur, sr, r, m, number, context)
     await client.say(bigline)
 
@@ -894,8 +894,6 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                     if foodsoul in ur_pool:
                         ur += 1
                         number += 1
-                    if lfood_soul == lfoodsoul:
-                        count_foodsoul += 1
                     if foodsoul in sr_pool:
                         sr += 1
                         number += 1
@@ -905,6 +903,8 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                     if foodsoul in m_pool:
                         m += 1
                         number += 1
+                    if lfood_soul == lfoodsoul:
+                        count_foodsoul += 1
             bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
             await client.say(bigline)
         elif mode == "rarity":
