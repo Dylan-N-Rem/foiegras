@@ -1,6 +1,7 @@
 from discord.ext.commands import Bot
 from discord import Game
 from discord.ext import commands
+import discord
 import random
 import time
 import traceback
@@ -984,10 +985,10 @@ Beta Tester: Madara#0483")
 async def foodinfo(dish):
     await client.say("Coming Soon!")
 
-#@client.event
-#async def on_command_error(error, context):
-#    if isinstance(error, commands.CommandOnCooldown):
-#        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle")
+@client.event
+async def on_command_error(error, context):
+    if isinstance(error, commands.CommandOnCooldown):
+        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle")
 
 @client.event
 async def on_ready():
