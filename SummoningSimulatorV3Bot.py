@@ -352,13 +352,13 @@ async def afoodsoul(context, food_soul, amount):
                 number += 1
             if lfood_soul == lfoodsoul:
                 count_foodsoul += 1
-            elif foodsoul in sr_pool:
+            if foodsoul in sr_pool:
                 sr += 1
                 number += 1
-            elif foodsoul in r_pool:
+            if foodsoul in r_pool:
                 r += 1
                 number += 1
-            elif foodsoul in m_pool:
+            if foodsoul in m_pool:
                 m += 1
                 number += 1
     bigline = output(summoned, valid, ur, sr, r, m, number, context)
@@ -693,13 +693,13 @@ async def cafoodsoul(context, food_soul, amount):
                 number += 1
             if lfood_soul == lfoodsoul:
                 count_foodsoul += 1
-            elif foodsoul in csr_pool:
+            if foodsoul in csr_pool:
                 sr += 1
                 number += 1
-            elif foodsoul in cr_pool:
+            if foodsoul in cr_pool:
                 r += 1
                 number += 1
-            elif foodsoul in cm_pool:
+            if foodsoul in cm_pool:
                 m += 1
                 number += 1
     bigline = output3(summoned, valid, ur, sr, r, m, number, context)
@@ -896,13 +896,13 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                         number += 1
                     if lfood_soul == lfoodsoul:
                         count_foodsoul += 1
-                    elif foodsoul in sr_pool:
+                    if foodsoul in sr_pool:
                         sr += 1
                         number += 1
-                    elif foodsoul in r_pool:
+                    if foodsoul in r_pool:
                         r += 1
                         number += 1
-                    elif foodsoul in m_pool:
+                    if foodsoul in m_pool:
                         m += 1
                         number += 1
             bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
