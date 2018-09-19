@@ -1928,31 +1928,31 @@ async def event3(context, event_index, mode, foodsoul_or_rarity, amount):
         await client.say("Error - Invalid event index - Unavailable in the Chinese server")
     elif event_index == "2":
         vaalid = True
-        eroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "3":
         vaalid = True
-        eroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "4":
         vaalid = True
-        eroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "5":
         vaalid = True
-        eroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "6":
         vaalid = True
-        eroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "7":
         vaalid = True
-        eroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "8":
         vaalid = True
-        eroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "9":
         vaalid = True
-        eroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "10":
         vaalid = True
-        eroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
+        ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -1977,7 +1977,7 @@ async def event3(context, event_index, mode, foodsoul_or_rarity, amount):
                 await client.say('Error - Invalid 3rd input: Use "." instead of space')
             if int(amount) <= 0:
                 await client.say("Error - Invalid 4th input: Number must be more than 0")
-            elif lfood_soul not in lesummon_pool:
+            elif lfood_soul not in lcesummon_pool:
                 if lfood_soul in lnone_pool:
                     ivalid = True
                     await client.say("Error - Invalid food soul: " + lfood_soul.title() + " cannot be summoned")
@@ -1990,12 +1990,12 @@ async def event3(context, event_index, mode, foodsoul_or_rarity, amount):
                     await client.say("Error - Invalid 3rd input: Food Soul does not exsist or improper spelling")
             elif int(amount) > 1000:
                 await client.say("Error - Invalid 4th input: Number must be less than 1000")
-            elif lfood_soul in lesummon_pool and int(amount) >= 1 and int(amount) < 1000:
+            elif lfood_soul in lcesummon_pool and int(amount) >= 1 and int(amount) < 1000:
                 await client.say("Summoning food souls...\n")
                 time.sleep(2)
                 count_foodsoul = 0
                 while int(amount) != count_foodsoul:
-                    foodsoul = random.choice(eroll)
+                    foodsoul = random.choice(ceroll)
                     valid = True
                     lfoodsoul = foodsoul.lower()
                     summoned += [foodsoul, ]
@@ -2088,35 +2088,36 @@ async def event4(context, event_index, number):
     ceevent_pool += event_pool
     cceevent_pool = []
     cceevent_pool += cevent_pool
+    unav_pool = []
     if event_index == "0" or event_index == "1":
         await client.say("Error - Invalid event index - Unavailable in the Chinese server")
     elif event_index == "2":
         vaalid = True
-        eroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "3":
         vaalid = True
-        eroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "4":
         vaalid = True
-        eroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "5":
         vaalid = True
-        eroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "6":
         vaalid = True
-        eroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "7":
         vaalid = True
-        eroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "8":
         vaalid = True
-        eroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "9":
         vaalid = True
-        eroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)
+        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "10":
         vaalid = True
-        eroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool)    
+        ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
     if vaalid == True:
         summoned = []
         eachsummoned = []
