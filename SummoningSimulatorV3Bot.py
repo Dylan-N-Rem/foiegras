@@ -1327,9 +1327,9 @@ def cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     return ceroll
 
 def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
-    cceevent.remove("Caviar")
-    ceeevent.remove("Seaweed Soup")
-    ceevent.remove("Toso")
+    cceevent_pool.remove("Caviar")
+    cceevent_pool.remove("Seaweed Soup")
+    ceevent_pool.remove("Toso")
     cesummon_pool += ["Caviar", "Toso", "Seaweed Soup", ]
     ceur_pool += ["Caviar", "Toso", ]
     cesr_pool += ["Seaweed Soup", ]
