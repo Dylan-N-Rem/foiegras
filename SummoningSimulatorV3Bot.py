@@ -345,7 +345,7 @@ async def summon(context, number):
         number = int(number)
         valid = True
         for x in range(number):
-            foodsoul = random.choice(roll)
+            foodsoul = random.choice(roll2)
             summoned += [foodsoul, ]
             if foodsoul in ur_pool:
                 ur += 1
@@ -400,7 +400,7 @@ async def afoodsoul(context, food_soul, amount):
         time.sleep(2)
         count_foodsoul = 0
         while int(amount) != count_foodsoul:
-            foodsoul = random.choice(roll)
+            foodsoul = random.choice(roll2)
             valid = True
             lfoodsoul = foodsoul.lower()
             summoned += [foodsoul, ]
@@ -449,7 +449,7 @@ async def rarity(context, rarity, amount):
         time.sleep(2)
         count_foodsoul = 0
         while int(amount) != count_foodsoul:
-            foodsoul = random.choice(roll)
+            foodsoul = random.choice(roll2)
             summoned += [foodsoul, ]
             if foodsoul in ur_pool:
                 ur += 1
