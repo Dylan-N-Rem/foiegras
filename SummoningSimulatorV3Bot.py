@@ -15,19 +15,20 @@ client = Bot(command_prefix = prefix)
 
 # Global server summoning:
 
-summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
+summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 ur_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop"]
 sr_pool = ["Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
 r_pool = ["Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 none_pool = ["Cloud Tea", "Canele", "Pizza", "Black Tea", "Mooncake", "Salty Tofu", "Spaghetti", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Matcha Rice", "Green Curry", "Mung Bean Soup", "Milk Tea", "Katsudon", "Vodka", "Wonton", "Yogurt", "Cola", "Cold Rice Shrimp", "Plum Juice", "Cheese", "Toast"]
 event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku", "Sweet Tofu"]
-unre_pool = ["Laba Congee", "Yunnan Noodles", "Udon"]
+unre_pool = ["Laba Congee", "Yunnan Noodles"]
 cevent_pool = ["Bonito Rice", "Cassata", "Spicy Hot Pot", "Beer", "Caviar", "Seaweed Soup", "Pufferfish"]
 rarity_pool = ["M", "R", "SR", "UR"]
 food_pool = ["Stir-Fried Potatoes", "Braised Pork", "Braised Eggplant", "Sauteed Lettuce", "Carrot Bread", "Cucumber Egg Stir-Fry", "Black Pepper Beef", "Sauteed Mushrooms", "Egg Fried Rice", "Salmon Fried Rice", "Onion Fried Rice", "Bacon Fried Rice", "Braised Octopus", "Risotto", "Butter Bread", "Emerald Roll", "Corn Pie", "Toffee Apple", "Pineapple Fried Rice", "Chicken Soup", "Mango Pudding", "Strawberry Ice Cream", "Red Bean Pudding", "Kung Pao Chicken", "Pumpkin Pie", "Sweet Yam Buns", "Steamed Cod", "Steamed Unagi", "Garlic Lobster", "Crab Hotpot", "French Fries", "Crispy Pork", "Salad", "Eggplant Roll", "Smoked Salmon", "Roast Beef", "Cheese Bread", "Mushroom Soup", "Fried Rice Cake", "Pork Burger", "Bacon Tofu Wrap", "Grilled Calamari", "Popcorn", "Shortbread", "Minestrone", "Pineapple Juice", "Apple Crisp", "Chicken Pizza", "Roast Chicken", "Mango Wrap", "Fruit Salad", "Peanut Pie", "Pumpkin Soup", "Hotteok", "Cheesy Yam", "Fried Cod", "Fried Unagi", "Baked Lobster", "Crab Salad", "Baked Potato", "Grilled Pork Belly", "Cucumber Salad", "Boiled Lettuce", "Mushroom Yaki", "Salmon Sashimi", "Beef Tartare", "Tamagoyaki", "Omurice", "Shogayki", "Bacon Bites", "Cold Tofu", "Grilled Corn", "Vegetable Tempura", "Takoyaki", "Creamed Spinach", "Baked Pineapple", "Apples & Cream", "Chicken Skewer", "Fried Chicken", "Mango Smoothie", "Strawberry Smoothie", "Peanut Crisp", "Cod Fillet", "Piglet Daifuku", "Pumpkin Muffin", "Yam Dumplings", "Unagi Don", "Lobster Sashimi", "Crab Sashimi"]
 lostfood_pool = ["Calamari Skewer", "Garlic Oyster", "Grilled Prawns", "Pickled Salmon Head", "Tomato & Eggs", "Steamed Mushrooms", "Spaghetti", "Har Gow", "Gold Cake", "Mixed Greens", "Stir-Fried Mussels", "Mushroom Alfredo", "Cha Siu Bao", "Spinach Noodles", "Mint Pineapple", "Apple Sangria", "Braised Lamb", "Mushroom Chicken Stew", "Matcha Cake", "Cappuccino", "Fruit Tea", "Lemon Pie", "Meat Zongzi", "Stuffed Lotus Root", "Lotus Root Stir-Fry", "Black Fungus Congee", "Sanma Shioyaki", "Steamed Crab", "Crab Rice Cake", "Curry Crab", "Yam Pigeon Soup", "Bamboo & Meat Stir-Fry", "Braised Geese", "Roe Meat Ball", "Birds Nest", "Ginseng Stew Chicken"]
 roll = []
+roll2 = []
 for u1 in range(23):
     roll += ["Crab Long Bao", ]
     roll += ["Gingerbread", ]
@@ -89,6 +90,69 @@ for m1 in range(46):
     roll += ["Pancake", ]
 for m2 in range(47):
     roll += ["Popcorn", ]
+
+for u21 in range(23):
+    roll2 += ["Crab Long Bao", ]
+    roll2 += ["Gingerbread", ]
+for u22 in range(61):
+    roll2 += ["Foie Gras", ]
+    roll2 += ["Peking Duck", ]
+    roll2 += ["B-52", ]
+for u23 in range(62):
+    roll2 += ["Bamboo Rice", ]
+for u24 in range(5):
+    roll2 += ["Boston Lobster", ]
+    roll2 += ["Double Scoop", ]
+for s21 in range(76):
+    roll2 += ["Tiramisu", ]
+    roll2 += ["Escargot", ]
+    roll2 += ["Hotdog", ]
+    roll2 += ["Mango Pudding", ]
+    roll2 += ["Hamburger",]
+    roll2 += ["Steak", ]
+    roll2 += ["Tangyuan", ]
+    roll2 += ["Sanma", ]
+    roll2 += ["Napoleon Cake", ]
+    roll2 += ["Salad", ]
+    roll2 += ["Pastel de nata", ]
+    roll2 += ["Yuxiang", ]
+    roll2 += ["Sukiyaki", ]
+    roll2 += ["Brownie", ]
+    roll2 += ["Red Wine", ]
+    roll2 += ["Gyoza", ]
+    roll2 += ["Chocolate", ]
+    roll2 += ["Udon", ]
+for s22 in range(146):
+    roll2 += ["Eggette", ]
+for s23 in range(147):
+    roll2 += ["Pineapple Cake", ]
+for r21 in range(413):
+    roll2 += ["Long Bao", ]
+    roll2 += ["Coffee", ]
+    roll2 += ["Sashimi", ]
+    roll2 += ["Macaron", ]
+    roll2 += ["Zongzi", ]
+    roll2 += ["Sakuramochi", ]
+    roll2 += ["Tom Yum", ]
+    roll2 += ["Taiyaki", ]
+    roll2 += ["Milk", ]
+    roll2 += ["Dorayaki", ]
+    roll2 += ["Sake", ]
+    roll2 += ["Tempura", ]
+    roll2 += ["Spicy Gluten", ]
+for r22 in range(414):
+    roll2 += ["Jiuniang", ]
+    roll2 += ["Omurice", ]
+    roll2 += ["Orange Juice", ]
+    roll2 += ["Ume Ochazuke" ,]
+    roll2 += ["Miso Soup" ,]
+    roll2 += ["Yellow Wine", ]
+for m21 in range(46):
+    roll2 += ["Skewer", ]
+    roll2 += ["Jello", ]
+    roll2 += ["Pancake", ]
+for m22 in range(47):
+    roll2 += ["Popcorn", ]
 lsummon_pool = [items.lower() for items in summon_pool]
 lrarity_pool = [itemr.lower() for itemr in rarity_pool]
 lnone_pool = [itemn.lower() for itemn in none_pool]
@@ -774,6 +838,8 @@ async def crarity(context, rarity, amount):
 def index0entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     esummon_pool.remove("Pineapple Cake")
     esummon_pool.remove("Eggette")
+    esummon_pool.remove("Udon")
+    unav_pool += ["Udon", "Pineapple Cake", "Eggette"]
     for e1 in range(151):
         eroll.remove("Pineapple Cake")
     for e2 in range(150):
@@ -814,6 +880,8 @@ def index1entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     esummon_pool += ["Toso", "Sweet Tofu", ]
     eur_pool += ["Toso", ]
     esr_pool += ["Sweet Tofu", ]
+    esummon_pool.remove("Udon")
+    unav_pool += ["Udon"]
     for e0 in range(12):
         eroll.remove("Gingerbread")
     for e1 in range(150):
@@ -859,6 +927,8 @@ def index2entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     esummon_pool += ["Raindrop Cake", "Strawberry Daifuku", ]
     eur_pool += ["Raindrop Cake", ]
     em_pool += ["Strawberry Daifuku", ]
+    esummon_pool.remove("Udon")
+    unav_pool += ["Udon"]
     for e1 in range(120):
         eroll += ["Raindrop Cake", ]
     for e2 in range(31):
