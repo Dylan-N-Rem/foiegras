@@ -21,9 +21,9 @@ sr_pool = ["Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburge
 r_pool = ["Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 none_pool = ["Cloud Tea", "Canele", "Pizza", "Black Tea", "Mooncake", "Salty Tofu", "Spaghetti", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Matcha Rice", "Green Curry", "Mung Bean Soup", "Milk Tea", "Katsudon", "Vodka", "Wonton", "Yogurt", "Cola", "Cold Rice Shrimp", "Plum Juice", "Cheese", "Toast"]
-event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku", "Sweet Tofu"]
+event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku", "Sweet Tofu", "Bonito Rice", "Milt"]
 unre_pool = ["Laba Congee", "Yunnan Noodles"]
-cevent_pool = ["Bonito Rice", "Cassata", "Spicy Hot Pot", "Beer", "Caviar", "Seaweed Soup", "Pufferfish"]
+cevent_pool = ["Cassata", "Spicy Hot Pot", "Beer", "Caviar", "Seaweed Soup"]
 rarity_pool = ["M", "R", "SR", "UR"]
 food_pool = ["Stir-Fried Potatoes", "Braised Pork", "Braised Eggplant", "Sauteed Lettuce", "Carrot Bread", "Cucumber Egg Stir-Fry", "Black Pepper Beef", "Sauteed Mushrooms", "Egg Fried Rice", "Salmon Fried Rice", "Onion Fried Rice", "Bacon Fried Rice", "Braised Octopus", "Risotto", "Butter Bread", "Emerald Roll", "Corn Pie", "Toffee Apple", "Pineapple Fried Rice", "Chicken Soup", "Mango Pudding", "Strawberry Ice Cream", "Red Bean Pudding", "Kung Pao Chicken", "Pumpkin Pie", "Sweet Yam Buns", "Steamed Cod", "Steamed Unagi", "Garlic Lobster", "Crab Hotpot", "French Fries", "Crispy Pork", "Salad", "Eggplant Roll", "Smoked Salmon", "Roast Beef", "Cheese Bread", "Mushroom Soup", "Fried Rice Cake", "Pork Burger", "Bacon Tofu Wrap", "Grilled Calamari", "Popcorn", "Shortbread", "Minestrone", "Pineapple Juice", "Apple Crisp", "Chicken Pizza", "Roast Chicken", "Mango Wrap", "Fruit Salad", "Peanut Pie", "Pumpkin Soup", "Hotteok", "Cheesy Yam", "Fried Cod", "Fried Unagi", "Baked Lobster", "Crab Salad", "Baked Potato", "Grilled Pork Belly", "Cucumber Salad", "Boiled Lettuce", "Mushroom Yaki", "Salmon Sashimi", "Beef Tartare", "Tamagoyaki", "Omurice", "Shogayki", "Bacon Bites", "Cold Tofu", "Grilled Corn", "Vegetable Tempura", "Takoyaki", "Creamed Spinach", "Baked Pineapple", "Apples & Cream", "Chicken Skewer", "Fried Chicken", "Mango Smoothie", "Strawberry Smoothie", "Peanut Crisp", "Cod Fillet", "Piglet Daifuku", "Pumpkin Muffin", "Yam Dumplings", "Unagi Don", "Lobster Sashimi", "Crab Sashimi"]
 lostfood_pool = ["Calamari Skewer", "Garlic Oyster", "Grilled Prawns", "Pickled Salmon Head", "Tomato & Eggs", "Steamed Mushrooms", "Spaghetti", "Har Gow", "Gold Cake", "Mixed Greens", "Stir-Fried Mussels", "Mushroom Alfredo", "Cha Siu Bao", "Spinach Noodles", "Mint Pineapple", "Apple Sangria", "Braised Lamb", "Mushroom Chicken Stew", "Matcha Cake", "Cappuccino", "Fruit Tea", "Lemon Pie", "Meat Zongzi", "Stuffed Lotus Root", "Lotus Root Stir-Fry", "Black Fungus Congee", "Sanma Shioyaki", "Steamed Crab", "Crab Rice Cake", "Curry Crab", "Yam Pigeon Soup", "Bamboo & Meat Stir-Fry", "Braised Geese", "Roe Meat Ball", "Birds Nest", "Ginseng Stew Chicken"]
@@ -947,11 +947,54 @@ def index2entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Skewer")
         eroll.remove("Crab Long Bao")
         eroll.remove("Gingerbread")
-    print(esummon_pool)
     return eroll
 
 def index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll2
+    eevent_pool.remove("Bonito Rice")
+    eevent_pool.remove("Milt")
+    esummon_pool += ["Bonito Rice", "Milt", ]
+    eur_pool += ["Milt", ]
+    esr_pool += ["Bonito Rice", ]
+    for e1 in range(48):
+        eroll += ["Milt", ]
+    for e2 in range(96):
+        eroll += ["Bonito Rice", ]
+    for e3 in range(4):
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+    for e4 in range(5):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de nata")
+        eroll.remove("Crab Long Bao")
+        eroll.remove("Gingerbread")
+    for e5 in range(6):
+        eroll.remove("Eggette")
+    for e6 in range(7):
+        eroll.remove("Pineapple Cake")
+    for e7 in range(8):
+        eroll.remove("Peking Duck")
+    for e8 in range(9):
+        eroll.remove("Foie Gras")
+        eroll.remove("B-52")
+    for e9 in range(10):
+        eroll.remove("Bamboo Rice")
+    return eroll
 
 def index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     pass
