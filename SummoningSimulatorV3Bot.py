@@ -1047,6 +1047,9 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
     elif event_index == "2":
         vaalid = True
         eroll = index2entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "3":
+        vaalid = True
+        eroll = index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -1194,6 +1197,9 @@ async def event2(context, event_index, number):
     elif event_index == "2":
         vaalid = True
         eroll = index2entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "3":
+        vaalid = True
+        eroll = index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         summoned = []
         eachsummoned = []
