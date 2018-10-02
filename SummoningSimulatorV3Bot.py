@@ -2276,7 +2276,7 @@ async def eventhelp():
     embed.add_field(name = "0. Sweet Temptations", value = "Chocolate has been addded to the summoning pool permamently; Gingerbread and Chocolate have an increased summoning rate for a limited time.\nGingerbread: 0.23% > 1.2%\nChocolate: 3.33%, drops to 0.8% after event", inline = False)
     embed.add_field(name = "1. Brewing Fine Wine", value = "Toso and Sweet Tofu have been added to the summoning pool for a limited time.\nToso: 1.5%\nSweet Tofu: 6.61%", inline = False)
     embed.add_field(name = "2. Sakura Falls (樱落水月)", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
-    embed.add_field(name = "3. 盛夏沁凉", value = "Pufferfish and Bonito Rice have been added to the summoning pool for a limited time.\nPufferfish: 0.48%\nBonito Rice: 0.96%", inline = False)
+    embed.add_field(name = "3. Autumn Memories (盛夏沁凉)", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
     embed.add_field(name = "4. 月华倾泻", value = "Toso, Caviar and Seaweed Soup have been added to the summoning pool for a limited time.\nToso: 0.5%\nCaviar: 0.5%\nSeaweed Soup: 3.41%", inline = False)
     embed.add_field(name = "5. 冰与火之夏", value = "Spicy Hot Pot and Beer have been added to the summoning pool for a limited time.\nSpicy Hot Pot: 1.2%\nBeer: 3.32%", inline = False)
     embed.add_field(name = "6. 水映夏花", value = "Cassata and Raindrop Cake have been added to the summoning pool for a limited time.\nCassata: 3.32%\nRaindrop Cake: 1.2%", inline = False)
