@@ -15,13 +15,13 @@ client = Bot(command_prefix = prefix)
 
 # Global server summoning:
 
-summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
+summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Sweet Tofu", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 ur_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop"]
-sr_pool = ["Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
+sr_pool = ["Sweet Tofu", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
 r_pool = ["Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 none_pool = ["Cloud Tea", "Canele", "Pizza", "Black Tea", "Mooncake", "Salty Tofu", "Spaghetti", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Matcha Rice", "Green Curry", "Mung Bean Soup", "Milk Tea", "Katsudon", "Vodka", "Wonton", "Yogurt", "Cola", "Cold Rice Shrimp", "Plum Juice", "Cheese", "Toast"]
-event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku", "Sweet Tofu", "Bonito Rice", "Milt"]
+event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku","Bonito Rice", "Milt"]
 unre_pool = ["Laba Congee", "Yunnan Noodles"]
 cevent_pool = ["Cassata", "Spicy Hot Pot", "Beer", "Caviar", "Seaweed Soup"]
 rarity_pool = ["M", "R", "SR", "UR"]
@@ -153,6 +153,71 @@ for m21 in range(46):
     roll2 += ["Pancake", ]
 for m22 in range(47):
     roll2 += ["Popcorn", ]
+for u31 in range(23):
+    roll3 += ["Crab Long Bao", ]
+    roll3 += ["Gingerbread", ]
+for u32 in range(61):
+    roll3 += ["Foie Gras", ]
+    roll3+= ["Peking Duck", ]
+    roll3 += ["B-52", ]
+for u33 in range(62):
+    roll3 += ["Bamboo Rice", ]
+for u34 in range(5):
+    roll3 += ["Boston Lobster", ]
+    roll3 += ["Double Scoop", ]
+for s31 in range(72):
+    roll3 += ["Tiramisu", ]
+    roll3 += ["Escargot", ]
+    roll3 += ["Hotdog", ]
+    roll3 += ["Mango Pudding", ]
+    roll3 += ["Hamburger",]
+    roll3 += ["Steak", ]
+    roll3 += ["Tangyuan", ]
+    roll3 += ["Sanma", ]
+    roll3 += ["Napoleon Cake", ]
+    roll3 += ["Salad", ]
+    roll3 += ["Pastel de nata", ]
+    roll3 += ["Yuxiang", ]
+    roll3 += ["Sukiyaki", ]
+    roll3 += ["Brownie", ]
+    roll3 += ["Red Wine", ]
+    roll3 += ["Gyoza", ]
+    roll3 += ["Chocolate", ]
+    roll3 += ["Udon", ]
+    roll3 += ["Sweet Tofu", ]
+
+for s32 in range(146):
+    roll3 += ["Eggette", ]
+for s33 in range(147):
+    roll3 += ["Pineapple Cake", ]
+for r31 in range(413):
+    roll3 += ["Long Bao", ]
+    roll3 += ["Coffee", ]
+    roll3 += ["Sashimi", ]
+    roll3 += ["Macaron", ]
+    roll3 += ["Zongzi", ]
+    roll3 += ["Sakuramochi", ]
+    roll3 += ["Tom Yum", ]
+    roll3 += ["Taiyaki", ]
+    roll3 += ["Milk", ]
+    roll3 += ["Dorayaki", ]
+    roll3 += ["Sake", ]
+    roll3 += ["Tempura", ]
+    roll3 += ["Spicy Gluten", ]
+for r32 in range(414):
+    roll3 += ["Jiuniang", ]
+    roll3 += ["Omurice", ]
+    roll3 += ["Orange Juice", ]
+    roll3 += ["Ume Ochazuke" ,]
+    roll3 += ["Miso Soup" ,]
+    roll3 += ["Yellow Wine", ]
+for m31 in range(46):
+    roll3 += ["Skewer", ]
+    roll3 += ["Jello", ]
+    roll3 += ["Pancake", ]
+for m32 in range(47):
+    roll3 += ["Popcorn", ]
+
 lsummon_pool = [items.lower() for items in summon_pool]
 lrarity_pool = [itemr.lower() for itemr in rarity_pool]
 lnone_pool = [itemn.lower() for itemn in none_pool]
@@ -345,7 +410,7 @@ async def summon(context, number):
         number = int(number)
         valid = True
         for x in range(number):
-            foodsoul = random.choice(roll2)
+            foodsoul = random.choice(roll3)
             summoned += [foodsoul, ]
             if foodsoul in ur_pool:
                 ur += 1
@@ -400,7 +465,7 @@ async def afoodsoul(context, food_soul, amount):
         time.sleep(2)
         count_foodsoul = 0
         while int(amount) != count_foodsoul:
-            foodsoul = random.choice(roll2)
+            foodsoul = random.choice(roll3)
             valid = True
             lfoodsoul = foodsoul.lower()
             summoned += [foodsoul, ]
@@ -449,7 +514,7 @@ async def rarity(context, rarity, amount):
         time.sleep(2)
         count_foodsoul = 0
         while int(amount) != count_foodsoul:
-            foodsoul = random.choice(roll2)
+            foodsoul = random.choice(roll3)
             summoned += [foodsoul, ]
             if foodsoul in ur_pool:
                 ur += 1
@@ -839,7 +904,8 @@ def index0entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     esummon_pool.remove("Pineapple Cake")
     esummon_pool.remove("Eggette")
     esummon_pool.remove("Udon")
-    unav_pool += ["Udon", "Pineapple Cake", "Eggette"]
+    esummon_pool.remove("Sweet Tofu")
+    unav_pool += ["Udon", "Pineapple Cake", "Eggette", "Sweet Tofu"]
     for e1 in range(151):
         eroll.remove("Pineapple Cake")
     for e2 in range(150):
@@ -929,6 +995,8 @@ def index2entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     em_pool += ["Strawberry Daifuku", ]
     esummon_pool.remove("Udon")
     unav_pool += ["Udon"]
+    esummon_pool.remove("Sweet Tofu")
+    unav_pool += ["Sweet Tofu"]
     for e1 in range(120):
         eroll += ["Raindrop Cake", ]
     for e2 in range(31):
@@ -957,6 +1025,8 @@ def index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     esummon_pool += ["Bonito Rice", "Milt", ]
     eur_pool += ["Milt", ]
     esr_pool += ["Bonito Rice", ]
+    esummon_pool.remove("Sweet Tofu")
+    unav_pool += ["Sweet Tofu"]
     for e1 in range(48):
         eroll += ["Milt", ]
     for e2 in range(96):
@@ -997,7 +1067,19 @@ def index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     return eroll
 
 def index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    for e1 in range(89):
+        eroll += ["Peking Duck", ]
+    for e2 in range(12):
+        eroll.remove("Crab Long Bao")
+        eroll.remove("Gingerbread")
+    for e3 in range(21):
+        eroll.remove("Foie Gras")
+        eroll.remove("B-52")
+    for e4 in range(23):
+        eroll.remove("Bamboo Rice")
+    return eroll
 
 def index5entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     pass
@@ -1050,6 +1132,9 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
     elif event_index == "3":
         vaalid = True
         eroll = index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "4":
+        vaalid = True
+        eroll = index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -1200,6 +1285,9 @@ async def event2(context, event_index, number):
     elif event_index == "3":
         vaalid = True
         eroll = index3entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "4":
+        vaalid = True
+        eroll = index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         summoned = []
         eachsummoned = []
@@ -1239,7 +1327,7 @@ async def event2(context, event_index, number):
 
 # China server event summoning:
 
-def cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex0entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     ceroll += croll
     ceevent_pool.remove("Raindrop Cake")
     ceevent_pool.remove("Strawberry Daifuku")
@@ -1328,7 +1416,7 @@ def cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Laba Congee", ]
     return ceroll
 
-def cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex1entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Pufferfish")
     cceevent_pool.remove("Bonito Rice")
     cesummon_pool.remove("B-52")
@@ -1445,7 +1533,7 @@ def cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Caviar")
     cceevent_pool.remove("Seaweed Soup")
     ceevent_pool.remove("Toso")
@@ -1570,7 +1658,7 @@ def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Spicy Hot Pot")
     cceevent_pool.remove("Beer")
     cesummon_pool += ["Spicy Hot Pot", "Beer", ]
@@ -1647,7 +1735,7 @@ def cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     ceevent_pool.remove("Raindrop Cake")
     cceevent_pool.remove("Cassata")
     cesummon_pool += ["Raindrop Cake", "Cassta", ]
@@ -1724,7 +1812,7 @@ def cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
     cesummon_pool += ["Cassta", ]
     cesr_pool += ["Cassata", ]
@@ -1797,7 +1885,7 @@ def cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
     cesummon_pool += ["Cassta", ]
     cesr_pool += ["Cassata", ]
@@ -1870,7 +1958,7 @@ def cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
     cesummon_pool += ["Cassta", ]
     cesr_pool += ["Cassata", ]
@@ -1944,7 +2032,7 @@ def cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
-def cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+def cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     ceevent_pool.remove("Toso")
     cceevent_pool.remove("Cassata")
     cesummon_pool += ["Toso", "Cassta", ]
@@ -2043,33 +2131,31 @@ async def event3(context, event_index, mode, foodsoul_or_rarity, amount):
     cceevent_pool = []
     cceevent_pool += cevent_pool
     unav_pool = []
-    if event_index == "0" or event_index == "1":
-        await client.say("Error - Invalid event index - Unavailable in the Chinese server")
-    elif event_index == "2":
+    if event_index == "0":
         vaalid = True
         ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "3":
+    elif event_index == "1":
         vaalid = True
         ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "4":
+    elif event_index == "2":
         vaalid = True
         ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "5":
+    elif event_index == "3":
         vaalid = True
         ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "6":
+    elif event_index == "4":
         vaalid = True
         ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "7":
+    elif event_index == "5":
         vaalid = True
         ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "8":
+    elif event_index == "6":
         vaalid = True
         ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "9":
+    elif event_index == "7":
         vaalid = True
         ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "10":
+    elif event_index == "8":
         vaalid = True
         ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
     if vaalid == True:
@@ -2208,33 +2294,31 @@ async def event4(context, event_index, number):
     cceevent_pool = []
     cceevent_pool += cevent_pool
     unav_pool = []
-    if event_index == "0" or event_index == "1":
-        await client.say("Error - Invalid event index - Unavailable in the Chinese server")
-    elif event_index == "2":
+    if event_index == "0":
         vaalid = True
         ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "3":
+    elif event_index == "1":
         vaalid = True
         ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "4":
+    elif event_index == "2":
         vaalid = True
         ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "5":
+    elif event_index == "3":
         vaalid = True
         ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "6":
+    elif event_index == "4":
         vaalid = True
         ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "7":
+    elif event_index == "5":
         vaalid = True
         ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "8":
+    elif event_index == "6":
         vaalid = True
         ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "9":
+    elif event_index == "7":
         vaalid = True
         ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
-    elif event_index == "10":
+    elif event_index == "8":
         vaalid = True
         ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
     if vaalid == True:
@@ -2281,18 +2365,27 @@ async def eventhelp():
     embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in!\nThe global server has only event index numbers 0 to 2 available while the Chinese sever has 2 to 10 available. Note that 2. Sakura Falls have different rates in the global server and Chinese server\nIn event index number 2 and 3 for the Chinese server, Gyoza, Yunnan Noodles, Udon and B-52 are NOT in the pool during the event. They are added into the pool afterwards.", color = 0x2ecc71)
     embed.add_field(name = "0. Sweet Temptations", value = "Chocolate has been addded to the summoning pool permamently; Gingerbread and Chocolate have an increased summoning rate for a limited time.\nGingerbread: 0.23% > 1.2%\nChocolate: 3.33%, drops to 0.8% after event", inline = False)
     embed.add_field(name = "1. Brewing Fine Wine", value = "Toso and Sweet Tofu have been added to the summoning pool for a limited time.\nToso: 1.5%\nSweet Tofu: 6.61%", inline = False)
-    embed.add_field(name = "2. Sakura Falls (樱落水月)", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
-    embed.add_field(name = "3. Autumn Memories (盛夏沁凉)", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
-    embed.add_field(name = "4. 月华倾泻", value = "Toso, Caviar and Seaweed Soup have been added to the summoning pool for a limited time.\nToso: 0.5%\nCaviar: 0.5%\nSeaweed Soup: 3.41%", inline = False)
-    embed.add_field(name = "5. 冰与火之夏", value = "Spicy Hot Pot and Beer have been added to the summoning pool for a limited time.\nSpicy Hot Pot: 1.2%\nBeer: 3.32%", inline = False)
-    embed.add_field(name = "6. 水映夏花", value = "Cassata and Raindrop Cake have been added to the summoning pool for a limited time.\nCassata: 3.32%\nRaindrop Cake: 1.2%", inline = False)
-    embed.add_field(name = "7. 安夏回忆", value = "Cassata has been added to the summoning pool and Crab Long Bao has an increased summoning rate for a limited time.\nCrab Long Bao: 0.36% > 1.2%\n Cassata: 3.32%", inline = False)
-    embed.add_field(name = "8. 夏季甜点", value = "Cassata has been added to the summoning pool and Double Scoop has an increased summoning rate for a limited time.\nDouble Scoop: 0.05% > 0.3%\n Cassata: 3.32%", inline = False)
-    embed.add_field(name = "9. 绿荫之夏", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% > 1.2%\n Cassata: 3.32%", inline = False)
-    embed.add_field(name = "10. 流浪夏日", value = "Toso and Cassata has been added to summoning pool for a limited time.\nToso: 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "2. Sakura Falls", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
+    embed.add_field(name = "3. Autumn Memories", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
+    embed.add_field(name = "4. Come Have a Chat", value = "Peking Duck has an increased summoning rate for a limited time.\nPeking Duck: 0.61% -> 1.5%", inline = False
     await client.say(embed = embed)
 
-# Non summoning commands:
+@commands.check(restriction)
+@client.command(name = "ceventindex")
+@commands.cooldown(1, 30, commands.BucketType.user)
+async def ceventhelp():
+    embed.add_field(name = "0. 樱落水月 (Sakura Falls)", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
+    embed.add_field(name = "1. 盛夏沁凉 (Autumn Memories)", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
+    embed.add_field(name = "2. 月华倾泻", value = "Toso, Caviar and Seaweed Soup have been added to the summoning pool for a limited time.\nToso: 0.5%\nCaviar: 0.5%\nSeaweed Soup: 3.41%", inline = False)
+    embed.add_field(name = "3. 冰与火之夏", value = "Spicy Hot Pot and Beer have been added to the summoning pool for a limited time.\nSpicy Hot Pot: 1.2%\nBeer: 3.32%", inline = False)
+    embed.add_field(name = "4. 水映夏花", value = "Cassata and Raindrop Cake have been added to the summoning pool for a limited time.\nCassata: 3.32%\nRaindrop Cake: 1.2%", inline = False)
+    embed.add_field(name = "5. 安夏回忆", value = "Cassata has been added to the summoning pool and Crab Long Bao has an increased summoning rate for a limited time.\nCrab Long Bao: 0.36% -> 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "6. 夏季甜点", value = "Cassata has been added to the summoning pool and Double Scoop has an increased summoning rate for a limited time.\nDouble Scoop: 0.05% -> 0.3%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "7. 绿荫之夏", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% -> 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "8. 流浪夏日", value = "Toso and Cassata has been added to summoning pool for a limited time.\nToso: 1.2%\n Cassata: 3.32%", inline = False)
+    await client.say(embed = embed)
+
+# Non-summoning commands:
 
 client.remove_command('help')
 
@@ -2300,14 +2393,15 @@ client.remove_command('help')
 @client.command(name = "help")
 @commands.cooldown(1, 20, commands.BucketType.user)
 async def help():
-    embed = discord.Embed(title = "Foie Gras", description = "Hello. My name is Foie Gras. How may I help you today? I will await your command", color = 0x3498db)
+    embed = discord.Embed(title = "Foie Gras", description = 'Hello. My name is Foie Gras. How may I help you today? I will await your command. My prefix is "f!" or "F!"', color = 0x3498db)
     embed.add_field(name = "f!summon <amount>", value = "Summons a desired amount of food souls", inline = False)
     embed.add_field(name = "f!foodsoul <food_soul> <amount>", value = 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "." instead of spaces. Example, f!foodsoul Bamboo.Rice 2 will summon endlessly until two Bamboo Rice have been summoned.', inline = False)
     embed.add_field(name = "f!rarity <rarity> <amount>", value = "Summons continuously until a specified amount of foods souls with a specified rarity has been summoned.", inline = False)
     embed.add_field(name = "f!csummon <amount>", value = "Summons a desired amount of food souls from the China version.", inline = False)
     embed.add_field(name = "f!cfoodsoul <food_soul> <amount>", value = 'Summons endlessly until a specific food soul of a specified amount has been summoned from the China version. Use "." instead of spaces. Example, f!cfoodsoul Laba.Congee 2 will summon endlessly until two Laba Congee have been summoned.', inline = False)
     embed.add_field(name = "f!crarity", value = 'Summons continuously until a specified amount of foods souls with a specified rarity has been summoned.', inline = False)
-    embed.add_field(name = "f!eventindex", value = "Shows the event index number to key into f!summonevent or f!event", inline = False)
+    embed.add_field(name = "f!eventindex", value = "Shows the event index number to key into f!summonevent or f!event (Global event summoning)", inline = False)
+    embed.add_field(name = "f!ceventindex", value = "Shows the event index number to key into f!csummonevent or f!cevent (China event summoning", inline = False)
     embed.add_field(name = "f!summonevent <event_index> <amount>", value = 'Event summoning! Use f!eventindex to check the event index number. Example, f!summonevent 0 100 will summon 100 times during the "Brewing Fine Wine" event.', inline = False)
     embed.add_field(name = "f!event <event_index> <mode> <foodsoul_or_rarity> <amount>", value = 'Event summoning! You can use "foodsoul" and "rarity" just like the regular f!foodsoul or f!rarity. Use f!eventindex to check the event index. Example, f!event 1 foodsoul sweet.tofu 2 will summon endlessly during the "Brewing Fine Wine" event until it summons 2 Sweet Tofu.', inline = False)
     embed.add_field(name = "f!food <dish>", value = 'Shows the recipe, cuisine, seasoning and type of food. Use "." instead of space.', inline = False)
@@ -2483,30 +2577,30 @@ async def foodinfo(dish):
                 foodstats = ["228", "251", "276", "304", "334", "245", "343", "441", "539", "735", "32", "31", "31", "30", "29", "300", "76"]
                 embed = output2(foodstats, "Curry Crab", 0xf1c40f, "Lost", "Blue Crab (24-6)", "Curry Cube (24-7)", "", "60", "Make 50 A grade dishes", "409", "2400", "227", "964", "Black Pepper", "Scallion", "Aroma")
                 await client.say(embed = embed)
-##            elif ldish == "yam pigeon soup":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-##                embed = output2(foodstats, "Yam Pigeon Soup", , "Lost", "", "", "", "60", "Serve 200 regular customers in your restaurant", "", "", "", "", "Ginger", "Scallion", "Appearence")
-##                await client.say(embed = embed)
-##            elif ldish == "bamboo & meat stir-fry":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-##                embed = output2(foodstats, "Bamboo & Meat Stir-Fry", , "Lost", "", "", "", "63", "Explore Sandstone Cave once", "", "", "", "", "", "Garlic", "Chili", "Flavor")
-##                await client.say(embed = embed)
-##            elif ldish == "braised geese":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-##                embed = output2(foodstats, "Braised Geese", , "Lost", "", "", "", "66", "Defeat 20 Dine and Dash customers in the restaurant", "", "", "", "", "", "Cooking Oil", "Soy Sauce", "Aroma")
-##                await client.say(embed = embed)
-##            elif ldish == "roe meat ball":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-##                embed = output2(foodstats, "Roe Meat Ball", , "Lost", "", "", "", "69", "Collect 50 Crab Roe (those already in inventory are not counted)", "", "", "", "", "Scallion", "Ginger", "Texture")
-##                await client.say(embed = embed)
+            elif ldish == "chinese yam and squab soup":
+                foodstats = ["75", "83", "91", "100", "110", "200", "280", "360", "440", "600", "12", "12", "11", "11", "10", "120", "25"]
+                embed = output2(foodstats, "Chinese Yam and Squab Soup", 0xf1c40f, "Lost", "Squab (25-1)", "Chinese Yam (25-4)", "Goji (25-7)", "60", "Serve 200 regular customers in your restaurant", "768", "410", "422", "2400", "Ginger", "Scallion", "Appearence")
+                await client.say(embed = embed)
+            elif ldish == "bamboo stir-fry":
+                foodstats = ["68", "75", "83", "91", "100", "200", "280", "360", "440", "600", "10", "10", "10", "9", "9", "90", "23"]
+                embed = output2(foodstats, "Bamboo Stir-Fry", 0xffeea9, "Lost", "Potherb Mustard (26-2)", "Bamboo Shoots (26-4)", "Shredded Meat (26-8)", "63", "Explore Sandstone Cave once", "2200", "556", "807", "437", "Garlic", "Chili", "Flavor")
+                await client.say(embed = embed)
+            elif ldish == "orange goose":
+                foodstats = ["57", "63", "69", "76", "84", "200", "280", "360", "440", "600", "7", "7", "7", "6", "6", "60", "19"]
+                embed = output2(foodstats, "Orange Goose", 0x2ecc71, "Lost", "Goose (27-2)", "Orange (27-4)", "Cellophane Noodles (27-8)", "66", "Defeat 20 Dine and Dash customers in the restaurant", "701", "494", "2400", "405", "Cooking Oil", "Soy Sauce", "Aroma")
+                await client.say(embed = embed)
+            elif ldish == "crab roe lion's head":
+                foodstats = ["118", "130", "143", "157", "173", "200", "280", "360", "440", "600", "15", "14", "14", "13", "12", "180", "39"]
+                embed = output2(foodstats, "Crab Roe Lion's Head", 0xffeea9, "Lost", "Crab Roe (28-2)", "Ground Meat (28-5)", "Greens (28-9)", "69", "Collect 50 Crab Roe (those already in inventory are not counted)", "594", "2400", "485", "520", "Scallion", "Ginger", "Texture")
+                await client.say(embed = embed)
 ##            elif ldish == "birds nest":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 ##                embed = output2(foodstats, "Birds Nest", , "Lost", "", "", "", "72", "Cook 30 A grade dishes", "", "", "", "", "Sugar", "Rock Sugar", "Flavor",)
 ##                await client.say(embed = embed)
 ##            elif ldish == "ginseng stew chicken":
-##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+##                foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 ##                embed = output2(foodstats, "Ginseng Chicken Stew", , "Lost", "", "", "", "75", "Challenge Fallen Angel Remains 25-2", "", "", "", "", "Ginger", "Garlic", "Texture")
-##                await client.say(embed = embed)            
+##                await client.say(embed = embed) 
     elif ldish in lfood_pool:
         if ldish == "stir-fried potatoes":
             foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
