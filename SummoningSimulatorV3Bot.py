@@ -2369,7 +2369,7 @@ async def eventhelp():
     embed.add_field(name = "1. Brewing Fine Wine", value = "Toso and Sweet Tofu have been added to the summoning pool for a limited time.\nToso: 1.5%\nSweet Tofu: 6.61%", inline = False)
     embed.add_field(name = "2. Sakura Falls", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
     embed.add_field(name = "3. Autumn Memories", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
-    embed.add_field(name = "4. Come Have a Chat", value = "Peking Duck has an increased summoning rate for a limited time.\nPeking Duck: 0.61% -> 1.5%", inline = False
+    embed.add_field(name = "4. Come Have a Chat", value = "Peking Duck has an increased summoning rate for a limited time.\nPeking Duck: 0.61% -> 1.5%", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
