@@ -2364,7 +2364,7 @@ async def event4(context, event_index, number):
 @client.command(name = "eventindex")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def eventhelp():
-    embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in!\nThe global server has only event index numbers 0 to 2 available while the Chinese sever has 2 to 10 available. Note that 2. Sakura Falls have different rates in the global server and Chinese server\nIn event index number 2 and 3 for the Chinese server, Gyoza, Yunnan Noodles, Udon and B-52 are NOT in the pool during the event. They are added into the pool afterwards.", color = 0x2ecc71)
+    embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in! Remember that this is for events in the global server.", color = 0x2ecc71)
     embed.add_field(name = "0. Sweet Temptations", value = "Chocolate has been addded to the summoning pool permamently; Gingerbread and Chocolate have an increased summoning rate for a limited time.\nGingerbread: 0.23% > 1.2%\nChocolate: 3.33%, drops to 0.8% after event", inline = False)
     embed.add_field(name = "1. Brewing Fine Wine", value = "Toso and Sweet Tofu have been added to the summoning pool for a limited time.\nToso: 1.5%\nSweet Tofu: 6.61%", inline = False)
     embed.add_field(name = "2. Sakura Falls", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
@@ -2376,6 +2376,7 @@ async def eventhelp():
 @client.command(name = "ceventindex")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def ceventhelp():
+    embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in! Remember that this is for events in the Chinese server.", color = 0x2ecc71)
     embed.add_field(name = "0. 樱落水月 (Sakura Falls)", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
     embed.add_field(name = "1. 盛夏沁凉 (Autumn Memories)", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
     embed.add_field(name = "2. 月华倾泻", value = "Toso, Caviar and Seaweed Soup have been added to the summoning pool for a limited time.\nToso: 0.5%\nCaviar: 0.5%\nSeaweed Soup: 3.41%", inline = False)
