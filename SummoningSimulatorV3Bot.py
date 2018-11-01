@@ -546,120 +546,77 @@ async def rarity(context, rarity, amount):
 csummon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Sweet Tofu", "Laba Congee", "Yunnan Noodles", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Cold Rice Shrimp", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 cur_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop"]
 csr_pool = ["Sweet Tofu", "Laba Congee", "Yunnan Noodles", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
-cr_pool = ["Cold Rice Shrimp", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
+cr_pool = ["Eclair Puff", "Cold Rice Shrimp", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 cm_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 rarity_pool = ["M", "R", "SR", "UR"]
 croll = []
-for cu1 in range(36):
+for cu1 in range(24):
     croll += ["Crab Long Bao", ]
-for cu2 in range(57):
+for cu2 in range(61):
     croll += ["Foie Gras", ]
-for cu3 in range(61):
     croll += ["Peking Duck", ]
-for cu4 in range(61):
     croll += ["B-52", ]
-for cu5 in range(52):
     croll += ["Bamboo Rice", ]
-for cu6 in range(25):
+for cu3 in range(23):
     croll += ["Gingerbread", ]
-for cu7 in range(4):
+for cu4 in range(5):
     croll += ["Boston Lobster", ]
-for cu8 in range(5):
     croll += ["Double Scoop", ]
-for cs1 in range(60):
-    croll += ["Tiramisu", ]
-for cs2 in range(65):
-    croll += ["Escargot", ]
-for cs3 in range(63):
-    croll += ["Hotdog", ]
-for cs4 in range(61):
-    croll += ["Mango Pudding", ]
-for cs5 in range(60):
-    croll += ["Hamburger", ]
-for cs6 in range(61):
-    croll += ["Steak", ]
-for cs7 in range(62):
-    croll += ["Tangyuan", ]
-for cs8 in range(61):
-    croll += ["Sanma", ]
-for cs9 in range(62):
-    croll += ["Napoleon Cake", ]
-for cs10 in range(62):
-    croll += ["Salad", ]
-for cs11 in range(60):
-    croll += ["Pastel de nata", ]
-for cs12 in range(63):
-    croll += ["Yuxiang", ]
-for cs13 in range(60):
-    croll += ["Sukiyaki", ]
-for cs14 in range(61):
-    croll += ["Brownie", ]
-for cs15 in range(58):
-    croll += ["Red Wine", ]
-for cs16 in range(60):
-    croll += ["Gyoza", ]
-for cs17 in range(58):
+for cs1 in range(63):
     croll += ["Chocolate", ]
-for cs18 in range(155):
-    croll += ["Eggette", ]
-for cs19 in range(141):
-    croll += ["Pineapple Cake", ]
-for cs20 in range(150):
-    croll += ["Laba Congee", ]
-for cs21 in range(61):
-    croll += ["Yunnan Noodles", ]
-for cs22 in range(61):
-    croll += ["Udon", ]
-for cs23 in range(56):
-    croll += ["Sweet Tofu", ]
-for cr1 in range(400):
-    croll += ["Long Bao", ]
-for cr2 in range(398):
-    croll += ["Coffee", ]
-for cr3 in range(388):
-    croll += ["Sashimi", ]
-for cr4 in range(388):
-    croll += ["Macaron", ]
-for cr5 in range(394):
-    croll += ["Zongzi", ]
-for cr6 in range(394):
+    croll += ["Brownie"]
+    croll += ["Sukiyaki"]
+    croll += ["Yunnan Noodles"]
+for cs2 in range(62):
+    croll += ["Gyoza"]
+    croll += ["Udon"]
+    croll += ["Tiramisu"]
+    croll += ["Yuxiang"]
+    croll += ["Sweet Tofu"]
+    croll += ["Pastel de nata"]
+    croll += ["Red Wine"]
+    croll += ["Salad"]
+    croll += ["Napoleon Cake"]
+    croll += ["Sanma"]
+    croll += ["Tangyuan"]
+    croll += ["Steak"]
+    croll += ["Hamburger"]
+    croll += ["Mango Pudding"]
+    croll += ["Hotdog"]
+    croll += ["Escargot"]
+for cs3 in range(139):
+    croll += ["Laba Congee"]
+    croll += ["Pineapple Cake"]
+    croll += ["Eggette"]
+for cr1 in range(374):
     croll += ["Sakuramochi", ]
-for cr7 in range(394):
-    croll += ["Tom Yum", ]
-for cr8 in range(394):
-    croll += ["Taiyaki", ]
-for cr9 in range(388):
-    croll += ["Milk", ]
-for cr10 in range(390):
-    croll += ["Dorayaki", ]
-for cr11 in range(389):
-    croll += ["Sake", ]
-for cr12 in range(399):
-    croll += ["Tempura", ]
-for cr13 in range(388):
+    croll += ["Zongzi",]
     croll += ["Spicy Gluten", ]
-for cr14 in range(400):
-    croll += ["Jiuniang", ]
-for cr15 in range(401):
-    croll += ["Omurice", ]
-for cr16 in range(381):
-    croll += ["Orange Juice", ]
-for cr17 in range(390):
-    croll += ["Ume Ochazuke" ,]
-for cr18 in range(388):
-    croll += ["Miso Soup" ,]
-for cr19 in range(394):
-    croll += ["Yellow Wine", ]
-for cr20 in range(396):
+    croll += ["Tempura", ]
+    croll += ["Sake", ]
+    croll += ["Dorayaki", ]
+    croll += ["Milk", ]
+    croll += ["Taiyaki", ]
+    croll += ["Tom Yum", ]
+    croll += ["Macaron", ]
+    croll += ["Sashimi", ]
+    croll += ["Coffee", ]
     croll += ["Cold Rice Shrimp", ]
-for cm1 in range(46):
-    croll += ["Skewer", ]
-for cm2 in range(46):
-    croll += ["Jello", ]
-for cm3 in range(49):
+    croll += ["Yellow Wine", ]
+    croll += ["Miso Soup", ]
+    croll += ["Orange Juice", ]
+    croll += ["Omurice", ]
+    croll += ["Jiuniang", ]
+    croll += ["Ume Ochazuke", ]
+    croll += ["Eclair Puff", ]
+for cr2 in range(373):
+    croll += ["Long Bao", ]
+for cm1 in range(47):
     croll += ["Pancake", ]
-for cm4 in range(44):
+for cm2 in range(46):
     croll += ["Popcorn", ]
+    croll += ["Jello", ]
+    croll += ["Skewer", ]
 lcsummon_pool = [items.lower() for items in csummon_pool]
 
 def output3(summoned, valid, ur, sr, r, m, number, context):
@@ -1084,13 +1041,135 @@ def index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     return eroll
 
 def index5entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    eevent_pool.remove("Cassata")
+    esummon_pool += ["Cassata", ]
+    esr_pool += ["Cassata", ]
+    for e1 in range(59):
+        eroll += ["B-52", ]
+    eroll.remove("Gingerbread")
+    for e2 in range(9):
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+    for e3 in range(10):
+        eroll.remove("Bamboo Rice")
+    for e4 in range(332):
+        eroll += ["Cassata", ]
+    for e5 in range(15):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de Nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+    for e6 in range(24):
+        eroll.remove("Pineapple Cake")
+    for e7 in range(23):
+        eroll.remove("Eggette")
+    return eroll
 
 def index6entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    eevent_pool.remove("Cassata")
+    esummon_pool += ["Cassata", ]
+    esr_pool += ["Cassata", ]
+    for e1 in range(97):
+        eroll += ["Crab Long Bao", ]
+    for e2 in range(4):
+        eroll.remove("Gingerbread")
+    for e3 in range(23):
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+        eroll.remove("B-52")
+    for e4 in range(24):
+        eroll.remove("Bamboo Rice")
+    for e5 in range(332):
+        eroll += ["Cassata", ]
+    for e6 in range(15):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de Nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+    for e7 in range(24):
+        eroll.remove("Pineapple Cake")
+    for e8 in range(23):
+        eroll.remove("Eggette")
+    return eroll
 
 def index7entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    eevent_pool.remove("Cassata")
+    esummon_pool += ["Cassata", ]
+    esr_pool += ["Cassata", ]
+    for e1 in range(25):
+        eroll += ["Double Scoop", ]
+    for e2 in range(2):
+        eroll.remove("Gingerbread")
+        eroll.remove("Crab Long Bao")
+    for e3 in range(5):
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+        eroll.remove("B-52")
+    for e4 in range(6):
+        eroll.remove("Bamboo Rice")
+    for e5 in range(332):
+        eroll += ["Cassata", ]
+    for e6 in range(15):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de Nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+    for e7 in range(24):
+        eroll.remove("Pineapple Cake")
+    for e8 in range(23):
+        eroll.remove("Eggette")
+    return eroll
 
 def index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     pass
@@ -1342,9 +1421,11 @@ def cindex0entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     cesr_pool.remove("Yunnan Noodles")
     cesummon_pool.remove("Gyoza")
     cesr_pool.remove("Gyoza")
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
     ceur_pool += ["Raindrop Cake", ]
     cem_pool += ["Strawberry Daifuku", ]
-    unav_pool += ["B-52", "Yunnan Noodles", "Udon", "Gyoza", ]
+    unav_pool += ["B-52", "Yunnan Noodles", "Udon", "Gyoza", "Eclair Puff"]
     ceroll += ["Boston Lobster", ]
     for ce1 in range(120):
         ceroll += ["Raindrop Cake", ]
@@ -1429,10 +1510,12 @@ def cindex1entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     cesr_pool.remove("Yunnan Noodles")
     cesummon_pool.remove("Gyoza")
     cesr_pool.remove("Gyoza")
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
     cesummon_pool += ["Pufferfish", "Bonito Rice", ]
     ceur_pool += ["Pufferfish", ]
     cesr_pool += ["Bonito Rice", ]
-    unav_pool += ["B-52", "Udon", "Yunnan Noodles", "Gyoza", ]
+    unav_pool += ["B-52", "Udon", "Yunnan Noodles", "Gyoza", "Eclair Puff"]
     for ce1 in range(48):
         ceroll += ["Pufferfish", ]
     for ce2 in range(4):
@@ -1542,6 +1625,9 @@ def cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     cesummon_pool += ["Caviar", "Toso", "Seaweed Soup", ]
     ceur_pool += ["Caviar", "Toso", ]
     cesr_pool += ["Seaweed Soup", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(50):
         ceroll += ["Caviar", ]
     for ce2 in range(50):
@@ -1666,6 +1752,9 @@ def cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     cesummon_pool += ["Spicy Hot Pot", "Beer", ]
     ceur_pool += ["Spicy Hot Pot", ]
     cesr_pool += ["Beer", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(120):
         ceroll += ["Spicy Hot Pot", ]
     for ce2 in range(5):
@@ -1743,6 +1832,9 @@ def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
     cesummon_pool += ["Raindrop Cake", "Cassta", ]
     ceur_pool += ["Raindrop Cake", ]
     cesr_pool += ["Cassata", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(120):
         ceroll += ["Raindrop Cake", ]
     for ce2 in range(5):
@@ -1816,8 +1908,11 @@ def cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
 
 def cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
-    cesummon_pool += ["Cassta", ]
+    cesummon_pool += ["Cassata", ]
     cesr_pool += ["Cassata", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(5):
         ceroll += ["Boston Lobster", ]
         ceroll += ["Double Scoop", ]
@@ -1889,8 +1984,11 @@ def cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
 
 def cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
-    cesummon_pool += ["Cassta", ]
+    cesummon_pool += ["Cassata", ]
     cesr_pool += ["Cassata", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(30):
         ceroll += ["Double Scoop", ]
     for ce2 in range(5):
@@ -1962,8 +2060,11 @@ def cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
 
 def cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     cceevent_pool.remove("Cassata")
-    cesummon_pool += ["Cassta", ]
+    cesummon_pool += ["Cassata", ]
     cesr_pool += ["Cassata", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(120):
         ceroll += ["Bamboo Rice", ]
     for ce2 in range(5):
@@ -2037,9 +2138,12 @@ def cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
 def cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
     ceevent_pool.remove("Toso")
     cceevent_pool.remove("Cassata")
-    cesummon_pool += ["Toso", "Cassta", ]
+    cesummon_pool += ["Toso", "Cassata", ]
     ceur_pool += ["Toso", ]
     cesr_pool += ["Cassata", ]
+    cesummon_pool.remove("Eclair Puff")
+    cer_pool.remove("Eclair Puff")
+    unav_pool += ["Eclair Puff"]
     for ce1 in range(120):
         ceroll += ["Toso", ]
     for ce2 in range(5):
@@ -2111,6 +2215,84 @@ def cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, 
         ceroll += ["Skewer", ]
     return ceroll
 
+def cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool):
+    ceevent_pool.remove("Huangshen Maofeng")
+    cceevent_pool.remove("Osmanthus Cake")
+    cesummon_pool += ["Huangshen Maofeng", "Osmanthus Cake", ]
+    ceur_pool += ["Huangshen Maofeng", ]
+    cesr_pool += ["Osmanthus Cake", ]
+    for ce1 in range(120):
+        ceroll += ["Huangshen Maofeng", ]
+    for ce2 in range(5):
+        ceroll += ["Boston Lobster", ]
+        ceroll += ["Double Scoop", ]
+    for ce3 in range(36):
+        ceroll += ["Bamboo Rice", ]
+        ceroll += ["B-52", ]
+        ceroll += ["Peking Duck", ]
+        ceroll += ["Foie Gras", ]
+    for ce4 in range(13):
+        ceroll += ["Gingerbread", ]
+    for ce5 in range(14):
+        ceroll += ["Crab Long Bao", ]
+    for ce6 in range(334):
+        ceroll += ["Osmanthus Cake", ]
+    for ce7 in range(50):
+        ceroll += ["Chocolate", ]
+        ceroll += ["Brownie", ]
+        ceroll += ["Sukiyaki" ,]
+        ceroll += ["Udon", ]
+        ceroll += ["Yunnan Noodles", ]
+        ceroll += ["Gyoza", ]
+        ceroll += ["Tiramisu", ]
+        ceroll += ["Yuxiang", ]
+        ceroll += ["Sweet Tofu", ]
+        ceroll += ["Pastel de nata"]
+        ceroll += ["Red Wine", ]
+        ceroll += ["Salad", ]
+        ceroll += ["Napoleon Cake", ]
+        ceroll += ["Sanma", ]
+        ceroll += ["Tangyuan", ]
+        ceroll += ["Steak", ]
+        ceroll += ["Hamburger", ]
+        ceroll += ["Mango Pudding", ]
+        ceroll += ["Hotdog", ]
+        ceroll += ["Escargot", ]
+    for ce8 in range(109):
+        ceroll += ["Laba Congee", ]
+        ceroll += ["Pineapple Cake", ]
+        ceroll += ["Eggette", ]
+    for ce9 in range(374):
+        ceroll += ["Sakuramochi", ]
+        ceroll += ["Zongzi",]
+        ceroll += ["Spicy Gluten", ]
+        ceroll += ["Tempura", ]
+        ceroll += ["Sake", ]
+        ceroll += ["Dorayaki", ]
+        ceroll += ["Milk", ]
+        ceroll += ["Taiyaki", ]
+        ceroll += ["Tom Yum", ]
+        ceroll += ["Macaron", ]
+        ceroll += ["Sashimi", ]
+        ceroll += ["Coffee", ]
+        ceroll += ["Cold Rice Shrimp", ]
+        ceroll += ["Yellow Wine", ]
+        ceroll += ["Miso Soup", ]
+        ceroll += ["Orange Juice", ]
+        ceroll += ["Omurice", ]
+        ceroll += ["Jiuniang", ]
+        ceroll += ["Ume Ochazuke", ]
+        ceroll += ["Eclair Puff", ]
+    for ce10 in range(373):
+        ceroll += ["Long Bao", ]
+    for ce11 in range(47):
+        ceroll += ["Pancake", ]
+    for ce12 in range(46):
+        ceroll += ["Popcorn", ]
+        ceroll += ["Jello", ]
+        ceroll += ["Skewer", ]
+    return ceroll
+
 @commands.check(restriction)
 @client.command(name = "cevent",
                 pass_context = True)
@@ -2135,31 +2317,34 @@ async def event3(context, event_index, mode, foodsoul_or_rarity, amount):
     unav_pool = []
     if event_index == "0":
         vaalid = True
-        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex0entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "1":
         vaalid = True
-        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex1entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "2":
         vaalid = True
-        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "3":
         vaalid = True
-        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "4":
         vaalid = True
-        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "5":
         vaalid = True
-        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "6":
         vaalid = True
-        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "7":
         vaalid = True
-        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "8":
         vaalid = True
-        ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
+        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+    elif event_index == "9":
+        vaalid = True
+        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -2298,31 +2483,34 @@ async def event4(context, event_index, number):
     unav_pool = []
     if event_index == "0":
         vaalid = True
-        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex0entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "1":
         vaalid = True
-        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex1entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "2":
         vaalid = True
-        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex2entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "3":
         vaalid = True
-        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex3entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "4":
         vaalid = True
-        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex4entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "5":
         vaalid = True
-        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex5entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "6":
         vaalid = True
-        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex6entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "7":
         vaalid = True
-        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+        ceroll = cindex7entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     elif event_index == "8":
         vaalid = True
-        ceroll = cindex10entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)    
+        ceroll = cindex8entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
+    elif event_index == "9":
+        vaalid = True
+        ceroll = cindex9entry(ceroll, ceevent_pool, cceevent_pool, cesummon_pool, ceur_pool, cesr_pool, cer_pool, cem_pool, unav_pool)
     if vaalid == True:
         summoned = []
         eachsummoned = []
@@ -2370,6 +2558,11 @@ async def eventhelp():
     embed.add_field(name = "2. Sakura Falls", value = "Strawberry Daifuku and Raindrop Cake have been added to the summoning pool for a limited time.\nStrawberry Daifuku: 1.2%\nRaindrop Cake: 0.31%", inline = False)
     embed.add_field(name = "3. Autumn Memories", value = "Milt and Bonito Rice have been added to the summoning pool for a limited time.\nMilt: 0.48%\nBonito Rice: 0.96%", inline = False)
     embed.add_field(name = "4. Come Have a Chat", value = "Peking Duck has an increased summoning rate for a limited time.\nPeking Duck: 0.61% -> 1.5%", inline = False)
+    embed.add_field(name = "5. Amusement Park Sign Up! I", value = "Cassata has been added to the summoning pool and B-52 has an increased summoning rate for a limited time.\nCassata: 3.32%\nB-52: 1.2%", inline = False)
+    embed.add_field(name = "6. Amusement Park Sign Up! II", value = "Cassata has been added to the summoning pool and Crab Long Bao has an increased summoning rate for a limited time.\nCrab Long Bao: 0.36% -> 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "7. Amusement Park Sign Up! III", value = "Cassata has been added to the summoning pool and Double Scoop has an increased summoning rate for a limited time.\nDouble Scoop: 0.05% -> 0.3%\n Cassata: 3.32%", inline = False)
+##    embed.add_field(name = "8. Amusement Park Sign Up! IV", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% -> 1.2%\n Cassata: 3.32%", inline = False)
+##    embed.add_field(name = "9. Amusement Park Sign Up! V", value = "Toso and Cassata has been added to the summoning pool for a limited time.\nToso: 1.2%\nCassata: 3.32%", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
@@ -2385,7 +2578,8 @@ async def ceventhelp():
     embed.add_field(name = "5. 安夏回忆", value = "Cassata has been added to the summoning pool and Crab Long Bao has an increased summoning rate for a limited time.\nCrab Long Bao: 0.36% -> 1.2%\n Cassata: 3.32%", inline = False)
     embed.add_field(name = "6. 夏季甜点", value = "Cassata has been added to the summoning pool and Double Scoop has an increased summoning rate for a limited time.\nDouble Scoop: 0.05% -> 0.3%\n Cassata: 3.32%", inline = False)
     embed.add_field(name = "7. 绿荫之夏", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% -> 1.2%\n Cassata: 3.32%", inline = False)
-    embed.add_field(name = "8. 流浪夏日", value = "Toso and Cassata has been added to summoning pool for a limited time.\nToso: 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "8. 流浪夏日", value = "Toso and Cassata has been added to the summoning pool for a limited time.\nToso: 1.2%\nCassata: 3.32%", inline = False)
+    embed.add_field(name = "9. 月笼纱", value = "Huangshan Maofeng and Osmanthus Cake has been added to the summoning pool for a limited time.\nHuangshan Maofeng: 1.2%\nOsmanthus Cake: 3.34%", inline = False)
     await client.say(embed = embed)
 
 # Non-summoning commands:
@@ -2411,7 +2605,18 @@ async def help():
     embed.add_field(name = "f!soulinfo <food_soul>", value = 'Shows the information about a food soul. Use "." instead of space.\nNOTE: This feature is UNRELEASED.', inline = False)
     embed.add_field(name = "f!info", value = "Gives a paragraph of information about Foie Gras", inline = False)
     embed.add_field(name = "f!dialogue", value = "Words of wisdom from Foie Gras.", inline = False)
+    embed.add_field(name = "f!update", value = "Checks the latest version of the bot and most recent updates", inline = False)
     embed.add_field(name = "f!credit", value = "Reveals the people behind the bot.", inline = False)
+    await client.say(embed = embed)
+
+@commands.check(restriction)
+@client.command(name = "update")
+@commands.cooldown(1, 30, commands.BucketType.user)
+async def update():
+    embed = discord.Embed(title = "Bot Update (v0.8)", color = 0x3498db)
+    embed.add_field(name = "Added global summoning event: Park Sign Up! I, II and III", description = "Use f!eventindex to check the event index number of the new events!", inline = False)
+    embed.add_field(name = "Added Chinese summoning event: 月笼纱", description = "You can now summon Huangshen Maofeng and Osmanthus Cake using f!cevent or f!csummonevent. Check f!ceventindex for the event index number.", inline = False)
+    embed.add_field(name = "Updated the Chinese normal summoning", description = "Eclair Puff has been permanently added into the normal summoning pool", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
