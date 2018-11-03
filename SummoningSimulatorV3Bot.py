@@ -2613,10 +2613,11 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    embed = discord.Embed(title = "Bot Update (v0.8)", color = 0x3498db)
+    embed = discord.Embed(title = "Bot Update (v0.81)", color = 0x3498db)
     embed.add_field(name = "Added global summoning event: Park Sign Up! I, II and III", value = "Use f!eventindex to check the event index number of the new events!", inline = False)
     embed.add_field(name = "Added Chinese summoning event: 月笼纱", value = "You can now summon Huangshen Maofeng and Osmanthus Cake using f!cevent or f!csummonevent. Check f!ceventindex for the event index number.", inline = False)
     embed.add_field(name = "Updated the Chinese normal summoning", value = "Eclair Puff has been permanently added into the normal summoning pool", inline = False)
+    embed.add_field(name = "Typo error", value = "Fixed a bug on not being able to check the food info for Braised Lamb", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
@@ -2729,7 +2730,7 @@ async def foodinfo(dish):
                 foodstats = ["126", "139", "153", "168", "185", "145", "203", "261", "319", "435", "18", "17", "17", "16", "15", "210", "41"]
                 embed = output2(foodstats, "Apple Sangria", 0xe74c3c, "Lost", "Apple (15-1)", "Red Wine (15-6)", "", "36", "Collect and submit 10 Spinach", "578", "515", "898", "2000", "Icing", "Rock Sugar", "Appearence")
                 await client.say(embed = embed)
-            elif ldish == "brasied lamb":
+            elif ldish == "braised lamb":
                 foodstats = ["126", "139", "153", "168", "185", "245", "343", "441", "539", "735", "18", "17", "17", "16", "15", "210", "42"]
                 embed = output2(foodstats, "Braised Lamb", 0xe74c3c, "Lost", "Red Wine (15-6)", "Lamb Leg (15-9)", "", "38", "Bring a Control talent into battle", "397", "2200", "808", "595", "Sugar", "Garlic", "Aroma")
                 await client.say(embed = embed)
