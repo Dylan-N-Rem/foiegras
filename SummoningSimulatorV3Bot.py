@@ -2745,11 +2745,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    embed = discord.Embed(title = "Bot Update (v0.81)", color = 0x3498db)
-    embed.add_field(name = "Added global summoning event: Park Sign Up! I, II and III", value = "Use f!eventindex to check the event index number of the new events!", inline = False)
-    embed.add_field(name = "Added Chinese summoning event: 月笼纱", value = "You can now summon Huangshen Maofeng and Osmanthus Cake using f!cevent or f!csummonevent. Check f!ceventindex for the event index number.", inline = False)
-    embed.add_field(name = "Updated the Chinese normal summoning", value = "Eclair Puff has been permanently added into the normal summoning pool", inline = False)
-    embed.add_field(name = "Typo error", value = "Fixed a bug on not being able to check the food info for Braised Lamb", inline = False)
+    embed = discord.Embed(title = "Bot Update (v0.82)", color = 0x3498db)
+    embed.add_field(name = "Added global summoning event: Park Sign Up! IV and V", value = "Use f!eventindex to check the event index number of the new events!", inline = False)
+    embed.add_field(name = "Added global summoning event: Candy Strike!", value = "Use f!eventindex to check the event index number of the new events!", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
