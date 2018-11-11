@@ -1172,13 +1172,108 @@ def index7entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
     return eroll
 
 def index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    eevent_pool.remove("Cassata")
+    esummon_pool += ["Cassata", ]
+    esr_pool += ["Cassata", ]
+    for e1 in range(58):
+        eroll += ["Bamboo Rice", ]
+    for e2 in range(19):
+        eroll.remove("B-52")
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+    eroll.remove("Gingerbread")
+    for e3 in range(332):
+        eroll += ["Cassata", ]
+    for e4 in range(15):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de Nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+    for e5 in range(24):
+        eroll.remove("Pineapple Cake")
+    for e6 in range(23):
+        eroll.remove("Eggette")
+    return eroll
 
 def index9entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    eroll = []
+    eroll += roll3
+    eevent_pool.remove("Cassata")
+    eevent_pool.remove("Toso")
+    esummon_pool += ["Toso", ]
+    esummon_pool += ["Cassata", ]
+    eur_pool += ["Toso", ]
+    esr_pool += ["Cassata", ]
+    for e1 in range(120):
+        eroll += ["Toso", ]
+    for e2 in range(5):
+        eroll.remove("Crab Long Bao")
+    for e3 in range(6):
+        eroll.remove("Gingerbread")
+    for e4 in range(27):
+        eroll.remove("B-52")
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+    for e5 in range(28):
+        eroll.removve("Bamboo Rice")
+    for e6 in range(332):
+        eroll += ["Cassata", ]
+    for e7 in range(15):
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de Nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+    for e8 in range(24):
+        eroll.remove("Pineapple Cake")
+    for e9 in range(23):
+        eroll.remove("Eggette")
+    return eroll
 
 def index10entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    pass
+    for e1 in range(127):
+        eroll += ["Gingerbread", ]
+    for e2 in range(28):
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+    for e3 in range(29):
+        eroll.remove("B-52")
+    for e4 in range(30):
+        eroll.remove("Bamboo Rice")
+    for e5 in range(12):
+        eroll.remove("Crab Long Bao")
+    return eroll
 
 @commands.check(restriction)
 @client.command(name = "event",
@@ -1204,7 +1299,7 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
     if event_index == "0":
         vaalid = True
         eroll = index0entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
-    if event_index == "1":
+    elif event_index == "1":
         vaalid = True
         eroll = index1entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "2":
@@ -1216,6 +1311,24 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
     elif event_index == "4":
         vaalid = True
         eroll = index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "5":
+        vaalid = True
+        eroll = index5entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "6":
+        vaalid = True
+        eroll = index6entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "7":
+        vaalid = True
+        eroll = index7entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "6":
+        vaalid = True
+        eroll = index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "9":
+        vaalid = True
+        eroll = index9entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "10":
+        vaalid = True
+        eroll = index10entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -1369,6 +1482,24 @@ async def event2(context, event_index, number):
     elif event_index == "4":
         vaalid = True
         eroll = index4entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "5":
+        vaalid = True
+        eroll = index5entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "6":
+        vaalid = True
+        eroll = index6entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "7":
+        vaalid = True
+        eroll = index7entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "6":
+        vaalid = True
+        eroll = index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "9":
+        vaalid = True
+        eroll = index9entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "10":
+        vaalid = True
+        eroll = index10entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     if vaalid == True:
         summoned = []
         eachsummoned = []
@@ -2561,8 +2692,9 @@ async def eventhelp():
     embed.add_field(name = "5. Amusement Park Sign Up! I", value = "Cassata has been added to the summoning pool and B-52 has an increased summoning rate for a limited time.\nCassata: 3.32%\nB-52: 1.2%", inline = False)
     embed.add_field(name = "6. Amusement Park Sign Up! II", value = "Cassata has been added to the summoning pool and Crab Long Bao has an increased summoning rate for a limited time.\nCrab Long Bao: 0.36% -> 1.2%\n Cassata: 3.32%", inline = False)
     embed.add_field(name = "7. Amusement Park Sign Up! III", value = "Cassata has been added to the summoning pool and Double Scoop has an increased summoning rate for a limited time.\nDouble Scoop: 0.05% -> 0.3%\n Cassata: 3.32%", inline = False)
-##    embed.add_field(name = "8. Amusement Park Sign Up! IV", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% -> 1.2%\n Cassata: 3.32%", inline = False)
-##    embed.add_field(name = "9. Amusement Park Sign Up! V", value = "Toso and Cassata has been added to the summoning pool for a limited time.\nToso: 1.2%\nCassata: 3.32%", inline = False)
+    embed.add_field(name = "8. Amusement Park Sign Up! IV", value = "Cassata has been added to the summoning pool and Bamboo Rice has an increased summoning rate for a limited time.\nBamboo Rice: 0.52% -> 1.2%\n Cassata: 3.32%", inline = False)
+    embed.add_field(name = "9. Amusement Park Sign Up! V", value = "Toso and Cassata has been added to the summoning pool for a limited time.\nToso: 1.2%\nCassata: 3.32%", inline = False)
+    embed.add_field(name = "10. Candy Strike!", value = "Gingeerbread has an increased summoning rate for a limited time.\nGingerbread: 0.23%% -> 1.5%", inline = False)
     await client.say(embed = embed)
 
 @commands.check(restriction)
