@@ -15,11 +15,12 @@ client = Bot(command_prefix = prefix)
 
 # Global server summoning:
 
-summon_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop", "Sweet Tofu", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake", "Skewer", "Jello", "Pancake", "Popcorn", "Cold Rice Shrimp", "Long Bao", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
+summon_pool = []
 ur_pool = ["Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop"]
 sr_pool = ["Milk Tea", "Yunnan Noodles", "Laba Congee", "Sweet Tofu", "Udon", "Tiraumisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
 r_pool = ["Cold Rice Shrimp", "Long Bao", "Cold Rice Shrimp", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
+summon_pool += ur_pool + sr_pool + r_pool + m_pool
 none_pool = ["Cloud Tea", "Canele", "Pizza", "Apple Pie", "Black Tea", "Mooncake", "Salty Tofu", "Spaghetti", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Cola", "Plum Juice", "Crepe", "Cheese", "Toast"]
 event_pool = ["Toso", "Raindrop Cake", "Strawberry Daifuku", "Bonito Rice", "Milt", "Cassata", "Caviar", "Seaweed Soup", "Sichuan Hotpot", "Beer"]
 unre_pool = ["Eclair Puff"]
@@ -565,6 +566,50 @@ def output2(foodstats, dishname, colour, cuisine, ingredient1, ingredient2, ingr
     foodoutput.add_field(name = "Meal Time", value = foodstats[15] + " seconds", inline = False)
     foodoutput.add_field(name = "Cost Per Dish", value = foodstats[16] + " Gold", inline = False)
     return foodoutput
+
+def output3(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool):
+    eachsummoned = set(summoned) & set(esummon_pool)
+    eachsummoned = list(eachsummoned)
+    ursummoned = set(eachsummoned) & set(eur_pool)
+    ursummoned = list(ursummoned)
+    ursummoned.sort()
+    srsummoned = set(eachsummoned) & set(esr_pool)
+    srsummoned = list(srsummoned)
+    srsummoned.sort()
+    rsummoned = set(eachsummoned) & set(er_pool)
+    rsummoned = list(rsummoned)
+    rsummoned.sort()
+    msummoned = set(eachsummoned) & set(em_pool)
+    msummoned = list(msummoned)
+    msummoned.sort()
+    if valid == True:
+        urline = ""
+        srline = ""
+        rline = ""
+        mline = ""
+        if ur >= 1:
+            urline1 = "**\nURs summoned:**"
+            urline2 = '\nYou summoned ' + '*, '.join([ str(summoned.count(uc)) + ' *' + str(uc) for uc in ursummoned ]) + '*.'
+            urline += urline1 + urline2
+        if sr >= 1:
+            srline1 = "**\nSRs summoned:**"
+            srline2 = '\nYou summoned ' + '*, '.join([ str(summoned.count(sc)) + ' *' + str(sc) for sc in srsummoned ]) + '*.'
+            srline += srline1 + srline2
+        if r >= 1:
+            rline1 = "**\nRs summoned:**"
+            rline2 = '\nYou summoned ' + '*, '.join([ str(summoned.count(rc)) + ' *' + str(rc) for rc in rsummoned ]) + '*.'
+            rline += rline1 + rline2
+        if m >= 1:
+            mline1 = "**\nMs summoned:**"
+            mline2 = '\nYou summoned ' + '*, '.join([ str(summoned.count(mc)) + ' *' + str(mc) for mc in msummoned ]) + '*.'
+            mline += mline1 + mline2
+        stats = "\nStatistics\n---------------------"
+        stats2 = "\nYou summoned " + str(ur) + " URs in total, that is " + str(round((ur/number)*100, 2)) + "% of summons."
+        stats3 = "\nYou summoned " + str(sr) + " SRs in total, that is " + str(round((sr/number)*100, 2)) + "% of summons."
+        stats4 = "\nYou summoned " + str(r) + " Rs in total, that is " + str(round((r/number)*100, 2)) + "% of summons."
+        stats5 = "\nYou summoned " + str(m) + " Ms in total, that is " + str(round((m/number)*100, 2)) + "% of summons."
+        stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*150) + " Soul Embers or " + str(number*100) + " Crystals."
+        return "Summoning results of {}:".format(context.message.author.mention) + urline + srline + rline + mline + stats + stats2 + stats3 + stats4 + stats5 + stats6
 
 @client.command(name = "channel",
                 pass_context = True)
