@@ -1015,7 +1015,7 @@ def index5entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1063,7 +1063,7 @@ def index6entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1112,7 +1112,7 @@ def index7entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1157,7 +1157,7 @@ def index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1210,7 +1210,7 @@ def index9entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, e
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1284,7 +1284,7 @@ def index11entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, 
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1333,7 +1333,7 @@ def index12entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, 
         eroll.remove("Sanma")
         eroll.remove("Napoleon Cake")
         eroll.remove("Salad")
-        eroll.remove("Pastel de Nata")
+        eroll.remove("Pastel de nata")
         eroll.remove("Yuxiang")
         eroll.remove("Sukiyaki")
         eroll.remove("Brownie")
@@ -1458,6 +1458,8 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
     elif event_index == "13":
         vaalid = True
         eroll = index13entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    else:
+        await client.say("Error - Invalid 1st input: Event index must be 0-13")
     if vaalid == True:
         if mode != "rarity" and mode != "foodsoul":
             await client.say('Error - Invalid mode: Must be "foodsoul" or "rarity"')
@@ -1520,7 +1522,7 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                         number += 1
                     if lfood_soul == lfoodsoul:
                         count_foodsoul += 1
-            bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
+            bigline = output3(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
             await client.say(bigline)
         elif mode == "rarity":
             summoned = []
@@ -1533,8 +1535,6 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
             valid = False
             rarity = foodsoul_or_rarity
             lrarity = rarity.lower()
-            if not(event_index.isdigit()):
-                await client.say("Error - Invalid 1st input: Event index must be 2-10")
             if lrarity not in lrarity_pool:
                 await client.say("Error - Invalid 3rd input: Rarity does not exsist or improper spelling")
             if not(amount.isdigit()):
@@ -1569,10 +1569,8 @@ async def event1(context, event_index, mode, foodsoul_or_rarity, amount):
                         number += 1
                         if lrarity == "m":
                             count_foodsoul += 1
-            bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
+            bigline = output3(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
             await client.say(bigline)
-    elif vaalid == False:
-        await client.say("Error - Invalid event index")
 
 @commands.check(restriction)
 @client.command(name = "summonevent",
@@ -1643,6 +1641,8 @@ async def event2(context, event_index, number):
     elif event_index == "13":
         vaalid = True
         eroll = index13entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    else:
+        await client.say("Error - Invalid 1st input: Event index must be a number 0-13")
     if vaalid == True:
         summoned = []
         eachsummoned = []
@@ -1651,10 +1651,6 @@ async def event2(context, event_index, number):
         r = 0
         m = 0
         valid = False
-        if not(event_index.isdigit()):
-            await client.say("Error - Invalid 1st input: Event index must be 0-2")
-        if int(event_index) > 9 or int(event_index) < 0:
-            await client.say("Error - Invalid event index: Must be 0-2")
         if not(number.isdigit()):
             await client.say("Error - Invalid 2nd input: Must be a positive integer")
         elif int(number) <= 0:
@@ -1677,7 +1673,7 @@ async def event2(context, event_index, number):
                     r += 1
                 elif foodsoul in em_pool:
                     m += 1
-            bigline = output4(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
+            bigline = output3(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_pool, esr_pool, er_pool, em_pool)
             await client.say(bigline)
 
 @commands.check(restriction)
