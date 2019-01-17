@@ -2328,7 +2328,7 @@ async def update():
     embed = discord.Embed(title = "Bot Update (2.11)", color = 0x3498db)
     embed.add_field(name = "Removed the rarity function", value = "The rarity function (f!rarity) is a function that summons endlessly until a specified amount of food souls with a specified rarity is summoned. This function does not have much of a use since people usually want a specific food soul instead. Moreover, the function is rarely used and the event summon function was also very confusing to understand. Therefore, it has been removed.", inline = False)
     embed.add_field(name = "Updated the help page", value = "The help page had a few errors. The new help page should be pinned up.", inline = False)
-    embed.add_field(name = "Event summoning command renamed", value = 'The event summoning commands "f!event" and "f!summonevent" has been renamed to "f!efoodsoul and "f!esummon" respectively. Due to removal of "f!rarity", "f!efoodsoul is now easier to use as it doesn\'t require the user to specify if they want the rarity or foodsoul function.', inline = False)
+    embed.add_field(name = "Event summoning command renamed", value = 'The event summoning commands "f!event" and "f!summonevent" has been renamed to "f!efoodsoul and "f!esummon" respectively. Due to removal of "f!rarity", "f!efoodsoul" is now easier to use as it doesn\'t require the user to specify if they want the rarity or foodsoul function.', inline = False)
     await client.say(embed = embed)
 
 @client.command(name = "credits")
