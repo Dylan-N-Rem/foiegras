@@ -2315,7 +2315,7 @@ async def help():
     embed.add_field(name = "f!eventindex", value = "Shows the event index number to key into f!summonevent or f!event.", inline = False)
     embed.add_field(name = "f!esummon <event_index> <amount>", value = 'Summons a desired amount of food souls from an event. Use f!eventindex to check the event index number\nExample: f!summonevent 2 100 will summon 100 times during the "Brewing Fine Wine" event.', inline = False)
     embed.add_field(name = "f!efoodsoul <event_index> <food_soul> <amount>", value = 'Summon endlessly from an event until a specific food soul of a specified amount has been summoned. Use f!eventindex to check the event index.\nExample: f!event 2 foodsoul sweet.tofu 2 will summon endlessly during the "Brewing Fine Wine" event until it summons 2 Sweet Tofu.', inline = False)
-    embed.add_field(name = "f!food <dish>", value = 'Shows the stats and information of a dish. Use "." instead of space.\nExample: f!food buuter.bread will show the stats and information of Butter Bread.', inline = False)
+    embed.add_field(name = "f!food <dish>", value = 'Shows the stats and information of a dish. Use "." instead of space.\nExample: f!food butter.bread will show the stats and information of Butter Bread.', inline = False)
     embed.add_field(name = "f!soulinfo <food_soul>", value = 'Shows the information about a food soul. Use "." instead of space.\nNOTE: This feature is UNRELEASED.', inline = False)
     embed.add_field(name = "f!update", value = "Checks the latest version of the bot and most recent updates", inline = False)
     embed.add_field(name = "f!credits", value = "Reveals the people behind the bot.", inline = False)
