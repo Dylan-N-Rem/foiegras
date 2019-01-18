@@ -1257,7 +1257,7 @@ def index14entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     for e1 in range(499):
         eroll += ["Beer", ]
     for e2 in range(121):
-        eroll += ["Shichuan Hotpot"]
+        eroll += ["Sichuan Hotpot"]
     return eroll
 
 def index4bentry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
