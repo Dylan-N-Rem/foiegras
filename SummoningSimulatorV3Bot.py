@@ -700,7 +700,6 @@ async def summon(context, number):
         valid = True
         for x in range(number):
             foodsoul = random.choice(roll)
-            print(foodsoul)
             summoned += [foodsoul]
             if foodsoul in ur_pool:
                 ur += 1
