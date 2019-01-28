@@ -815,10 +815,10 @@ async def rates():
         mrateslist += [[mfs, temp/100]]
         mtotal += temp/100
     embed = discord.Embed(title = "Feast of Creation:", color = 0xffb100)
-        embed.add_field(name = "UR: " + str(round(urtotal, 2)) + "%", value = "\n".join([urc[0] + ": " + str(round(urc[1], 2)) + "%" for urc in urrateslist]), inline = False)
-        embed.add_field(name = "SR: " + str(round(srtotal, 2)) + "%", value = "\n".join([src[0] + ": " + str(round(src[1], 2)) + "%" for src in srrateslist]), inline = False)
-        embed.add_field(name = "R: " + str(round(rtotal, 2)) + "%", value = "\n".join([rrc[0] + ": " + str(round(rrc[1], 2)) + "%" for rrc in rrateslist]), inline = False)
-        embed.add_field(name = "M: " + str(round(mtotal, 2)) + "%", value = "\n".join([mrc[0] + ": " + str(round(mrc[1], 2)) + "%" for mrc in mrateslist]), inline = False)
+    embed.add_field(name = "UR: " + str(round(urtotal, 2)) + "%", value = "\n".join([urc[0] + ": " + str(round(urc[1], 2)) + "%" for urc in urrateslist]), inline = False)
+    embed.add_field(name = "SR: " + str(round(srtotal, 2)) + "%", value = "\n".join([src[0] + ": " + str(round(src[1], 2)) + "%" for src in srrateslist]), inline = False)
+    embed.add_field(name = "R: " + str(round(rtotal, 2)) + "%", value = "\n".join([rrc[0] + ": " + str(round(rrc[1], 2)) + "%" for rrc in rrateslist]), inline = False)
+    embed.add_field(name = "M: " + str(round(mtotal, 2)) + "%", value = "\n".join([mrc[0] + ": " + str(round(mrc[1], 2)) + "%" for mrc in mrateslist]), inline = False)
     await client.say(embed = embed)
 
 # Event summoning:
