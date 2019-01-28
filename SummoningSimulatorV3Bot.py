@@ -1810,7 +1810,6 @@ async def efoodsoul(context, event_index, food_soul, amount):
             count_foodsoul = 0
             while int(amount) != count_foodsoul:
                 foodsoul = random.choice(eroll)
-                print(foodsoul)
                 valid = True
                 lfoodsoul = foodsoul.lower()
                 summoned += [foodsoul]
