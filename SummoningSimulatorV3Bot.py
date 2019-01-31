@@ -15,14 +15,14 @@ client = Bot(command_prefix = prefix)
 
 # Normal summoning:
 
-ur_pool = ["Bibimbap", "Crab Long Bao", "Foie Gras", "Peking Duck", "B-52", "Bamboo Rice", "Gingerbread", "Boston Lobster", "Double Scoop"]
-sr_pool = ["Milk Tea", "Yunnan Noodles", "Laba Congee", "Sweet Tofu", "Udon", "Tiramisu", "Escargot", "Hotdog", "Mango Pudding", "Hamburger", "Steak", "Tangyuan", "Sanma", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Sukiyaki", "Brownie", "Red Wine", "Gyoza", "Chocolate", "Eggette", "Pineapple Cake"]
-r_pool = ["Long Bao", "Cold Rice Shrimp", "Coffee", "Sashimi", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
+ur_pool = ["Bamboo Rice", "Foie Gras", "Peking Duck", "B-52", "Gingerbread", "Crab Long Bao", "Bibimbap", "Double Scoop", "Boston Lobster"]
+sr_pool = ["Pineapple Cake", "Eggette", "Laba Congee", "Milk Tea", "Yunnan Noodles", "Escargot", "Hotdog", "Hamburger", "Steak", "Tangyuan", "Sanma", "Sukiyaki", "Brownie", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Tiramisu", "Mango Pudding", "Red Wine", "Gyoza", "Chocolate", "Sweet Tofu", "Udon"]
+r_pool = ["Long Bao", "Coffee", "Sashimi", "Cold Rice Shrimp", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 summon_pool = ur_pool + sr_pool + r_pool + m_pool
-none_pool = ["Cloud Tea", "Canele", "Pizza", "Apple Pie", "Black Tea", "Mooncake", "Salty Tofu", "Spaghetti", "Donut", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Cola", "Plum Juice", "Crepe", "Cheese", "Toast"]
-event_pool = ["Champagne", "Toso", "Raindrop Cake", "Strawberry Daifuku", "Bonito Rice", "Milt", "Cassata", "Caviar", "Seaweed Soup", "Sichuan Hotpot", "Beer"]
-unre_pool = ["Eclair Puff", "Green Curry"]
+none_pool = ["Cloud Tea", "Canele", "Pizza", "Turkey", "Apple Pie", "Black Tea", "Eggnog", "Mooncake", "Salty Tofu", "Spaghetti", "Donut", "Sushi", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Cola", "Plum Juice", "Crepe", "Rice", "Cheese", "Toast"]
+event_pool = ["Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Cassata", "Caviar", "Bonito Rice", "Seaweed Soup", "Beer", "Strawberry Daifuku"]
+unre_pool = ["Eclair Puff", "Green Curry", "Matcha Rice", "Osmanthus Cake", "Fondant Cake"]
 
 roll0 = []
 roll1 = []
