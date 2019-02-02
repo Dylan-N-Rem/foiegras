@@ -819,7 +819,7 @@ def index19entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll.remove("Peking Duck")
         eroll.remove("B-52")
         eroll.remove("Bamboo Rice")
-    for e7 in range(4)
+    for e7 in range(4):
         eroll.remove("Pineapple Cake")
         eroll.remove("Eggette")
         eroll.remove("Laba Congee")
@@ -871,7 +871,7 @@ def index20entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll.remove("Peking Duck")
         eroll.remove("B-52")
         eroll.remove("Bamboo Rice")
-    for e7 in range(4)
+    for e7 in range(4):
         eroll.remove("Pineapple Cake")
         eroll.remove("Eggette")
         eroll.remove("Laba Congee")
