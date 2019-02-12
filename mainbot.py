@@ -465,7 +465,8 @@ async def eventhelp():
                  ["17", "Fragrant Garden: Toso", "Toso, Milt, Strawberry Daifuku, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Toso: 1.21%\nMilt: 0.50%\nStrawberry Daifuku: 0.47%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
                  ["18", "Flame Storm", "B-52" + srateup, "25th January to 31st January 2019", "B-52: 0.60% -> 1.20%"],
                  ["19", "Memories Revisited: Huangshan Maofeng Tea", "Huangshan Maofeng Tea, Fondant Cake and Osmanthus Cake" + padded, "1st February to 11th February 2019", "Huangshan Maofeng Tea: 1.20%\nFondant Cake: 0.58%\nOsmanthus Cake: 0.57%"],
-                 ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"]]
+                 ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
+                 ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"]]
     embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in! Remember that this is for events in the global server.", color = 0x2ecc71)
     for eventcount in range(len(eventlist)):
         embed.add_field(name = eventlist[eventcount][0] + ". " + eventlist[eventcount][1], value = eventlist[eventcount][2] + " from " + eventlist[eventcount][3] + ".\n" + eventlist[eventcount][4], inline = False)
@@ -1034,8 +1035,7 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Memories Revisited added", "You can summon from the summon event: Memories Revisited: Huangshan Maofeng Tea/Caviar now!"],
-                  ["Code Update: Organised into different files", "The code for the bot has been split up into different files so it's easier to navigate around and edit the code."]]
+    updatelist = [["Event summoning: Bamboo Forest Exploration added", "You can now summon from the new event: Bamboo Rice Expedition!"]]
     embed = discord.Embed(title = "Bot Update (v2.13)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
