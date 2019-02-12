@@ -903,6 +903,21 @@ def index20entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll += ["Strawberry Daifuku"]
     return eroll
 
+def index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 8, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    for e1 in range(60):
+        eroll += ["Bamboo Rice"]
+    for e2 in range(16):
+        eroll.remove("Foie Gras")
+        eroll.remove("B-52")
+        eroll.remove("Peking Duck")
+    for e3 in range(5):
+        eroll.remove("Gingerbread")
+        eroll.remove("Crab Long Bao")
+    for e4 in range(2):
+        eroll.remove("Bibimbap")
+    return eroll
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -952,6 +967,8 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index19entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "20":
         eroll = index20entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "21":
+        eroll = index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
