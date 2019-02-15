@@ -638,15 +638,15 @@ async def foodinfo(dish):
                 await client.say(embed = embed)          
     elif ldish in lfood_pool:
         if ldish == "stir-fried potatoes":
-            foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+            foodstats = ["24", "26", "29", "32", "35", "35", "49", "63", "77", "105", "3", "3", "3", "2", "2", "60", "8"]
             embed = output3(foodstats, "Stir-Fried Potatoes", 0xf1c40f, "Potato (1-3)", "", "", "Light Kingdom", "Potato (1-3)", "", "", "", "", "801", "1500", "992", "707", "Chili", "Scallion", "Flavor")
             await client.say(embed = embed)
         elif ldish == "braised pork":
-            foodstats = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+            foodstats = ["24", "26", "29", "32", "35", "45", "63", "81", "99", "1355", "3", "3", "3", "2", "2", "60", "8"]
             embed = output3(foodstats, "Braised Pork", 0xa84300, "Light Kingdom", "Pork Belly (1-6)", "", "", "", "", "771", "910", "1500", "819", "Scallion", "Soy Sauce", "Texture")
             await client.say(embed = embed)
         elif ldish == "braised eggplant":
-            foodstats = ["24", "26", "29", "32", "35", "125", "175", "225", "275", "375", "3", "3", "3", "2", "2", "", ""]
+            foodstats = ["24", "26", "29", "32", "35", "125", "175", "225", "275", "375", "3", "3", "3", "2", "2", "60", "8"]
             embed = output3(foodstats, "Braised Eggplant", 0x71368a, "Light Kingdom", "Eggplant (2-7)", "", "", "", "", "717", "707", "876", "1700", "Garlic", "Cooking Oil", "Appearence")
             await client.say(embed = embed)
         elif ldish == "sauteed lettuce":
