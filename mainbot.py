@@ -1035,8 +1035,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Bamboo Forest Exploration added", "You can now summon from the new event: Bamboo Rice Expedition!"]]
-    embed = discord.Embed(title = "Bot Update (v2.13)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Minor bug fixes", "Fixed a few typo errors and missing information of dishes"]]
+    embed = discord.Embed(title = "Bot Update (v2.141)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
