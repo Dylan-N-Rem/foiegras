@@ -597,3 +597,76 @@ def roll8():
     for m82 in range(47):
         roll8 += ["Popcorn"]
     return roll8
+
+def roll9():
+    roll9 = []
+    for u91 in range(21):
+        roll9 += ["Crab Long Bao"]
+        roll9 += ["Gingerbread"]
+    for u92 in range(60):
+        roll9 += ["Foie Gras"]
+        roll9 += ["Peking Duck"]
+        roll9 += ["B-52"]
+        roll9 += ["Bamboo Rice"]
+    for u93 in range(9):
+        roll9 += ["Bibimbap"]
+    for u94 in range(5):
+        roll9 += ["Boston Lobster"]
+        roll9 += ["Double Scoop"]
+    for s91 in range(62):
+        roll9 += ["Tiramisu"]
+        roll9 += ["Escargot"]
+        roll9 += ["Hotdog"]
+        roll9 += ["Mango Pudding"]
+        roll9 += ["Hamburger",]
+        roll9 += ["Steak"]
+        roll9 += ["Tangyuan"]
+        roll9 += ["Sanma"]
+        roll9 += ["Napoleon Cake"]
+        roll9 += ["Salad"]
+        roll9 += ["Pastel de nata"]
+        roll9 += ["Yuxiang"]
+        roll9 += ["Sukiyaki"]
+        roll9 += ["Brownie"]
+        roll9 += ["Red Wine"]
+        roll9 += ["Gyoza"]
+        roll9 += ["Chocolate"]
+        roll9 += ["Udon"]
+    for s92 in range(61):
+        roll9 += ["Sweet Tofu"]
+    for s93 in range(65):
+        roll9 += ["Milk Tea"]
+        roll9 += ["Yunnan Noodles"]
+    for s94 in range(118):
+        roll9 += ["Eggette"]
+        roll9 += ["Pineapple Cake"]
+        roll9 += ["Laba Congee"]
+    for r91 in range(392):
+        roll9 += ["Long Bao"]
+        roll9 += ["Coffee"]
+        roll9 += ["Sashimi"]
+        roll9 += ["Macaron"]
+        roll9 += ["Zongzi"]
+        roll9 += ["Sakuramochi"]
+        roll9 += ["Cold Rice Shrimp"]
+    for r92 in range(393):
+        roll9 += ["Tom Yum"]
+        roll9 += ["Taiyaki"]
+        roll9 += ["Milk"]
+        roll9 += ["Dorayaki"]
+        roll9 += ["Sake"]
+        roll9 += ["Tempura"]
+        roll9 += ["Spicy Gluten"]
+        roll9 += ["Jiuniang"]
+        roll9 += ["Omurice"]
+        roll9 += ["Orange Juice"]
+        roll9 += ["Ume Ochazuke" ,]
+        roll9 += ["Miso Soup" ,]
+        roll9 += ["Yellow Wine"]
+    for m91 in range(46):
+        roll9 += ["Skewer"]
+        roll9 += ["Jello"]
+        roll9 += ["Pancake"]
+    for m92 in range(47):
+        roll9 += ["Popcorn"]
+    return roll9
