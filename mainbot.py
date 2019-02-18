@@ -1012,8 +1012,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Minor bug fixes", "Fixed a few typo errors and missing information of dishes"]]
-    embed = discord.Embed(title = "Bot Update (v2.141)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Added summoning event: Savory Feast", "You can now summon Ddeokbokki and Kimchi from the new event!"],
+                  ["Event index list split", "The event index list has been split into two embeds due to it being too long."]]
+    embed = discord.Embed(title = "Bot Update (v2.15)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
