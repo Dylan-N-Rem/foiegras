@@ -50,8 +50,10 @@ from rolls import roll7
 roll7 = roll7()
 from rolls import roll8
 roll8 = roll8()
+from rolls import roll9
+roll9 = roll9()
 
-roll = roll8
+roll = roll9
 
 lsummon_pool = [items.lower() for items in summon_pool]
 lnone_pool = [itemn.lower() for itemn in none_pool]
