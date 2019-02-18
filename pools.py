@@ -3,7 +3,7 @@ def ur_pool():
     return ur_pool
 
 def sr_pool():
-    sr_pool = ["Pineapple Cake", "Eggette", "Laba Congee", "Milk Tea", "Yunnan Noodles", "Escargot", "Hotdog", "Hamburger", "Steak", "Tangyuan", "Sanma", "Sukiyaki", "Brownie", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Tiramisu", "Mango Pudding", "Red Wine", "Gyoza", "Chocolate", "Sweet Tofu", "Udon"]
+    sr_pool = ["Ddeokbokki", "Kimchi", "Pineapple Cake", "Eggette", "Laba Congee", "Milk Tea", "Yunnan Noodles", "Escargot", "Hotdog", "Hamburger", "Steak", "Tangyuan", "Sanma", "Sukiyaki", "Brownie", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Tiramisu", "Mango Pudding", "Red Wine", "Gyoza", "Chocolate", "Sweet Tofu", "Udon"]
     return sr_pool
 
 def r_pool():
@@ -27,5 +27,5 @@ def event_pool():
     return event_pool
 
 def unre_pool():
-    unre_pool = ["Eclair Puff", "Green Curry", "Matcha Rice"]
+    unre_pool = ["Eclair", "Green Curry", "Matcha Rice"]
     return unre_pool
