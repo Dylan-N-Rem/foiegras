@@ -1,4 +1,24 @@
-from rollimport import rolls
+from rolls import roll0
+from rolls import roll1
+from rolls import roll2
+from rolls import roll3
+from rolls import roll4
+from rolls import roll5
+from rolls import roll6
+from rolls import roll7
+from rolls import roll8
+from rolls import roll9
+
+roll0 = roll0()
+roll1 = roll1()
+roll2 = roll2()
+roll3 = roll3()
+roll4 = roll4()
+roll5 = roll5()
+roll6 = roll6()
+roll7 = roll7()
+roll8 = roll8()
+roll9 = roll9()
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if roll_num <= 8:
