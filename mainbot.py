@@ -454,7 +454,7 @@ async def eventhelp():
 # Dish commands:
 
 food_pool = ["Stir-Fried Potatoes", "Braised Pork", "Braised Eggplant", "Sauteed Lettuce", "Carrot Bread", "Cucumber Egg Stir-Fry", "Black Pepper Beef", "Sauteed Mushrooms", "Egg Fried Rice", "Salmon Fried Rice", "Onion Fried Rice", "Bacon Fried Rice", "Braised Octopus", "Risotto", "Butter Bread", "Emerald Roll", "Corn Pie", "Toffee Apple", "Pineapple Fried Rice", "Chicken Soup", "Mango Pudding", "Strawberry Ice Cream", "Red Bean Pudding", "Kung Pao Chicken", "Pumpkin Pie", "Sweet Yam Buns", "Steamed Cod", "Steamed Unagi", "Garlic Lobster", "Crab Hotpot", "French Fries", "Crispy Pork", "Salad", "Eggplant Roll", "Smoked Salmon", "Roast Beef", "Cheese Bread", "Mushroom Soup", "Fried Rice Cake", "Pork Burger", "Bacon Tofu Wrap", "Grilled Calamari", "Popcorn", "Shortbread", "Minestrone", "Pineapple Juice", "Apple Crisp", "Chicken Pizza", "Roast Chicken", "Mango Wrap", "Fruit Salad", "Peanut Pie", "Pumpkin Soup", "Hotteok", "Cheesy Yam", "Fried Cod", "Fried Unagi", "Baked Lobster", "Crab Salad", "Baked Potato", "Grilled Pork Belly", "Cucumber Salad", "Boiled Lettuce", "Mushroom Yaki", "Salmon Sashimi", "Beef Tartare", "Tamagoyaki", "Omurice", "Shogayki", "Bacon Bites", "Cold Tofu", "Grilled Corn", "Vegetable Tempura", "Takoyaki", "Creamed Spinach", "Baked Pineapple", "Apples & Cream", "Chicken Skewer", "Fried Chicken", "Mango Smoothie", "Strawberry Smoothie", "Peanut Crisp", "Cod Fillet", "Piglet Daifuku", "Pumpkin Muffin", "Yam Dumplings", "Unagi Don", "Lobster Sashimi", "Crab Sashimi"]
-lostfood_pool = ["Calamari Skewer", "Garlic Oyster", "Grilled Prawns", "Pickled Salmon Head", "Tomato & Eggs", "Steamed Mushrooms", "Spaghetti", "Har Gow", "Gold Cake", "Mixed Greens", "Stir-Fried Mussels", "Mushroom Alfredo", "Cha Siu Bao", "Spinach Noodles", "Mint Pineapple", "Apple Sangria", "Braised Lamb", "Mushroom Chicken Stew", "Matcha Cake", "Cappuccino", "Fruit Tea", "Lemon Pie", "Meat Zongzi", "Stuffed Lotus Root", "Lotus Root Stir-Fry", "Black Fungus Congee", "Sanma Shioyaki", "Steamed Crab", "Crab Rice Cake", "Curry Crab", "Yam Pigeon Soup", "Bamboo & Meat Stir-Fry", "Braised Geese", "Roe Meat Ball", "Birds Nest", "Ginseng Stew Chicken"]
+lostfood_pool = ["Calamari Skewer", "Garlic Oyster", "Grilled Prawns", "Pickled Salmon Head", "Tomato & Eggs", "Steamed Mushrooms", "Spaghetti", "Har Gow", "Gold Cake", "Mixed Greens", "Stir-Fried Mussels", "Mushroom Alfredo", "Cha Siu Bao", "Spinach Noodles", "Mint Pineapple", "Apple Sangria", "Braised Lamb", "Mushroom Chicken Stew", "Matcha Cake", "Cappuccino", "Fruit Tea", "Lemon Pie", "Meat Zongzi", "Stuffed Lotus Root", "Lotus Root Stir-Fry", "Black Fungus Congee", "Sanma Shioyaki", "Steamed Crab", "Crab Rice Cake", "Curry Crab", "Chinese Yam & Squab Soup", "Bamboo Stir-Fry", "Orange Goose", "Crab Roe Lion's Head", "Bird's Nest With White Fungus", "Ginseng Black Chicken"]
 lfood_pool = [itemd.lower() for itemd in food_pool]
 llostfood_pool = [iteml.lower() for iteml in lostfood_pool]
 
@@ -465,7 +465,6 @@ from outputs import output3
 async def foodinfo(dish):
     dish = dish.replace(".", " ")
     dish = dish.replace(" and ", " & ")
-    dish = dish.replace("'", "")
     ldish = dish.lower()
     if ldish not in lfood_pool:
         if ldish not in llostfood_pool:
@@ -591,7 +590,7 @@ async def foodinfo(dish):
                 foodstats = ["228", "251", "276", "304", "334", "245", "343", "441", "539", "735", "32", "31", "31", "30", "29", "300", "76"]
                 embed = output3(foodstats, "Curry Crab", 0xf1c40f, "Lost", "Blue Crab (24-6)", "Curry Cube (24-7)", "", "60", "Make 50 A grade dishes", "409", "2400", "227", "964", "Black Pepper", "Scallion", "Aroma")
                 await client.say(embed = embed)
-            elif ldish == "chinese yam and squab soup":
+            elif ldish == "chinese yam & squab soup":
                 foodstats = ["75", "83", "91", "100", "110", "200", "280", "360", "440", "600", "12", "12", "11", "11", "10", "120", "25"]
                 embed = output3(foodstats, "Chinese Yam and Squab Soup", 0xf1c40f, "Lost", "Squab (25-1)", "Chinese Yam (25-4)", "Goji (25-7)", "60", "Serve 200 regular customers in your restaurant", "768", "410", "422", "2400", "Ginger", "Scallion", "Appearence")
                 await client.say(embed = embed)
@@ -607,14 +606,14 @@ async def foodinfo(dish):
                 foodstats = ["118", "130", "143", "157", "173", "200", "280", "360", "440", "600", "15", "14", "14", "13", "12", "180", "39"]
                 embed = output3(foodstats, "Crab Roe Lion's Head", 0xffeea9, "Lost", "Crab Roe (28-2)", "Ground Meat (28-5)", "Greens (28-9)", "69", "Collect 50 Crab Roe (those already in inventory are not counted)", "594", "2400", "485", "520", "Scallion", "Ginger", "Texture")
                 await client.say(embed = embed)
-            elif ldish == "birds nest with white fungus":
+            elif ldish == "bird's nest with white fungus":
                 foodstats = ["230", "253", "278", "306", "337", "300", "420", "540", "660", "900", "32", "31", "31", "30", "29", "300", "77"]
                 embed = output3(foodstats, "Bird's Nest With White Fungus", 0xfffee3, "Lost", "Bird's Nest (29-1)", "White Fungus (29-4)", "Lotus Seeds (29-8)", "72", "Cook 30 A grade dishes", "2300", "354", "514", "832", "Sugar", "Rock Sugar", "Flavor",)
                 await client.say(embed = embed)
             elif ldish == "ginseng black chicken":
                 foodstats = ["230", "253", "278", "306", "337", "300", "420", "540", "660", "900", "32", "31", "31", "30", "29", "300", "77"]
                 embed = output3(foodstats, "Ginseng Black Chicken", 0x494949, "Lost", "American Ginseng (30-1)", "Black Chicken (30-4)", "Jujube (30-9)", "75", "Challenge Fallen Angel Remains 25-2", "768", "2300", "522", "410", "Salt", "Cooking Wine", "Texture")
-                await client.say(embed = embed)          
+                await client.say(embed = embed)       
     elif ldish in lfood_pool:
         if ldish == "stir-fried potatoes":
             foodstats = ["24", "26", "29", "32", "35", "35", "49", "63", "77", "105", "3", "3", "3", "2", "2", "60", "8"]
