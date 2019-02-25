@@ -968,6 +968,15 @@ def index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll.remove("Gingerbread")
     for e4 in range(2):
         eroll.remove("Bibimbap")
+    for e5 in range(3):
+        eroll += ["Milk Tea"]
+        eroll += ["Yunnan Noodles"]
+    eroll.remove("Tiramisu")
+    eroll.remove("Mango Pudding")
+    eroll.remove("Red Wine")
+    eroll.remove("Gyoza")
+    eroll.remove("Chocolate")
+    eroll.remove("Udon")
     return eroll
 
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
