@@ -922,17 +922,17 @@ def index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
 
 def index22entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
-    for e1 in range(332):
+    for e1 in range(275):
         eroll += ["Ddeokbokki"]
         eroll += ["Kimchi"]
-    for e2 in range(50):
+    for e2 in range(42):
         eroll.remove("Eggette")
         eroll.remove("Pineapple Cake")
         eroll.remove("Laba Congee")
-    for e3 in range(27):
+    for e3 in range(23):
         eroll.remove("Milk Tea")
         eroll.remove("Yunnan Noodles")
-    for e4 in range(24):
+    for e4 in range(20):
         eroll.remove("Escargot")
         eroll.remove("Hotdog")
         eroll.remove("Hamburger")
@@ -948,11 +948,26 @@ def index22entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll.remove("Tiramisu")
         eroll.remove("Mango Pudding")
         eroll.remove("Sweet Tofu")
-    for e5 in range(25):
+    for e5 in range(21):
         eroll.remove("Red Wine")
         eroll.remove("Gyoza")
         eroll.remove("Chocolate")
         eroll.remove("Udon")
+    return eroll
+
+def index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    for e1 in range(99):
+        eroll += ["Crab Long Bao"]
+    for e2 in range(23):
+        eroll.remove("Foie Gras")
+        eroll.remove("B-52")
+        eroll.remove("Peking Duck")
+        eroll.remove("Bamboo Rice")
+    for e3 in range(5):
+        eroll.remove("Gingerbread")
+    for e4 in range(2):
+        eroll.remove("Bibimbap")
     return eroll
 
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
@@ -1008,6 +1023,8 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "22":
         eroll = index22entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "23":
+        eroll = index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
@@ -1036,11 +1053,12 @@ def eventlist():
                  ["13", "Breezy Snacks", "Raindrop Cake" + sadded + " and Sanma" + srateup, "16th November to 30th November 2018", "Raindrop: 1.21%\nSanma: 0.72% -> 4.98%"],
                  ["14", "No Spice No Dice", "Sichuan Hotpot and Beer" + padded, "17th December to 26th December 2018", "Sichuan Hotpot: 1.21%\nBeer: 4.99%"]]
     eventlist2 = [["15", "Flavor Frenzy", "Bibimbap" + sadded + " permanently and" + srateup, "3rd January to 10th January 2019", "Bibimbap: 0.09% -> 1.21%"],
-                 ["16", "Fragrant Garden: Champagne", "Champagne, Raindrop Cake, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Champagne: 1.21%\nRaindrop Cake: 0.50%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
-                 ["17", "Fragrant Garden: Toso", "Toso, Milt, Strawberry Daifuku, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Toso: 1.21%\nMilt: 0.50%\nStrawberry Daifuku: 0.47%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
-                 ["18", "Flame Storm", "B-52" + srateup, "25th January to 31st January 2019", "B-52: 0.60% -> 1.20%"],
-                 ["19", "Memories Revisited: Huangshan Maofeng Tea", "Huangshan Maofeng Tea, Fondant Cake and Osmanthus Cake" + padded, "1st February to 11th February 2019", "Huangshan Maofeng Tea: 1.20%\nFondant Cake: 0.58%\nOsmanthus Cake: 0.57%"],
-                 ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
-                 ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
-                 ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + "permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 3.32%\nKimchi: 3.32%"]]
+                  ["16", "Fragrant Garden: Champagne", "Champagne, Raindrop Cake, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Champagne: 1.21%\nRaindrop Cake: 0.50%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
+                  ["17", "Fragrant Garden: Toso", "Toso, Milt, Strawberry Daifuku, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Toso: 1.21%\nMilt: 0.50%\nStrawberry Daifuku: 0.47%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
+                  ["18", "Flame Storm", "B-52" + srateup, "25th January to 31st January 2019", "B-52: 0.60% -> 1.20%"],
+                  ["19", "Memories Revisited: Huangshan Maofeng Tea", "Huangshan Maofeng Tea, Fondant Cake and Osmanthus Cake" + padded, "1st February to 11th February 2019", "Huangshan Maofeng Tea: 1.20%\nFondant Cake: 0.58%\nOsmanthus Cake: 0.57%"],
+                  ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
+                  ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
+                  ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 3.32%\nKimchi: 3.32%"],
+                  ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"]]
     return eventlist, eventlist2
