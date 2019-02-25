@@ -613,7 +613,7 @@ def roll9():
     for u94 in range(5):
         roll9 += ["Boston Lobster"]
         roll9 += ["Double Scoop"]
-    for s91 in range(62):
+    for s91 in range(58):
         roll9 += ["Tiramisu"]
         roll9 += ["Escargot"]
         roll9 += ["Hotdog"]
@@ -632,12 +632,14 @@ def roll9():
         roll9 += ["Gyoza"]
         roll9 += ["Chocolate"]
         roll9 += ["Udon"]
-    for s92 in range(61):
+    for s92 in range(57):
         roll9 += ["Sweet Tofu"]
-    for s93 in range(65):
+        roll9 += ["Kimchi"]
+        roll9 += ["Ddeokbokki"]
+    for s93 in range(61):
         roll9 += ["Milk Tea"]
         roll9 += ["Yunnan Noodles"]
-    for s94 in range(118):
+    for s94 in range(110):
         roll9 += ["Eggette"]
         roll9 += ["Pineapple Cake"]
         roll9 += ["Laba Congee"]
@@ -669,35 +671,4 @@ def roll9():
         roll9 += ["Pancake"]
     for m92 in range(47):
         roll9 += ["Popcorn"]
-    for e1 in range(332):
-        roll9 += ["Ddeokbokki"]
-        roll9 += ["Kimchi"]
-    for e2 in range(50):
-        roll9.remove("Eggette")
-        roll9.remove("Pineapple Cake")
-        roll9.remove("Laba Congee")
-    for e3 in range(27):
-        roll9.remove("Milk Tea")
-        roll9.remove("Yunnan Noodles")
-    for e4 in range(24):
-        roll9.remove("Escargot")
-        roll9.remove("Hotdog")
-        roll9.remove("Hamburger")
-        roll9.remove("Steak")
-        roll9.remove("Tangyuan")
-        roll9.remove("Sanma")
-        roll9.remove("Sukiyaki")
-        roll9.remove("Brownie")
-        roll9.remove("Napoleon Cake")
-        roll9.remove("Salad")
-        roll9.remove("Pastel de nata")
-        roll9.remove("Yuxiang")
-        roll9.remove("Tiramisu")
-        roll9.remove("Mango Pudding")
-        roll9.remove("Sweet Tofu")
-    for e5 in range(25):
-        roll9.remove("Red Wine")
-        roll9.remove("Gyoza")
-        roll9.remove("Chocolate")
-        roll9.remove("Udon")
     return roll9
