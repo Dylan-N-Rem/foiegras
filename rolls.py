@@ -614,6 +614,8 @@ def roll9():
         roll9 += ["Boston Lobster"]
         roll9 += ["Double Scoop"]
     for s91 in range(58):
+        roll9 += ["Milk Tea"]
+        roll9 += ["Yunnan Noodles"]
         roll9 += ["Tiramisu"]
         roll9 += ["Escargot"]
         roll9 += ["Hotdog"]
@@ -636,10 +638,7 @@ def roll9():
         roll9 += ["Sweet Tofu"]
         roll9 += ["Kimchi"]
         roll9 += ["Ddeokbokki"]
-    for s93 in range(61):
-        roll9 += ["Milk Tea"]
-        roll9 += ["Yunnan Noodles"]
-    for s94 in range(110):
+    for s93 in range(110):
         roll9 += ["Eggette"]
         roll9 += ["Pineapple Cake"]
         roll9 += ["Laba Congee"]
