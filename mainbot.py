@@ -1013,8 +1013,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Added summoning event: Savory Feast", "You can now summon Ddeokbokki and Kimchi from the new event!"],
-                  ["Event index list split", "The event index list has been split into two embeds due to it being too long."]]
+    updatelist = [["Event summoning: Training Time! added", "In this event, Crab Long Bao has an increased summoning rate!"],
+                  ["Ddeokbokki and Kimchi rate up has ended", "The rate up event for Ddeokbokki and Kimchi is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."]]
     embed = discord.Embed(title = "Bot Update (v2.15)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
