@@ -1015,7 +1015,7 @@ async def help():
 async def update():
     updatelist = [["Event summoning: Training Time! added", "In this event, Crab Long Bao has an increased summoning rate!"],
                   ["Ddeokbokki and Kimchi rate up has ended", "The rate up event for Ddeokbokki and Kimchi is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."]]
-    embed = discord.Embed(title = "Bot Update (v2.2)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
+    embed = discord.Embed(title = "Bot Update (v2.2)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
@@ -1025,7 +1025,7 @@ async def update():
 async def credit():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
-Developer: Monokhorome#2353 AKA 「Pengu Pout」ディラン (Dylan)\n\
+Developer: Monokhorome#2353 AKA ディラン (Dylan)\n\
 Speical thanks to cyn#1598 AKA Just Marisa and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
 
 @client.event
