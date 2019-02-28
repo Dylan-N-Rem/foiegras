@@ -21,8 +21,12 @@ roll8 = roll8()
 roll9 = roll9()
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    if roll_num <= 8:
+    if roll_num <= 9:
         unav_pool = []
+    if roll_num <= 8:
+        esr_pool.remove("Ddeokbokki")
+        esr_pool.remove("Kimchi")
+        unav_pool += ["Ddeokbokki", "Kimchi"]
     if roll_num <= 7:
         eur_pool.remove("Bibimbap")
         unav_pool += ["Bibimbap"]
@@ -96,6 +100,8 @@ def autoroll(eroll, roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
         eroll += roll7
     elif roll_num == 8:
         eroll += roll8
+    elif roll_num == 9:
+        eroll += roll9
     return eroll, unav_pool
 
 def index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
