@@ -6,8 +6,9 @@ import random
 import time
 import traceback
 import sys
+import os
 
-TOKEN = ??
+TOKEN = os.environ.get("TOKEN")
 prefix = ("f!", "F!")
 client = Bot(command_prefix = prefix)
 
