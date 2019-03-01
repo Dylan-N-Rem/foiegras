@@ -1138,6 +1138,6 @@ def eventlist():
                   ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
                   ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
                   ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 0.57% -> 3.32%\nKimchi: 0.57% -> 3.32%"],
-                  ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"]
+                  ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"],
                   ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"]]
     return eventlist, eventlist2
