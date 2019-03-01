@@ -7,8 +7,8 @@ import time
 import traceback
 import sys
 
-TOKEN = 'NDg0MzAxNTQwMzA4NTQ5NjUz.DmgA9g.3ZGIJc_GB4ItpQZCPf5-qj9AXu4'
-prefix = ("f?", "F?")
+TOKEN = ??
+prefix = ("f!", "F!")
 client = Bot(command_prefix = prefix)
 
 # Normal summoning:
