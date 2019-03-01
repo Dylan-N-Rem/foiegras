@@ -6,11 +6,9 @@ import random
 import time
 import traceback
 import sys
-import os
-import json
 
-TOKEN = os.getenv("TOKEN")
-prefix = ("f!", "F!")
+TOKEN = 'NDg0MzAxNTQwMzA4NTQ5NjUz.DmgA9g.3ZGIJc_GB4ItpQZCPf5-qj9AXu4'
+prefix = ("f?", "F?")
 client = Bot(command_prefix = prefix)
 
 # Normal summoning:
@@ -613,7 +611,7 @@ async def foodinfo(dish):
             elif ldish == "ginseng black chicken":
                 foodstats = ["230", "253", "278", "306", "337", "300", "420", "540", "660", "900", "32", "31", "31", "30", "29", "300", "77"]
                 embed = output3(foodstats, "Ginseng Black Chicken", 0x494949, "Lost", "American Ginseng (30-1)", "Black Chicken (30-4)", "Jujube (30-9)", "75", "Challenge Fallen Angel Remains 25-2", "768", "2300", "522", "410", "Salt", "Cooking Wine", "Texture")
-                await client.say(embed = embed)       
+                await client.say(embed = embed)          
     elif ldish in lfood_pool:
         if ldish == "stir-fried potatoes":
             foodstats = ["24", "26", "29", "32", "35", "35", "49", "63", "77", "105", "3", "3", "3", "2", "2", "60", "8"]
@@ -1013,9 +1011,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Training Time! added", "In this event, Crab Long Bao has an increased summoning rate!"],
-                  ["Ddeokbokki and Kimchi rate up has ended", "The rate up event for Ddeokbokki and Kimchi is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."]]
-    embed = discord.Embed(title = "Bot Update (v2.2)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Spring Feast added", "In this event, you can summon Buddha's Temptation, Butter Tea and more for a limited time!\nNOTE: This applies only for the Step event as the Super event do not contain precise ratings and has three different SR/UR rates."]]
+    embed = discord.Embed(title = "Bot Update (v2.13)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
@@ -1025,13 +1022,13 @@ async def update():
 async def credit():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
-Developer: Monokhorome#2353 AKA ディラン (Dylan)\n\
+Developer: Monokhorome#2353 AKA 「Pengu Pout」ディラン (Dylan)\n\
 Speical thanks to cyn#1598 AKA Just Marisa and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
 
-@client.event
-async def on_command_error(error, context):
-    if isinstance(error, commands.CommandOnCooldown):
-        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle")
+##@client.event
+##async def on_command_error(error, context):
+##    if isinstance(error, commands.CommandOnCooldown):
+##        await client.send_message(context.message.channel, "Please do not spam. There is only so much I can handle")
 
 @client.event
 async def on_ready():
