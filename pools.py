@@ -3,7 +3,7 @@ def ur_pool():
     return ur_pool
 
 def sr_pool():
-    sr_pool = ["Ddeokbokki", "Kimchi", "Pineapple Cake", "Eggette", "Laba Congee", "Milk Tea", "Yunnan Noodles", "Escargot", "Hotdog", "Hamburger", "Steak", "Tangyuan", "Sanma", "Sukiyaki", "Brownie", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Tiramisu", "Mango Pudding", "Red Wine", "Gyoza", "Chocolate", "Sweet Tofu", "Udon"]
+    sr_pool = ["Pineapple Cake", "Eggette", "Laba Congee", "Milk Tea", "Yunnan Noodles", "Escargot", "Hotdog", "Hamburger", "Steak", "Tangyuan", "Sanma", "Sukiyaki", "Brownie", "Napoleon Cake", "Salad", "Pastel de nata", "Yuxiang", "Tiramisu", "Mango Pudding", "Red Wine", "Gyoza", "Chocolate", "Udon", "Sweet Tofu", "Ddeokbokki", "Kimchi"]
     return sr_pool
 
 def r_pool():
@@ -23,9 +23,9 @@ def none_pool():
     return none_pool
 
 def event_pool():
-    event_pool = ["Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Cassata", "Caviar", "Bonito Rice", "Seaweed Soup", "Beer", "Osmanthus Cake", "Fondant Cake", "Strawberry Daifuku"]
+    event_pool = ["Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Osmanthus Cake", "Fondant Cake", "Strawberry Daifuku"]
     return event_pool
 
 def unre_pool():
-    unre_pool = ["Eclair", "Green Curry", "Matcha Rice"]
+    unre_pool = ["Eclair", "Matcha Rice"]
     return unre_pool
