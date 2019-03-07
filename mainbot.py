@@ -486,8 +486,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Spring Feast added", "In this event, you can summon Buddha's Temptation, Butter Tea and more for a limited time!\nNOTE: This applies only for the Step event as the Super event do not contain precise ratings and has three different SR/UR rates."]]
-    embed = discord.Embed(title = "Bot Update (v2.21)", description = "If there are any problems with the bot, please ping @「Pengu Pout」ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Code refactored", "Refactored and fixed the code for food information ``f!food``. It used to be a giant code of ifs and else-ifs. The new system checks all the names of available dishes and matches it with your input."]]
+    embed = discord.Embed(title = "Bot Update (v2.22)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
