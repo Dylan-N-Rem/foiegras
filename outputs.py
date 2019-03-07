@@ -1,21 +1,6 @@
 import discord
 
-from pools import ur_pool
-ur_pool = ur_pool()
-from pools import sr_pool
-sr_pool = sr_pool()
-from pools import r_pool
-r_pool = r_pool()
-from pools import m_pool
-m_pool = m_pool()
-from pools import summon_pool
-summon_pool = summon_pool()
-from pools import none_pool
-none_pool = none_pool()
-from pools import event_pool
-event_pool = event_pool()
-from pools import unre_pool
-unre_pool = unre_pool()
+from pools import *
 
 def output(summoned, valid, ur, sr, r, m, number, context):
     eachsummoned = set(summoned) & set(summon_pool)
