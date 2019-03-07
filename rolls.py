@@ -651,4 +651,3 @@ for m91 in range(46):
     roll9 += ["Pancake"]
 for m92 in range(47):
     roll9 += ["Popcorn"]
-return roll9
