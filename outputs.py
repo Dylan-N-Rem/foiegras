@@ -105,96 +105,95 @@ def output2(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_po
         stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*150) + " Soul Embers or " + str(number*100) + " Crystals."
         return "Summoning results of {}:".format(context.message.author.mention) + urline + srline + rline + mline + stats + stats2 + stats3 + stats4 + stats5 + stats6
 
-def output3(foodstats, dishname, colour, cuisine, ingredient1, ingredient2, ingredient3, level, quest, flavor, texture, aroma, appearence, season1, season2, attribute):
-    if season1 == "Ginger":
+def output3(foodstats, dishname, colour, cuisine, recipe, dishunlock, maxstats, seasoning):
+    if seasoning[0] == "Ginger":
         season3 = "Tender Ginger"
-    if season2 == "Ginger":
+    if seasoning[1] == "Ginger":
         season4 = "Tender Ginger"
 
-    if season1 == "Scallion":
+    if seasoning[0] == "Scallion":
         season3 = "Diced Scallions"
-    if season2 == "Scallion":
+    if seasoning[1] == "Scallion":
         season4 = "Diced Scallions"
 
-    if season1 == "Garlic":
+    if seasoning[0] == "Garlic":
         season3 = "Fresh Garlic"
-    if season2 == "Garlic":
+    if seasoning[1] == "Garlic":
         season4 = "Fresh Garlic"
 
-    if season1 == "Chili":
+    if seasoning[0] == "Chili":
         season3 = "Royal Dressing"
-    if season2 == "Chili":
+    if seasoning[1] == "Chili":
         season4 = "Royal Dressing"
 
-    if season1 == "Soy Sauce":
+    if seasoning[0] == "Soy Sauce":
         season3 = "Premium Soy Sauce"
-    if season2 == "Soy Sauce":
+    if seasoning[1] == "Soy Sauce":
         season4 = "Premium Soy Sauce"
 
-    if season1 == "Black Pepper":
+    if seasoning[0] == "Black Pepper":
         season3 = "Tellicherry Pepper"
-    if season2 == "Black Pepper":
+    if seasoning[1] == "Black Pepper":
         season4 = "Tellicherry Pepper"
 
-    if season1 == "Sugar":
+    if seasoning[0] == "Sugar":
         season3 = "Granulated Sugar"
-    if season2 == "Sugar":
+    if seasoning[1] == "Sugar":
         season4 = "Granulated Sugar"
 
-    if season1 == "Cooking Oil":
+    if seasoning[0] == "Cooking Oil":
         season3 = "Sealed Oil"
-    if season2 == "Cooking Oil":
+    if seasoning[1] == "Cooking Oil":
         season4 = "Sealed Oil"
 
-    if season1 == "Rock Sugar":
+    if seasoning[0] == "Rock Sugar":
         season3 = "Pearl Sugar"
-    if season2 == "Rock Sugar":
+    if seasoning[1] == "Rock Sugar":
         season4 = "Pearl Sugar"
 
-    if season1 == "Salt":
+    if seasoning[0] == "Salt":
         season3 = "Sea Salt"
-    if season2 == "Salt":
+    if seasoning[1] == "Salt":
         season4 = "Sea Salt"
 
-    if season1 == "Salad Dressing":
+    if seasoning[0] == "Salad Dressing":
         season3 = "Thousand Island"
-    if season2 == "Salad Dressing":
+    if seasoning[1] == "Salad Dressing":
         season4 = "Thousand Island"
 
-    if season1 == "Sago":
+    if seasoning[0] == "Sago":
         season3 = "Crystal Sago"
-    if season2 == "Sago":
+    if seasoning[1] == "Sago":
         season4 = "Crystal Sago"
 
-    if season1 == "Condensed Milk":
+    if seasoning[0] == "Condensed Milk":
         season3 = "Premium Condensed Milk"
-    if season2 == "Condensed Milk":
+    if seasoning[1] == "Condensed Milk":
         season4 = "Premium Condensed Milk"
 
-    if season1 == "Cooking Wine":
+    if seasoning[0] == "Cooking Wine":
         season3 = "Sparkling Wine"
-    if season2 == "Cooking Wine":
+    if seasoning[1] == "Cooking Wine":
         season4 = "Sparkling Wine"
 
-    if season1 == "Icing":
+    if seasoning[0] == "Icing":
         season3 = "Mist Icing"
-    if season2 == "Icing":
+    if seasoning[1] == "Icing":
         season4 = "Mist Icing"
 
     foodoutput = discord.Embed(title = dishname, color = colour)
     foodoutput.add_field(name = "Cuisine", value = cuisine, inline = False)
-    if ingredient1 != "" and ingredient2 == "" and ingredient3 == "":
-        foodoutput.add_field(name = "Ingredients/Recipe", value = ingredient1, inline = False)
-    if ingredient1 != "" and ingredient2 != "" and ingredient3 == "":
-        foodoutput.add_field(name = "Ingredients/Recipe", value = ingredient1 + " and " + ingredient2, inline = False)
-    if ingredient1 != "" and ingredient2 != "" and ingredient3 != "":
-        foodoutput.add_field(name = "Ingredients/Recipe", value = ingredient1 + ", " + ingredient2 + " and " + ingredient3, inline = False)
-    if level != "":
-        foodoutput.add_field(name = "Level Requirement", value = level, inline = False)
-    if quest != "":
-        foodoutput.add_field(name = "Quest", value = quest, inline = False)
-    foodoutput.add_field(name = "Max Food Stats", value = "Flavour: " + flavor + "\nTexture: " + texture + "\nAroma: " + aroma + "\nAppearence: " + appearence, inline = False)
-    foodoutput.add_field(name = "Seasoning", value = "These seasonings add **" + attribute + "** to the dish\n" + season1 + " ^\n" + season2 + " ^^\n" + season3 + " ^^^\n" + season4 + " ^^^^", inline = False)
+    if recipe[0] != "" and recipe[1] == "" and recipe[2] == "":
+        foodoutput.add_field(name = "Ingredients/Recipe", value = recipe[0], inline = False)
+    if recipe[0] != "" and recipe[1] != "" and recipe[2] == "":
+        foodoutput.add_field(name = "Ingredients/Recipe", value = recipe[0] + " and " + recipe[1], inline = False)
+    if recipe[0] != "" and recipe[1] != "" and recipe[2] != "":
+        foodoutput.add_field(name = "Ingredients/Recipe", value = recipe[0] + ", " + recipe[1] + " and " + recipe[2], inline = False)
+    if dishunlock != []:
+        foodoutput.add_field(name = "Level Requirement", value = dishunlock[0], inline = False)
+        foodoutput.add_field(name = "Quest", value = dishunlock[1], inline = False)
+    foodoutput.add_field(name = "Max Food Stats", value = "Flavour: " + maxstats[0] + "\nTexture: " + maxstats[1] + "\nAroma: " + maxstats[2] + "\nAppearence: " + maxstats[3], inline = False)
+    foodoutput.add_field(name = "Seasoning", value = "These seasonings add **" + seasoning[2] + "** to the dish\n" + seasoning[0] + " ^\n" + seasoning[1] + " ^^\n" + season3 + " ^^^\n" + season4 + " ^^^^", inline = False)
     foodoutput.add_field(name = "Selling Price", value = "D: " + foodstats[0] + " Gold" + "\nC: " + foodstats[1] + " Gold" +"\nB: " + foodstats [2] + " Gold" + "\nA: " + foodstats[3] + " Gold" + "\nS: " + foodstats[4] + " Gold", inline = False)
     foodoutput.add_field(name = "Maximum Production Quantity ", value = "D: " + foodstats[5] + " dishes" + "\nC: " + foodstats[6] + " dishes" +"\nB: " + foodstats [7] + " dishes" + "\nA: " + foodstats[8] + " dishes" + "\nS: " + foodstats[9] + " dishes", inline = False)
     foodoutput.add_field(name = "Time Per Dish", value = "D: " + foodstats[10] + " seconds" + "\nC: " + foodstats[11] + " seconds" +"\nB: " + foodstats [12] + " seconds" + "\nA: " + foodstats[13] + " seconds" + "\nS: " + foodstats[14] + " seconds", inline = False)
