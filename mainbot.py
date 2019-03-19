@@ -172,36 +172,7 @@ async def rates():
 
 from outputs import output2
 
-from erolls import autounav
-from erolls import eventfs
-from erolls import removefs
-from erolls import autoroll
-
-from erolls import index0entry
-from erolls import index1entry
-from erolls import index2entry
-from erolls import index3entry
-from erolls import index4aentry
-from erolls import index4bentry
-from erolls import index5aentry
-from erolls import index6entry
-from erolls import index7entry
-from erolls import index8entry
-from erolls import index9entry
-from erolls import index10entry
-from erolls import index11aentry
-from erolls import index11bentry
-from erolls import index12entry
-from erolls import index13entry
-from erolls import index14entry
-from erolls import index15entry
-from erolls import index16entry
-from erolls import index17entry
-from erolls import index18entry
-from erolls import index19entry
-from erolls import index20entry
-
-from erolls import eventindexcheck
+from erolls *
 
 @client.command(name = "esummon",
                 pass_context = True)
@@ -486,8 +457,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Code refactored", "Refactored and fixed the code for food information ``f!food``. It used to be a giant code of ifs and else-ifs. The new system checks all the names of available dishes and matches it with your input."]]
-    embed = discord.Embed(title = "Bot Update (v2.22)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Flame Storm added", "In this event, you have a higher chance of summoning B-52 for a limited time!"]]
+    embed = discord.Embed(title = "Bot Update (v2.23)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
