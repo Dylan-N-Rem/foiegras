@@ -172,7 +172,7 @@ async def rates():
 
 from outputs import output2
 
-from erolls *
+from erolls import *
 
 @client.command(name = "esummon",
                 pass_context = True)
