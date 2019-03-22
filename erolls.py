@@ -4,8 +4,8 @@ def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if roll_num <= 10:
         unav_pool = []
     if roll_num <= 9:
-        er_pool = ["Eclair"]
-        esr_pool = ["Fried Chicken"]
+        er_pool.remove("Eclair")
+        esr_pool.remove("Fried Chicken")
         unav_pool = ["Eclair", "Fried Chicken"]
     if roll_num <= 8:
         esr_pool.remove("Ddeokbokki")
