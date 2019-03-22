@@ -17,7 +17,7 @@ client = Bot(command_prefix = prefix)
 from pools import *
 from rolls import *
 
-roll = roll9
+roll = roll10
 
 lsummon_pool = [items.lower() for items in summon_pool]
 lnone_pool = [itemx.lower() for itemx in none_pool]
