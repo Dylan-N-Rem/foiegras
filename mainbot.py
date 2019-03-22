@@ -468,7 +468,7 @@ async def update():
 async def credit():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
-Developer: Monokhorome#2353 AKA 「Pengu Pout」ディラン (Dylan)\n\
+Developer: Monokhorome#2353 AKA ディラン (Dylan)\n\
 Speical thanks to cyn#1598 AKA Just Marisa and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
 
 @client.event
