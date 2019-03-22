@@ -1,8 +1,12 @@
 from rolls import *
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    if roll_num <= 9:
+    if roll_num <= 10:
         unav_pool = []
+    if roll_num <= 9:
+        er_pool = ["Eclair"]
+        esr_pool = ["Fried Chicken"]
+        unav_pool = ["Eclair", "Fried Chicken"]
     if roll_num <= 8:
         esr_pool.remove("Ddeokbokki")
         esr_pool.remove("Kimchi")
@@ -82,6 +86,8 @@ def autoroll(eroll, roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
         eroll += roll8
     elif roll_num == 9:
         eroll += roll9
+    elif roll_num == 10:
+        eroll += roll10
     return eroll, unav_pool
 
 def index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
@@ -1050,6 +1056,9 @@ def index18bentry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav
         eroll.remove("Bibimbap")
     return eroll
 
+##def index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+##    eroll, unav_pool = autoroll(eroll, 10, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -1109,6 +1118,8 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "24":
         eroll = index24entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+##    elif event_index == "25":
+##        eroll = index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
@@ -1147,4 +1158,5 @@ def eventlist():
                   ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 0.57% -> 3.32%\nKimchi: 0.57% -> 3.32%"],
                   ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"],
                   ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"]]
+##                  ["25", "Snack Time!", "Eclair and Fried Chicken" + padded " permamently and" + prateup, "21st March to 29th March 2019", "Eclair: ??? -> 25.33%\nFried Chicken ??? -> 4.98%"]]
     return eventlist, eventlist2
