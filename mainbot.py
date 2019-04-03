@@ -457,7 +457,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Eclair and Fried Chicken added permanently", "Eclair and Fried Chicken has been permanently added to the regular summoning pool. Now with limited rate ups!"]]
+    updatelist = [["Eclair and Fried Chicken rate up has ended", "The rate up event for Eclair and Fried Chicken is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."],
+                  ["Event summoning: Meaningful Amber added", "In this event, you can only summon strength food souls, including Raindrop Cake, Moon Cake Sushi and more for a limited time!"],
+                  ["West Palata Lost dishes added", "The six new dishes have been added. You can use ``f!food`` to check the information of the dish"]]
     embed = discord.Embed(title = "Bot Update (v2.24)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
