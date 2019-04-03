@@ -4,8 +4,8 @@ def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if roll_num <= 10:
         unav_pool = []
     if roll_num <= 9:
-        er_pool.remove("Eclair")
-        esr_pool.remove("Fried Chicken")
+        er_pool = ["Eclair"]
+        esr_pool = ["Fried Chicken"]
         unav_pool = ["Eclair", "Fried Chicken"]
     if roll_num <= 8:
         esr_pool.remove("Ddeokbokki")
@@ -1056,8 +1056,198 @@ def index18bentry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav
         eroll.remove("Bibimbap")
     return eroll
 
-##def index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-##    eroll, unav_pool = autoroll(eroll, 10, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+def index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 10, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    for e1 in range(1982):
+        eroll += ["Eclair"]
+    for e2 in range(442):
+        eroll += ["Fried Chicken"]
+    for e3 in range(32):
+        eroll.remove("Eggette")
+        eroll.remove("Pineapple Cake")
+        eroll.remove("Laba Congee")
+    for e4 in range(15):
+        eroll.remove("Milk Tea")
+        eroll.remove("Yunnan Noodles")
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+        eroll.remove("Ddeokbokki")
+    for e5 in range(16):
+        eroll.remove("Kimchi")
+    for e6 in range(100):
+        eroll.remove("Long Bao")
+        eroll.remove("Coffee")
+    for e7 in range(99):
+        eroll.remove("Sashimi")
+        eroll.remove("Macaron")
+        eroll.remove("Zongzi")
+        eroll.remove("Sakuramochi")
+        eroll.remove("Cold Rice Shrimp")
+        eroll.remove("Tom Yum")
+        eroll.remove("Taiyaki")
+        eroll.remove("Milk")
+        eroll.remove("Dorayaki")
+        eroll.remove("Sake")
+        eroll.remove("Tempura")
+        eroll.remove("Spicy Gluten")
+        eroll.remove("Jiuniang")
+        eroll.remove("Omurice")
+        eroll.remove("Orange Juice")
+        eroll.remove("Ume Ochazuke")
+        eroll.remove("Miso Soup")
+        eroll.remove("Yellow Wine")
+    return eroll
+
+def index26entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 10, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eevent_pool = eventfs("Raindrop Cake", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eevent_pool = eventfs("Moon Cake", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eevent_pool = eventfs("Sushi", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eevent_pool = eventfs("Osmanthus Cake", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    unav_pool = removefs("Foie Gras", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Bibimbap", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Gingerbread", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("B-52", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Peking Duck", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Crab Long Bao", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Double Scoop", 1, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Fried Chicken", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Ddeokbokki", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Kimchi", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Milk Tea", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Yunnan Noodles", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Eggette", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Pineapple Cake", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Gyoza", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Laba Congee", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Sweet Tofu", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Udon", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Salad", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Napoleon Cake", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Brownie", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Sukiyaki", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Tangyuan", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Steak", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Escargot", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Chocolate", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Tiramisu", 2, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Miso Soup", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Ume Ochazuke", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Orange Juice", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Jiuniang", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Eclair", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Tempura", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Sake", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Dorayaki", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Milk", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Tom Yum", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Sakuramochi", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Macaron", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Coffee", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Long Bao", 3, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Jello", 4, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    unav_pool = removefs("Popcorn", 4, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    for e1 in range(134):
+        eroll += ["Raindrop Cake"]
+    for e2 in range(73):
+        eroll += ["Bamboo Rice"]
+    for e3 in range(128):
+        eroll += ["Boston Lobster"]
+    for e4 in range(370):
+        eroll += ["Osmanthus Cake"]
+        eroll += ["Sushi"]
+        eroll += ["Moon Cake"]
+    for e5 in range(314):
+        eroll += ["Hotdog"]
+        eroll += ["Mango Pudding"]
+        eroll += ["Hamburger"]
+        eroll += ["Sanma"]
+        eroll += ["Red Wine"]
+        eroll += ["Pastel de nata"]
+        eroll += ["Yuxiang"]
+    for e6 in range(426):
+        eroll += ["Yellow Wine"]
+        eroll += ["Omurice"]
+        eroll += ["Cold Rice Shrimp"]
+        eroll += ["Spicy Gluten"]
+        eroll += ["Taiyaki"]
+        eroll += ["Zongzi"]
+        eroll += ["Sashimi"]
+    for e7 in range(104):
+        eroll += ["Skewer"]
+        eroll += ["Pancake"]
+    for e8 in range(21):
+        eroll.remove("Crab Long Bao")
+        eroll.remove("Gingerbread")
+    for e9 in range(60):
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+        eroll.remove("B-52")
+    for e10 in range(9):
+        eroll.remove("Bibimbap")
+    for e11 in range(5):
+        eroll.remove("Double Scoop")
+    for e12 in range(56):
+        eroll.remove("Fried Chicken")
+        eroll.remove("Milk Tea")
+        eroll.remove("Yunnan Noodles")
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Gyoza")
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+        eroll.remove("Kimchi")
+    for e13 in range(55):
+        eroll.remove("Ddeokbokki")
+    for e14 in range(106):
+        eroll.remove("Eggette")
+        eroll.remove("Pineapple Cake")
+        eroll.remove("Laba Congee")
+    for e15 in range(374):
+        eroll.remove("Long Bao")
+        eroll.remove("Coffee")
+        eroll.remove("Macaron")
+        eroll.remove("Sakuramochi")
+        eroll.remove("Tom Yum")
+        eroll.remove("Milk")
+        eroll.remove("Dorayaki")
+        eroll.remove("Sake")
+        eroll.remove("Tempura")
+        eroll.remove("Jiuniang")
+        eroll.remove("Orange Juice")
+        eroll.remove("Ume Ochazuke")
+        eroll.remove("Miso Soup")
+    for e16 in range(373):
+        eroll.remove("Eclair")
+    for e17 in range(46):
+        eroll.remove("Jello")
+    for e10 in range(47):
+        eroll.remove("Popcorn")
+    return eroll
 
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
@@ -1118,8 +1308,10 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "24":
         eroll = index24entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
-##    elif event_index == "25":
-##        eroll = index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "25":
+        eroll = index25entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "26":
+        eroll = index26entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
@@ -1157,6 +1349,7 @@ def eventlist():
                   ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
                   ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 0.57% -> 3.32%\nKimchi: 0.57% -> 3.32%"],
                   ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"],
-                  ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"]]
-##                  ["25", "Snack Time!", "Eclair and Fried Chicken" + padded " permamently and" + prateup, "21st March to 29th March 2019", "Eclair: ??? -> 25.33%\nFried Chicken ??? -> 4.98%"]]
+                  ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"],
+                  ["25", "Snack Time!", "Eclair and Fried Chicken" + padded + " permanently and" + prateup, "21st March to 29th March 2019", "Eclair: 3.73% -> 25.33%\nFried Chicken 0.56% -> 4.98%"],
+                  ["26", "Meaningful Amber", "This event only contains Strength Food Souls, including Raindrop Cake, Osmanthus Cake, Moon Cake and Sushi. URs, SRs and Ms are also increased", "30th March to 5th April 2019", "Raindrop Cake: 1.34%\nOsmanthus Cake: 3.70%\nMooncake: 3.70%\nSushi: 3.70%\nURs: 3.01% -> 4.00%\nSRs: 16.61% -> 37.00%\nMs: 1.85% -> 3.00%"]]
     return eventlist, eventlist2

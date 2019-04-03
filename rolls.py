@@ -666,7 +666,8 @@ for u103 in range(9):
 for u104 in range(5):
     roll10 += ["Boston Lobster"]
     roll10 += ["Double Scoop"]
-for s101 in range(41):
+for s101 in range(56):
+    roll10 += ["Fried Chicken"]
     roll10 += ["Milk Tea"]
     roll10 += ["Yunnan Noodles"]
     roll10 += ["Tiramisu"]
@@ -688,17 +689,16 @@ for s101 in range(41):
     roll10 += ["Chocolate"]
     roll10 += ["Udon"]
     roll10 += ["Sweet Tofu"]
-for s102 in range(40):
     roll10 += ["Kimchi"]
+for s102 in range(55):
     roll10 += ["Ddeokbokki"]
-for s103 in range(74):
+for s103 in range(106):
     roll10 += ["Eggette"]
     roll10 += ["Pineapple Cake"]
     roll10 += ["Laba Congee"]
-for r101 in range(274):
+for r101 in range(374):
     roll10 += ["Long Bao"]
     roll10 += ["Coffee"]
-for r102 in range(275):
     roll10 += ["Sashimi"]
     roll10 += ["Macaron"]
     roll10 += ["Zongzi"]
@@ -717,13 +717,11 @@ for r102 in range(275):
     roll10 += ["Ume Ochazuke"]
     roll10 += ["Miso Soup"]
     roll10 += ["Yellow Wine"]
+for r102 in range(373):
+    roll10 += ["Eclair"]
 for m101 in range(46):
     roll10 += ["Skewer"]
     roll10 += ["Jello"]
     roll10 += ["Pancake"]
 for m102 in range(47):
     roll10 += ["Popcorn"]
-for re1 in range(2533):
-    roll10 += ["Eclair"]
-for re2 in range(498):
-    roll10 += ["Fried Chicken"]
