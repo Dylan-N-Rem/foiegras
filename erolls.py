@@ -6,7 +6,7 @@ def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if roll_num <= 9:
         er_pool.remove("Eclair")
         esr_pool.remove("Fried Chicken")
-        unav_pool += ["Eclair", "Fried Chicken"]
+        unav_pool = ["Eclair", "Fried Chicken"]
     if roll_num <= 8:
         esr_pool.remove("Ddeokbokki")
         esr_pool.remove("Kimchi")
@@ -316,7 +316,7 @@ def index7entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_p
         eroll.remove("Eggette")
     return eroll
 
-def index8entry(eroll, eevent_pool, esummon_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+def index8entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     eroll, unav_pool = autoroll(eroll, 4, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eevent_pool = eventfs("Cassata", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     for e1 in range(25):
@@ -399,6 +399,7 @@ def index9entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_p
 def index10entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     eroll, unav_pool = autoroll(eroll, 4, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eevent_pool = eventfs("Cassata", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eevent_pool = eventfs("Toso", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     for e1 in range(120):
         eroll += ["Toso"]
     for e2 in range(5):
@@ -410,7 +411,7 @@ def index10entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
         eroll.remove("Foie Gras")
         eroll.remove("Peking Duck")
     for e5 in range(28):
-        eroll.removve("Bamboo Rice")
+        eroll.remove("Bamboo Rice")
     for e6 in range(332):
         eroll += ["Cassata"]
     for e7 in range(15):
@@ -842,7 +843,7 @@ def index19entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     return eroll
 
 def index20entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 8, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = autoroll(eroll, 8, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eevent_pool = eventfs("Caviar", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     eevent_pool = eventfs("Seaweed Soup", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     eevent_pool = eventfs("Fondant Cake", 2, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
@@ -897,7 +898,7 @@ def index20entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     return eroll
 
 def index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 8, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = autoroll(eroll, 8, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     for e1 in range(60):
         eroll += ["Bamboo Rice"]
     for e2 in range(16):
@@ -912,7 +913,7 @@ def index21entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     return eroll
 
 def index22entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     for e1 in range(275):
         eroll += ["Ddeokbokki"]
         eroll += ["Kimchi"]
@@ -947,7 +948,7 @@ def index22entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     return eroll
 
 def index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     for e1 in range(99):
         eroll += ["Crab Long Bao"]
     for e2 in range(23):
@@ -971,7 +972,7 @@ def index23entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     return eroll
 
 def index24entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    eroll, unav_pool = eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = autoroll(eroll, 9, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eevent_pool = eventfs("Buddha's Temptation", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     eevent_pool = eventfs("Butter Tea", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     eevent_pool = eventfs("Milt", 1, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
