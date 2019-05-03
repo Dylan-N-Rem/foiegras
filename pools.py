@@ -4,5 +4,5 @@ r_pool = ["Long Bao", "Coffee", "Sashimi", "Cold Rice Shrimp", "Macaron", "Zongz
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 summon_pool = ur_pool + sr_pool + r_pool + m_pool
 none_pool = ["Cloud Tea", "Canele", "Pizza", "Turkey", "Apple Pie", "Black Tea", "Eggnog", "Salty Tofu", "Spaghetti", "Donut", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Cola", "Plum Juice", "Crepe", "Rice", "Cheese", "Toast"]
-event_pool = ["Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake", "Strawberry Daifuku"]
-unre_pool = ["Qingtuan"]
+event_pool = ["Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar", "Mandarin Squirrel Fish", "Green Curry", "Qingtuan", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake", "Pudding", "Sandwich", "Strawberry Daifuku"]
+unre_pool = ["Whiskey", "Mapo Tofu", "Oyster"]
