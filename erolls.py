@@ -1591,6 +1591,6 @@ def eventlist():
                   ["25", "Snack Time!", "Eclair and Fried Chicken" + padded + " permanently and" + prateup, "21st March to 29th March 2019", "Eclair: 3.73% -> 25.33%\nFried Chicken 0.56% -> 4.98%"],
                   ["26", "Meaningful Amber", exclusive("Srength", "Raindrop Cake, Osmanthus Cake, Moon Cake and Sushi"), "30th March to 5th April 2019", "Raindrop Cake: 1.34%\nOsmanthus Cake: 3.70%\nMooncake: 3.70%\nSushi: 3.70%\nURs: 3.01% -> 4.00%\nSRs: 16.61% -> 37.00%\nMs: 1.85% -> 3.00%"],
                   ["27", "Amusement Park Sign Up!: Butter Tea", "Butter Tea and Cassata" + padded, "15th April to 29th April 2019", "Butter Tea: 1.20%\nCassata: 4.97%"],
-                  ["28", "Amusement Park Sign Up!: Huangshan Maofeng Tea", "Huangshan Maofeng Tea and Cassata" + padded, "15th April to 29th April 2019", "Huangshan Maofeng: 1.20%\nCassata: 4.97%"]
-                  ["29", "Crimson Gem", exclusive("Magic", "Sichuan Hotpot, Beer, Sandwich and Pudding"), "2nd May to 8th May 2019", "Sichuan Hotpot: 1.00%\nBeer:3.70%\nSandwich: 1.00%\nPudding: 1.00%"]]
+                  ["28", "Amusement Park Sign Up!: Huangshan Maofeng Tea", "Huangshan Maofeng Tea and Cassata" + padded, "15th April to 29th April 2019", "Huangshan Maofeng: 1.20%\nCassata: 4.97%"],
+                  ["29", "Crimson Gem", exclusive("Magic", "Sichuan Hotpot, Beer, Sandwich and Pudding"), "2nd May to 8th May 2019", "Sichuan Hotpot: 1.00%\nBeer: 3.70%\nSandwich: 1.00%\nPudding: 1.00%"]]
     return eventlist, eventlist2
