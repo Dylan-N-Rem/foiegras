@@ -85,9 +85,13 @@ def output2(summoned, valid, ur, sr, r, m, number, context, esummon_pool, eur_po
         stats = "\nStatistics\n---------------------"
         stats2 = "\nYou summoned " + str(ur) + " URs in total, that is " + str(round((ur/number)*100, 2)) + "% of summons."
         stats3 = "\nYou summoned " + str(sr) + " SRs in total, that is " + str(round((sr/number)*100, 2)) + "% of summons."
-        stats4 = "\nYou summoned " + str(r) + " Rs in total, that is " + str(round((r/number)*100, 2)) + "% of summons."
         stats5 = "\nYou summoned " + str(m) + " Ms in total, that is " + str(round((m/number)*100, 2)) + "% of summons."
-        stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*150) + " Soul Embers or " + str(number*100) + " Crystals."
+        if er_pool == []:
+            stats4 = ""
+            stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*450) + " Soul Embers or " + str(number*300) + " Crystals."
+        else:
+            stats4 = "\nYou summoned " + str(r) + " Rs in total, that is " + str(round((r/number)*100, 2)) + "% of summons."
+            stats6 = "\nTo summon " + str(number) + " amount of times, you will have to spend " + str(number*150) + " Soul Embers or " + str(number*100) + " Crystals."
         return "Summoning results of {}:".format(context.message.author.mention) + urline + srline + rline + mline + stats + stats2 + stats3 + stats4 + stats5 + stats6
 
 def output3(foodstats, dishname, colour, cuisine, recipe, dishunlock, maxstats, seasoning):
