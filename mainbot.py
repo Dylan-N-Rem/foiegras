@@ -457,8 +457,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Crimson Gem added", "In this event, you can only summon Magic Food Souls, including Sichuan Hotpot, Beer, Sandwich and Pudding for a limited time!"]]
-    embed = discord.Embed(title = "Bot Update (v2.27)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Bells Resound added", "In this event, you can summon Butter Tea, Buddha's Temptation, Milt, Green Curry and Mandarin Squirrel Fish for a limited time!"],
+                  ["Event summoning: Golden Pig Arch added", "In this event, R food souls are not in the summoning pool and you can summon many exclusive food souls, including Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more!"]]
+    embed = discord.Embed(title = "Bot Update (v2.29)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
