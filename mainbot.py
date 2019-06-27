@@ -457,9 +457,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Bells Resound added", "In this event, you can summon Butter Tea, Buddha's Temptation, Milt, Green Curry and Mandarin Squirrel Fish for a limited time!"],
-                  ["Event summoning: Golden Pig Arch added", "In this event, R food souls are not in the summoning pool and you can summon many exclusive food souls, including Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more!"]]
-    embed = discord.Embed(title = "Bot Update (v2.29)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Updated summoning pool", "Dragon's Beard Candy, Rum and Pineapple Bun have been permanently added to the summoning pool and their rates have been increased for a limited time!"]]
+    embed = discord.Embed(title = "Bot Update (v2.30)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
@@ -469,7 +468,7 @@ async def update():
 async def credit():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
-Developer: Monokhorome#3439 AKA ディラン (Dylan)\n\
+Developer: Monokhrome#3439 AKA ディラン (Dylan)\n\
 Speical thanks to cyn#1598 AKA Just Marisa and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
 
 @client.event
