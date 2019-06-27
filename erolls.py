@@ -1,8 +1,13 @@
 from rolls import *
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    if roll_num <= 10:
+    if roll_num <= 11:
         unav_pool = []
+    if roll_num <= 10:
+        eur_pool.remove("Rum")
+        eur_pool.remove("Dragon's Beard Candy")
+        esr_pool.remove("Pineapple Bun")
+        unav_pool = ["Dragon's Beard Candy", "Rum", "Pineapple Bun"]
     if roll_num <= 9:
         er_pool.remove("Eclair")
         esr_pool.remove("Fried Chicken")
