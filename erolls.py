@@ -93,6 +93,8 @@ def autoroll(eroll, roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
         eroll += roll9
     elif roll_num == 10:
         eroll += roll10
+    elif roll_num == 11:
+        eroll += roll11
     return eroll, unav_pool
 
 def index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
@@ -1719,8 +1721,60 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index30entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "31":
         eroll = index31entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "32":
+        eroll = index32entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
+    return eroll
+
+def index32entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    for e1 in range(7):
+        eroll.remove("Crab Long Bao")
+        eroll.remove("Gingerbread")
+    for e2 in range(4):
+        eroll.remove("Bibimbap")
+    for e3 in range(17):
+        eroll.remove("Bamboo Rice")
+        eroll.remove("Foie Gras")
+        eroll.remove("Peking Duck")
+        eroll.remove("B-52")
+    for e4 in range(43):
+        eroll += ["Rum"]
+        eroll += ["Dragon's Beard Candy"]
+    for e5 in range(445):
+        eroll += ["Pineapple Bun"]
+    for e6 in range(13):
+        eroll.remove("Chocolate")
+        eroll.remove("Udon")
+        eroll.remove("Sweet Tofu")
+        eroll.remove("Kimchi")
+        eroll.remove("Ddeokbokki")
+    for e7 in range(14):
+        eroll.remove("Gyoza")
+    for e8 in range(15):
+        eroll.remove("Fried Chicken")
+        eroll.remove("Milk Tea")
+        eroll.remove("Yunnan Noodles")
+        eroll.remove("Tiramisu")
+        eroll.remove("Escargot")
+        eroll.remove("Hotdog")
+        eroll.remove("Mango Pudding")
+        eroll.remove("Hamburger")
+        eroll.remove("Steak")
+        eroll.remove("Tangyuan")
+        eroll.remove("Sanma")
+        eroll.remove("Napoleon Cake")
+        eroll.remove("Salad")
+        eroll.remove("Pastel de nata")
+        eroll.remove("Yuxiang")
+        eroll.remove("Sukiyaki")
+        eroll.remove("Brownie")
+        eroll.remove("Red Wine")
+    for e9 in range(32):
+        eroll.remove("Pineapple Cake")
+        eroll.remove("Eggette")
+        eroll.remove("Laba Congee")
     return eroll
 
 def eventlist():
@@ -1766,5 +1820,6 @@ def eventlist():
                   ["28", "Amusement Park Sign Up!: Huangshan Maofeng Tea", "Huangshan Maofeng Tea and Cassata" + padded, "15th April to 29th April 2019", "Huangshan Maofeng: 1.20%\nCassata: 4.97%"],
                   ["29", "Crimson Gem", exclusive("Magic", "Sichuan Hotpot, Beer, Sandwich and Pudding"), "2nd May to 8th May 2019", "Sichuan Hotpot: 1.00%\nBeer: 3.70%\nSandwich: 1.00%\nPudding: 1.00%"],
                   ["30", "Bells Resound", "Butter Tea, Buddha's Temptation, Milt, Green Curry and Mandarin Squirrel Fish" + padded, "31st May to 12th June 2019", "Butter Tea: 1.20%\nMilt: 0.10%\nBuddha's Temptation: 0.10%\nGreen Curry: 4.98%\nMandarin Squirrel Fish: 0.41%"],
-                  ["31", "Golden Pig Arch", "R Food Souls are not in this summoning pool and includes many exclusive food souls such as Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more", "31st May to 12th June 2019", "\nURs: 5.00%\nSRs: 85.00%\nMs: 10.00%"]]
+                  ["31", "Golden Pig Arch", "R Food Souls are not in this summoning pool and includes many exclusive food souls such as Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more", "31st May to 12th June 2019", "URs: 5.00%\nSRs: 85.00%\nMs: 10.00%"],
+                  ["32", "Wine In Bottle", "Pineapple Bun, Dragon's Beard Candy and Rum" + padded + " permamently and they" + prateup, "26th June to 2nd July 2019", "Pineapple Bun: 0.53% -> 4.98%\nDragon's Beard Candy: 0.17% -> 0.60%\nRum: 0.17% -> 0.60%"]]
     return eventlist, eventlist2

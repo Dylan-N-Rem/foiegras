@@ -727,27 +727,22 @@ for m102 in range(47):
     roll10 += ["Popcorn"]
 
 roll11 = []
-for u111 in range(11):
+for u111 in range(18):
     roll11 += ["Crab Long Bao"]
     roll11 += ["Gingerbread"]
-for u112 in range(36):
-    roll11 += ["Foie Gras"]
-    roll11 += ["Peking Duck"]
-    roll11 += ["B-52"]
-    roll11 += ["Bamboo Rice"]
-for u113 in range(5):
+for u112 in range(9):
     roll11 += ["Bibimbap"]
-for u114 in range(5):
+for u113 in range(5):
     roll11 += ["Boston Lobster"]
     roll11 += ["Double Scoop"]
-for u115 in range(60):
+for u114 in range(17):
     roll11 += ["Rum"]
     roll11 += ["Dragon's Beard Candy"]
-for s111 in range(74):
+for s111 in range(106):
     roll11 += ["Eggette"]
     roll11 += ["Pineapple Cake"]
     roll11 += ["Laba Congee"]
-for s112 in range(39):
+for s112 in range(54):
     roll11 += ["Fried Chicken"]
     roll11 += ["Milk Tea"]
     roll11 += ["Yunnan Noodles"]
@@ -766,13 +761,18 @@ for s112 in range(39):
     roll11 += ["Sukiyaki"]
     roll11 += ["Brownie"]
     roll11 += ["Red Wine"]
+for us113 in range(53):
+    roll11 += ["Foie Gras"]
+    roll11 += ["Peking Duck"]
+    roll11 += ["B-52"]
+    roll11 += ["Bamboo Rice"]
     roll11 += ["Gyoza"]
-for s113 in range(40):
     roll11 += ["Chocolate"]
     roll11 += ["Udon"]
     roll11 += ["Sweet Tofu"]
     roll11 += ["Kimchi"]
     roll11 += ["Ddeokbokki"]
+    roll11 += ["Pineapple Bun"]
 for r111 in range(374):
     roll11 += ["Long Bao"]
     roll11 += ["Coffee"]
