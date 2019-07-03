@@ -457,8 +457,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Updated summoning pool", "Dragon's Beard Candy, Rum and Pineapple Bun have been permanently added to the summoning pool and their rates have been increased for a limited time!"]]
-    embed = discord.Embed(title = "Bot Update (v2.30)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Rum, Dragon's Beard Candy and Pineapple Bun rate up has ended", "The rate up event for Rum, Dragon's Beard Candy and Pineapple Bun is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."]]
+    embed = discord.Embed(title = "Bot Update (v2.31)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
