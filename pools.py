@@ -3,6 +3,22 @@ sr_pool = ["Pineapple Bun", "Fried Chicken", "Pineapple Cake", "Eggette", "Laba 
 r_pool = ["Long Bao", "Coffee", "Sashimi", "Cold Rice Shrimp", "Macaron", "Zongzi", "Sakuramochi", "Tom Yum", "Taiyaki", "Milk", "Dorayaki", "Sake", "Tempura", "Spicy Gluten", "Jiuniang", "Omurice", "Orange Juice", "Ume Ochazuke", "Miso Soup", "Yellow Wine", "Eclair"]
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 summon_pool = ur_pool + sr_pool + r_pool + m_pool
-none_pool = ["Cloud Tea", "Canele", "Pizza", "Turkey", "Apple Pie", "Mapo Tofu", "Black Tea", "Eggnog", "Salty Tofu", "Spaghetti", "Donut", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Surstromming", "Cola", "Plum Juice", "Crepe", "Rice", "Cheese", "Toast"]
-event_pool = ["Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar", "Mandarin Squirrel Fish", "Green Curry", "Qingtuan", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake", "Pudding", "Sandwich", "Strawberry Daifuku"]
+
+nur_pool = ["Cloud Tea", "Canele", "Pizza", "Turkey", "Apple Pie", "Nagashi Somen", "Mapo Tofu"]
+nsr_pool = ["Black Tea", "Lion's Head", "American Corn Bread", "Qingtuan", "Eggnog", "Zitui Bun", "Salty Tofu", "Spaghetti", "Donut", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Surstromming"]
+nr_pool = ["Nasi Lemak", "Cola", "Plum Juice", "Crepe"]
+nm_pool = ["Hawthorne Ball", "Rice", "Cheese", "Toast"]
+none_pool = nur_pool + nsr_pool + nr_pool + nm_pool
+
+eur_pool = ["Osechi", "Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar"]
+esr_pool = ["Unadon", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake"]
+em_pool = ["Pudding", "Sandwich", "Strawberry Daifuku"]
+event_pool = eur_pool + esr_pool + em_pool
+
 unre_pool = ["Whiskey", "Oyster"]
+
+all_pool = summon_pool + none_pool + event_pool
+all_ur = ur_pool + nur_pool + eur_pool
+all_sr = sr_pool + nsr_pool + esr_pool
+all_r = r_pool + nr_pool
+all_m = m_pool + nm_pool + em_pool
