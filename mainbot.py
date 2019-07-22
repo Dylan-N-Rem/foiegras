@@ -213,7 +213,12 @@ async def esummon(context, event_index, number):
             time.sleep(2)
             number = int(number)
             valid = True
-            for x1 in range(number):
+            new_number = number
+            if event_index == "33" and number > 9:
+                summoned += ["Osechi"]
+                ur += 1
+                new_number -= 1
+            for x1 in range(new_number):
                 foodsoul = random.choice(eroll)
                 summoned += [foodsoul]
                 if foodsoul in eur_pool:
@@ -291,6 +296,11 @@ async def efoodsoul(context, event_index, food_soul, amount):
                 valid = True
                 lfoodsoul = foodsoul.lower()
                 summoned += [foodsoul]
+                if event_index == "33" and number > 9 and "Osechi" not in summoned:
+                    summoned += ["Osechi"]
+                    ur += 1
+                    number += 1
+                    lfoodsoul = "osechi"
                 if foodsoul in eur_pool:
                     ur += 1
                     number += 1
@@ -365,11 +375,15 @@ async def erates(event_index):
                     temp += 1
             mrateslist += [[mfs, temp/100]]
             mtotal += temp/100
-        embed = discord.Embed(title = "Feast of Creation:", color = 0xffb100)
-        embed.add_field(name = "UR: " + str(round(urtotal, 2)) + "%", value = "\n".join([urc[0] + ": " + str(round(urc[1], 2)) + "%" for urc in urrateslist]), inline = False)
-        embed.add_field(name = "SR: " + str(round(srtotal, 2)) + "%", value = "\n".join([src[0] + ": " + str(round(src[1], 2)) + "%" for src in srrateslist]), inline = False)
-        embed.add_field(name = "R: " + str(round(rtotal, 2)) + "%", value = "\n".join([rrc[0] + ": " + str(round(rrc[1], 2)) + "%" for rrc in rrateslist]), inline = False)
-        embed.add_field(name = "M: " + str(round(mtotal, 2)) + "%", value = "\n".join([mrc[0] + ": " + str(round(mrc[1], 2)) + "%" for mrc in mrateslist]), inline = False)
+        embed = discord.Embed(title = "Event Summoning:", color = 0xffb100)
+        if eur_pool != []:
+            embed.add_field(name = "UR: " + str(round(urtotal, 2)) + "%", value = "\n".join([urc[0] + ": " + str(round(urc[1], 2)) + "%" for urc in urrateslist]), inline = False)
+        if esr_pool != []:
+            embed.add_field(name = "SR: " + str(round(srtotal, 2)) + "%", value = "\n".join([src[0] + ": " + str(round(src[1], 2)) + "%" for src in srrateslist]), inline = False)
+        if er_pool != []:
+            embed.add_field(name = "R: " + str(round(rtotal, 2)) + "%", value = "\n".join([rrc[0] + ": " + str(round(rrc[1], 2)) + "%" for rrc in rrateslist]), inline = False)
+        if em_pool != []:
+            embed.add_field(name = "M: " + str(round(mtotal, 2)) + "%", value = "\n".join([mrc[0] + ": " + str(round(mrc[1], 2)) + "%" for mrc in mrateslist]), inline = False)
         await client.say(embed = embed)
 
 @client.command(name = "eventindex")
@@ -457,8 +471,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Rum, Dragon's Beard Candy and Pineapple Bun rate up has ended", "The rate up event for Rum, Dragon's Beard Candy and Pineapple Bun is over! Fret not, you can still summon in the rate up using ``f!esummon`` or ``f!efoodsoul``! Check the event index list to key in the proper event index."]]
-    embed = discord.Embed(title = "Bot Update (v2.31)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Shattered Starlight added", "In this event, you can summon Osechi and Fondant Cake for a limited time! Summoning 10 or more times guarantees 1 Osechi!"],
+                  ["Event summoning: Apricot Blossom added", "In this event, you can summon Osechi and Unadon for a limited time! Unfortunately, the swapping function is not available."]]
+    embed = discord.Embed(title = "Bot Update (v2.32)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
