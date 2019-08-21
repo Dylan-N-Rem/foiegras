@@ -10,8 +10,8 @@ nr_pool = ["Nasi Lemak", "Cola", "Plum Juice", "Crepe"]
 nm_pool = ["Hawthorne Ball", "Rice", "Cheese", "Toast"]
 none_pool = nur_pool + nsr_pool + nr_pool + nm_pool
 
-eur_pool = ["Osechi", "Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar"]
-esr_pool = ["Unadon", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake"]
+eur_pool = ["Stargazy Pie", "Osechi", "Buddha's Temptation", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar"]
+esr_pool = ["Black Pudding", "Unadon", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake"]
 em_pool = ["Pudding", "Sandwich", "Strawberry Daifuku"]
 event_pool = eur_pool + esr_pool + em_pool
 
