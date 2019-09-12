@@ -1553,6 +1553,19 @@ def index35entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll = ratedown("Eggette", 45, eroll)
     return eroll
 
+def index36entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Turkey", 1, 120, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll = ratedown("Crab Long Bao", 2, eroll)
+    eroll = ratedown("Gingerbread", 2, eroll)
+    eroll = ratedown("Dragon's Beard Candy", 8, eroll)
+    eroll = ratedown("Rum", 8, eroll)
+    eroll = ratedown("Foie Gras", 25, eroll)
+    eroll = ratedown("Peking Duck", 25, eroll)
+    eroll = ratedown("B-52", 25, eroll)
+    eroll = ratedown("Bamboo Rice", 25, eroll)
+    return eroll
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -1634,6 +1647,9 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index34entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "35":
         eroll = index35entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "36":
+        eroll = index36entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    
     else:
         eroll = []
     return eroll
@@ -1685,5 +1701,6 @@ def eventlist():
                   ["32", "Wine In Bottle", "Pineapple Bun, Dragon's Beard Candy and Rum" + padded + " permamently and they" + prateup, "26th June to 2nd July 2019", "Pineapple Bun: 0.53% -> 4.98%\nDragon's Beard Candy: 0.17% -> 0.60%\nRum: 0.17% -> 0.60%"],
                   ["33", "Shattered Starlight", "Osechi and Fondant Cake" + prateup, "18th July to 31st July 2019", "Osechi: 1.20%, drawing 10 or more will guarantee one Osechi\nFodant Cake: 4.98%"],
                   ["34", "Apricot Blossom", "Osechi and Unadon" + prateup, "18th July to 31st July 2019", "NOTE: The swapping function is not available.\nOsechi: 1.20%\nUnadon: 4.98%"],
-                  ["35", "Starry Brilliance", "Stargazy Pie and Black Pudding" + padded, "15th August to 25th August 2019", "Stargazy Pie: 1.20%\nBlack Pudding: 4.98%"]]
+                  ["35", "Starry Brilliance", "Stargazy Pie and Black Pudding" + padded, "15th August to 25th August 2019", "Stargazy Pie: 1.20%\nBlack Pudding: 4.98%"],
+                  ["36", "Flaming Wings", "Turkey" + sadded, "31st August to 6th September 2019", "Turkey: 1.20%, drawing 10 or more will guarantee one Turkey"]]
     return eventlist, eventlist2
