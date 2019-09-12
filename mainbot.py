@@ -218,6 +218,10 @@ async def esummon(context, event_index, number):
                 summoned += ["Osechi"]
                 ur += 1
                 new_number -= 1
+            if event_index == "36" and number > 9:
+                summoned += ["Turkey"]
+                ur += 1
+                new_number -= 1
             for x1 in range(new_number):
                 foodsoul = random.choice(eroll)
                 summoned += [foodsoul]
@@ -301,6 +305,11 @@ async def efoodsoul(context, event_index, food_soul, amount):
                     ur += 1
                     number += 1
                     lfoodsoul = "osechi"
+                if event_index == "36" and number > 9 and "Turkey" not in summoned:
+                    summoned += ["Turkey"]
+                    ur += 1
+                    number += 1
+                    lfoodsoul = "turkey"
                 if foodsoul in eur_pool:
                     ur += 1
                     number += 1
@@ -320,7 +329,7 @@ async def efoodsoul(context, event_index, food_soul, amount):
 
 @client.command(name = 'erates',
                 pass_context = False)
-@commands.cooldown(1, 30, commands.BucketType.user)
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def erates(event_index):
     eroll = []
     eur_pool = []
@@ -452,7 +461,7 @@ client.remove_command('help')
 @client.command(name = "help")
 @commands.cooldown(1, 20, commands.BucketType.user)
 async def help():
-    helplist = [["f!summon <amount>", "Summons a desired amount of food souls from the current summoning pool.\\nExample: f!summon 100 will summon 100 food souls from the current summoning pool."],
+    helplist = [["f!summon <amount>", "Summons a desired amount of food souls from the current summoning pool.\nExample: f!summon 100 will summon 100 food souls from the current summoning pool."],
                 ["f!foodsoul <food_soul> <amount>", 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "." instead of spaces.\nExample: f!foodsoul Bamboo.Rice 2 will summon endlessly until two Bamboo Rice have been summoned.'],
                 ["f!rates", "Checks the probability rates of the food souls in the current summoning pool."],
                 ["f!eventindex", "Shows the event index number to key into f!summonevent or f!event."],
@@ -471,8 +480,8 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Starry Brilliance added", "In this event, you can summon Stargazy Pie and Black Pudding for a limited time."]]
-    embed = discord.Embed(title = "Bot Update (v2.33)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Flaming Wings added", "In this event, you can summon Turkey for a limited time. Summoning more than 10 times guarantees one Turkey"]]
+    embed = discord.Embed(title = "Bot Update (v2.34)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
@@ -482,9 +491,8 @@ async def update():
 async def credit():
     await client.say("\
 **All nicknames are from the Food Fantasy Discord Server.**\n\
-Developer: Monokhrome#3439 AKA ディラン (Dylan)\n\
-Speical thanks to cyn#1598 AKA Just Marisa and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
-
+Developer: SaySikeRn#9346 AKA ディラン (Dylan)\n\
+Speical thanks to cyn#1598 AKA marisleep and Madara#0483 AKA [Thirsty] MadaraKeehl for assisting me with the base programming of the bot!")
 @client.event
 async def on_command_error(error, context):
     if isinstance(error, commands.CommandOnCooldown):
