@@ -1566,6 +1566,50 @@ def index36entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll = ratedown("Bamboo Rice", 25, eroll)
     return eroll
 
+def index37entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Whisky", 1, 120, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Waffle", 2, 498, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll = ratedown("Bibimbap", 2, eroll)
+    eroll = ratedown("Crab Long Bao", 5, eroll)
+    eroll = ratedown("Gingerbread", 5, eroll)
+    eroll = ratedown("Rum", 10, eroll)
+    eroll = ratedown("Dragon's Beard Candy", 10, eroll)
+    eroll = ratedown("Ddeokbokki", 13, eroll)
+    eroll = ratedown("Pineapple Bun", 13, eroll)
+    eroll = ratedown("Fried Chicken", 14, eroll)
+    eroll = ratedown("Escargot", 14, eroll)
+    eroll = ratedown("Hotdog", 14, eroll)
+    eroll = ratedown("Mango Pudding", 14, eroll)
+    eroll = ratedown("Hamburger", 14, eroll)
+    eroll = ratedown("Steak", 14, eroll)
+    eroll = ratedown("Sweet Tofu", 14, eroll)
+    eroll = ratedown("Udon", 14, eroll)
+    eroll = ratedown("Gyoza", 14, eroll)
+    eroll = ratedown("Chocolate", 14, eroll)
+    eroll = ratedown("Kimchi", 14, eroll)
+    eroll = ratedown("Tangyuan", 15, eroll)
+    eroll = ratedown("Sanma", 15, eroll)
+    eroll = ratedown("Napoleon Cake", 15, eroll)
+    eroll = ratedown("Salad", 15, eroll)
+    eroll = ratedown("Red Wine", 15, eroll)
+    eroll = ratedown("Pastel de nata", 15, eroll)
+    eroll = ratedown("Yuxiang", 15, eroll)
+    eroll = ratedown("Tiramisu", 15, eroll)
+    eroll = ratedown("Yunnan Noodles", 15, eroll)
+    eroll = ratedown("Sukiyaki", 15, eroll)
+    eroll = ratedown("Brownie", 15, eroll)
+    eroll = ratedown("Milk Tea", 15, eroll)
+    eroll = ratedown("Foie Gras", 22, eroll)
+    eroll = ratedown("Peking Duck", 22, eroll)
+    eroll = ratedown("B-52", 22, eroll)
+    eroll = ratedown("Bamboo Rice", 22, eroll)
+    
+    eroll = ratedown("Pineapple Cake", 46, eroll)
+    eroll = ratedown("Eggette", 46, eroll)
+    eroll = ratedown("Laba Congee", 46, eroll)
+    return eroll
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -1649,7 +1693,8 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index35entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "36":
         eroll = index36entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
-    
+    elif event_index == "37":
+        eroll = index37entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
@@ -1702,5 +1747,6 @@ def eventlist():
                   ["33", "Shattered Starlight", "Osechi and Fondant Cake" + prateup, "18th July to 31st July 2019", "Osechi: 1.20%, drawing 10 or more will guarantee one Osechi\nFodant Cake: 4.98%"],
                   ["34", "Apricot Blossom", "Osechi and Unadon" + prateup, "18th July to 31st July 2019", "NOTE: The swapping function is not available.\nOsechi: 1.20%\nUnadon: 4.98%"],
                   ["35", "Starry Brilliance", "Stargazy Pie and Black Pudding" + padded, "15th August to 25th August 2019", "Stargazy Pie: 1.20%\nBlack Pudding: 4.98%"],
-                  ["36", "Flaming Wings", "Turkey" + sadded, "31st August to 6th September 2019", "Turkey: 1.20%, drawing 10 or more will guarantee one Turkey"]]
+                  ["36", "Flaming Wings", "Turkey" + sadded, "31st August to 6th September 2019", "Turkey: 1.20%, drawing 10 or more will guarantee one Turkey"],
+                  ["37", "Mellow Memory", "Whisky and Waffle" + padded, "25th September to 1st October 2019", "Whisky: 1.20%\nWaffle: 4.98%"]]
     return eventlist, eventlist2

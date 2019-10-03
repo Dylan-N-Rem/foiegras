@@ -4,18 +4,18 @@ r_pool = ["Long Bao", "Coffee", "Sashimi", "Cold Rice Shrimp", "Macaron", "Zongz
 m_pool = ["Skewer", "Jello", "Pancake", "Popcorn"]
 summon_pool = ur_pool + sr_pool + r_pool + m_pool
 
-nur_pool = ["Cloud Tea", "Canele", "Pizza", "Apple Pie", "Nagashi Somen", "Mapo Tofu"]
-nsr_pool = ["Black Tea", "Lion's Head", "American Corn Bread", "Qingtuan", "Eggnog", "Zitui Bun", "Salty Tofu", "Spaghetti", "Donut", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Surstromming"]
+nur_pool = ["Matsutake Dobinmushi", "Cloud Tea", "Canele", "Pizza", "Apple Pie", "Nagashi Somen", "Mapo Tofu"]
+nsr_pool = ["Soba", "Black Tea", "Lion's Head", "American Corn Bread", "Qingtuan", "Eggnog", "Zitui Bun", "Salty Tofu", "Spaghetti", "Donut", "Tortoise Jelly", "Sweet & Sour Fish", "Beggar's Chicken", "Mung Bean Soup", "Bloody Mary", "Vodka", "Wonton", "Yogurt", "Surstromming"]
 nr_pool = ["Nasi Lemak", "Cola", "Plum Juice", "Crepe"]
-nm_pool = ["Hawthorne Ball", "Rice", "Cheese", "Toast"]
+nm_pool = ["Hawthorne Ball", "Rice", "Cheese", "Toast", "Takoyaki"]
 none_pool = nur_pool + nsr_pool + nr_pool + nm_pool
 
-eur_pool = ["Stargazy Pie", "Osechi", "Buddha's Temptation", "Turkey", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar"]
-esr_pool = ["Black Pudding", "Unadon", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake"]
+eur_pool = ["Whisky", "Stargazy Pie", "Osechi", "Buddha's Temptation", "Turkey", "Butter Tea", "Huangshan Maofeng Tea", "Champagne", "Sichuan Hotpot", "Toso", "Raindrop Cake", "Milt", "Caviar"]
+esr_pool = ["Waffle", "Black Pudding", "Unadon", "Mandarin Squirrel Fish", "Green Curry", "Cassata", "Bonito Rice", "Seaweed Soup", "Beer", "Moon Cake", "Sushi", "Osmanthus Cake", "Fondant Cake"]
 em_pool = ["Pudding", "Sandwich", "Strawberry Daifuku"]
 event_pool = eur_pool + esr_pool + em_pool
 
-unre_pool = ["Whiskey", "Oyster"]
+unre_pool = ["Oyster", "Pretzel"]
 
 all_pool = summon_pool + none_pool + event_pool
 all_ur = ur_pool + nur_pool + eur_pool
