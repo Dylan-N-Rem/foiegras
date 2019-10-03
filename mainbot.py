@@ -481,8 +481,9 @@ async def help():
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
     updatelist = [["Event summoning: Mellow Memory added", "In this event, you can summon Whisky and Waffle for a limited time!"],
-                  ["Fixed food information for Sakurajima cuisine", "Crab Sashimi and many other Sakurajima dishes were bugged and displayed wrongly. They have all been fixed now."]
-                  ["Fixed help page", "There were a few typos on the help page. They have all been corrected."]]    embed = discord.Embed(title = "Bot Update (v2.34)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+                  ["Fixed food information for Sakurajima cuisine", "Crab Sashimi and many other Sakurajima dishes were bugged and displayed wrongly. They have all been fixed now."],
+                  ["Fixed help page", "There were a few typos on the help page. They have all been corrected."]]    
+    embed = discord.Embed(title = "Bot Update (v2.34)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
