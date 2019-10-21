@@ -480,7 +480,7 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Soft Serve Cone added permanently!", "Soft Serve Cone has been permanently added to the regular summoning pool"],
+    updatelist = [["Soft Serve Cone added permanently!", "Soft Serve Cone has been permanently added to the regular summoning pool"]]
     embed = discord.Embed(title = "Bot Update (v2.36)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
