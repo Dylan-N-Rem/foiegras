@@ -1,8 +1,11 @@
 from rolls import *
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    if roll_num <= 11:
+    if roll_nim <= 12:
         unav_pool = []
+    if roll_num <= 11:
+        esr_pool.remove("Soft Serve Cone")
+        unav_pool = ["Soft Serve Cone"]
     if roll_num <= 10:
         eur_pool.remove("Rum")
         eur_pool.remove("Dragon's Beard Candy")
@@ -71,6 +74,8 @@ def autoroll(eroll, roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
         eroll += roll10
     elif roll_num == 11:
         eroll += roll11
+    elif roll_num == 12:
+        eroll += roll12
     return eroll, unav_pool
 
 def addfs(foodsoul, fs_type, rate, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool):

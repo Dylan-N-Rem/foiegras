@@ -1,3 +1,9 @@
+def setrate(roll, rate, fslist):
+    for fscount in fslist:
+        for fsrate in range(rate):
+            roll += [fscount]
+    return roll
+
 roll0 = []
 for u01 in range(23):
     roll0 += ["Crab Long Bao"]
@@ -802,3 +808,33 @@ for m111 in range(46):
     roll11 += ["Pancake"]
 for m112 in range(47):
     roll11 += ["Popcorn"]
+
+roll12 = []
+roll12 = setrate(roll12, 5, ["Double Scoop", "Boston Lobster"])
+roll12 = setrate(roll12, 9, ["Bibimbap"])
+roll12 = setrate(roll12, 17, ["Rum", "Dragon's Beard Candy"])
+roll12 = setrate(roll12, 18, ["Crab Long Bao", "Gingerbread"])
+roll12 = setrate(roll12, 46, ["Jello", "Pancake", "Skewer"])
+roll12 = setrate(roll12, 47, ["Popcorn"])
+roll12 = setrate(roll12, 51, ["Escargot", "Fried Chicken",
+                              "Hamburger", "Hotdog", "Milk Tea",
+                              "Sanma", "Steak", "Tangyuan",
+                              "Yunnan Noodles"])
+roll12 = setrate(roll12, 52, ["Brownie", "Chocolate", "Ddeokbokki",
+                              "Gyoza", "Kimchi", "Mango Pudding",
+                              "Napoleon Cake", "Pastel de nata",
+                              "Pineapple Bun", "Red Wine", "Salad",
+                              "Sukiyaki", "Soft Serve Cone",
+                              "Sweet Tofu", "Tiramisu", "Udon",
+                              "Yuxiang"])
+roll12 = setrate(roll12, 53, ["Foie Gras", "Peking Duck", "B-52",
+                              "Bamboo Rice"])
+roll12 = setrate(roll12, 106, ["Eggette", "Pineapple Cake", "Laba Congee"])
+roll12 = setrate(roll12, 373, ["Eclair"])
+roll12 = setrate(roll12, 374, ["Coffee", "Cold Rice Shrimp", "Dorayaki",
+                               "Jiuniang", "Long Bao", "Macaron",
+                               "Milk", "Miso Soup", "Omurice",
+                               "Orange Juice", "Sake", "Sakuramochi",
+                               "Sashimi", "Spicy Gluten", "Taiyaki",
+                               "Tempura", "Tom Yum", "Ume Ochazuke",
+                               "Yellow Wine", "Zongzi"])
