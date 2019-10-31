@@ -1,7 +1,7 @@
 from rolls import *
 
 def autounav(roll_num, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
-    if roll_nim <= 12:
+    if roll_num <= 12:
         unav_pool = []
     if roll_num <= 11:
         esr_pool.remove("Soft Serve Cone")
@@ -549,8 +549,8 @@ def index14entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
 
 def index4bentry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     eroll, unav_pool = autoroll(eroll, 6, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
-    eevent_pool = addfs("Milt", 1, 121, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
-    eevent_pool = addfs("Bonito Rice", 2, 499, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Milt", 1, 121, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Bonito Rice", 2, 499, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
     return eroll
 
 def index11bentry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool):
@@ -1609,10 +1609,266 @@ def index37entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll = ratedown("Peking Duck", 22, eroll)
     eroll = ratedown("B-52", 22, eroll)
     eroll = ratedown("Bamboo Rice", 22, eroll)
-    
     eroll = ratedown("Pineapple Cake", 46, eroll)
     eroll = ratedown("Eggette", 46, eroll)
     eroll = ratedown("Laba Congee", 46, eroll)
+    return eroll
+
+def index38entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Foie Gras", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Peking Duck", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("B-52", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Milt", 1, 121, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Stargazy Pie", 1, 27, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Raindrop Cake", 1, 27, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Qingtuan", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Mung Bean Soup", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Osmanthus Cake", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll = ratedown("Chocolate", 3, eroll)
+    eroll = ratedown("Long Bao", 4, eroll)
+    eroll = ratedown("Coffee", 4, eroll)
+    eroll = ratedown("Sashimi", 4, eroll)
+    eroll = ratedown("Macaron", 4, eroll)
+    eroll = ratedown("Eclair", 4, eroll)
+    eroll = ratedown("Gyoza", 4, eroll)
+    eroll = ratedown("Udon", 4, eroll)
+    eroll = ratedown("Sweet Tofu", 4, eroll)
+    eroll = ratedown("Ddeokbokki", 4, eroll)
+    eroll = ratedown("Pineapple Bun", 4, eroll)
+    eroll = ratedown("Escargot", 4, eroll)
+    eroll = ratedown("Hotdog", 4, eroll)
+    eroll = ratedown("Mango Pudding", 4, eroll)
+    eroll = ratedown("Hamburger", 4, eroll)
+    eroll = ratedown("Steak", 4, eroll)
+    eroll = ratedown("Napoleon Cake", 4, eroll)
+    eroll = ratedown("Salad", 4, eroll)
+    eroll = ratedown("Tom Yum", 5, eroll)
+    eroll = ratedown("Taiyaki", 5, eroll)
+    eroll = ratedown("Milk", 5, eroll)
+    eroll = ratedown("Dorayaki", 5, eroll)
+    eroll = ratedown("Sake", 5, eroll)
+    eroll = ratedown("Tempura", 5, eroll)
+    eroll = ratedown("Spicy Gluten", 5, eroll)
+    eroll = ratedown("Jiuniang", 5, eroll)
+    eroll = ratedown("Omurice", 5, eroll)
+    eroll = ratedown("Orange Juice", 5, eroll)
+    eroll = ratedown("Ume Ochazuke", 5, eroll)
+    eroll = ratedown("Miso Soup", 5, eroll)
+    eroll = ratedown("Yellow Wine", 5, eroll)
+    eroll = ratedown("Cold Rice Shrimp", 5, eroll)
+    eroll = ratedown("Zongzi", 5, eroll)
+    eroll = ratedown("Sakuramochi", 5, eroll)
+    eroll = ratedown("Pastel de nata", 5, eroll)
+    eroll = ratedown("Yuxiang", 5, eroll)
+    eroll = ratedown("Tangyuan", 5, eroll)
+    eroll = ratedown("Sanma", 5, eroll)
+    eroll = ratedown("Sukiyaki", 5, eroll)
+    eroll = ratedown("Tiramisu", 5, eroll)
+    eroll = ratedown("Brownie", 5, eroll)
+    eroll = ratedown("Red Wine", 5, eroll)
+    eroll = ratedown("Yunnan Noodles", 5, eroll)
+    eroll = ratedown("Milk Tea", 5, eroll)
+    eroll = ratedown("Fried Chicken", 5, eroll)
+    eroll = rateup("Eggette", 4, eroll)
+    eroll = rateup("Pineapple Cake", 4, eroll)
+    eroll = rateup("Laba Congee", 4, eroll)
+    eroll = ratedown("Bamboo Rice", 8, eroll)
+    eroll = rateup("Rum", 10, eroll)
+    eroll = rateup("Dragon's Beard Candy", 10, eroll)
+    eroll = rateup("Bibimbap", 18, eroll)
+    eroll = rateup("Crab Long Bao", 27, eroll)
+    eroll = rateup("Gingerbread", 27, eroll)
+    return eroll
+
+def index39entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Foie Gras", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Peking Duck", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("B-52", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Toso", 1, 121, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Stargazy Pie", 1, 27, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Raindrop Cake", 1, 27, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Qingtuan", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Mung Bean Soup", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Osmanthus Cake", 2, 49, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll = ratedown("Chocolate", 3, eroll)
+    eroll = ratedown("Long Bao", 4, eroll)
+    eroll = ratedown("Coffee", 4, eroll)
+    eroll = ratedown("Sashimi", 4, eroll)
+    eroll = ratedown("Macaron", 4, eroll)
+    eroll = ratedown("Eclair", 4, eroll)
+    eroll = ratedown("Gyoza", 4, eroll)
+    eroll = ratedown("Udon", 4, eroll)
+    eroll = ratedown("Sweet Tofu", 4, eroll)
+    eroll = ratedown("Ddeokbokki", 4, eroll)
+    eroll = ratedown("Pineapple Bun", 4, eroll)
+    eroll = ratedown("Escargot", 4, eroll)
+    eroll = ratedown("Hotdog", 4, eroll)
+    eroll = ratedown("Mango Pudding", 4, eroll)
+    eroll = ratedown("Hamburger", 4, eroll)
+    eroll = ratedown("Steak", 4, eroll)
+    eroll = ratedown("Napoleon Cake", 4, eroll)
+    eroll = ratedown("Salad", 4, eroll)
+    eroll = ratedown("Tom Yum", 5, eroll)
+    eroll = ratedown("Taiyaki", 5, eroll)
+    eroll = ratedown("Milk", 5, eroll)
+    eroll = ratedown("Dorayaki", 5, eroll)
+    eroll = ratedown("Sake", 5, eroll)
+    eroll = ratedown("Tempura", 5, eroll)
+    eroll = ratedown("Spicy Gluten", 5, eroll)
+    eroll = ratedown("Jiuniang", 5, eroll)
+    eroll = ratedown("Omurice", 5, eroll)
+    eroll = ratedown("Orange Juice", 5, eroll)
+    eroll = ratedown("Ume Ochazuke", 5, eroll)
+    eroll = ratedown("Miso Soup", 5, eroll)
+    eroll = ratedown("Yellow Wine", 5, eroll)
+    eroll = ratedown("Cold Rice Shrimp", 5, eroll)
+    eroll = ratedown("Zongzi", 5, eroll)
+    eroll = ratedown("Sakuramochi", 5, eroll)
+    eroll = ratedown("Pastel de nata", 5, eroll)
+    eroll = ratedown("Yuxiang", 5, eroll)
+    eroll = ratedown("Tangyuan", 5, eroll)
+    eroll = ratedown("Sanma", 5, eroll)
+    eroll = ratedown("Sukiyaki", 5, eroll)
+    eroll = ratedown("Tiramisu", 5, eroll)
+    eroll = ratedown("Brownie", 5, eroll)
+    eroll = ratedown("Red Wine", 5, eroll)
+    eroll = ratedown("Yunnan Noodles", 5, eroll)
+    eroll = ratedown("Milk Tea", 5, eroll)
+    eroll = ratedown("Fried Chicken", 5, eroll)
+    eroll = rateup("Eggette", 4, eroll)
+    eroll = rateup("Pineapple Cake", 4, eroll)
+    eroll = rateup("Laba Congee", 4, eroll)
+    eroll = ratedown("Bamboo Rice", 8, eroll)
+    eroll = rateup("Rum", 10, eroll)
+    eroll = rateup("Dragon's Beard Candy", 10, eroll)
+    eroll = rateup("Bibimbap", 18, eroll)
+    eroll = rateup("Crab Long Bao", 27, eroll)
+    eroll = rateup("Gingerbread", 27, eroll)
+    return eroll
+
+def index40entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Mandarin Squirrel Fish", 2, 264, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, unav_pool = removefs("Foie Gras", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Dragon's Beard Candy", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Gingerbread", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("B-52", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Peking Duck", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Crab Long Bao", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Double Scoop", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Fried Chicken", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Ddeokbokki", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Yunnan Noodles", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Eggette", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Pineapple Cake", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Gyoza", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Pineapple Bun", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Udon", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Napoleon Cake", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Brownie", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Sukiyaki", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Steak", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Escargot", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Chocolate", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Ume Ochazuke", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Orange Juice", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Jiuniang", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Eclair", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Tempura", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Sake", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Dorayaki", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Tom Yum", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Sakuramochi", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Macaron", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Coffee", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Long Bao", 3, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Popcorn", 4, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll = rateup("Bamboo Rice", 47, eroll)
+    eroll = rateup("Skewer", 54, eroll)
+    eroll = rateup("Jello", 54, eroll)
+    eroll = rateup("Pancake", 54, eroll)
+    eroll = rateup("Rum", 83, eroll)
+    eroll = rateup("Bibimbap", 91, eroll)
+    eroll = rateup("Boston Lobster", 95, eroll)
+    eroll = rateup("Laba Congee", 158, eroll)
+    eroll = rateup("Salad", 210, eroll)
+    eroll = rateup("Pastel de nata", 210, eroll)
+    eroll = rateup("Yuxiang", 210, eroll)
+    eroll = rateup("Tangyuan", 210, eroll)
+    eroll = rateup("Sanma", 210, eroll)
+    eroll = rateup("Red Wine", 210, eroll)
+    eroll = rateup("Milk Tea", 210, eroll)
+    eroll = rateup("Sweet Tofu", 211, eroll)
+    eroll = rateup("Tiramisu", 211, eroll)
+    eroll = rateup("Hotdog", 211, eroll)
+    eroll = rateup("Mango Pudding", 211, eroll)
+    eroll = rateup("Hamburger", 211, eroll)
+    eroll = rateup("Taiyaki", 248, eroll)
+    eroll = rateup("Milk", 248, eroll)
+    eroll = rateup("Spicy Gluten", 248, eroll)
+    eroll = rateup("Cold Rice Shrimp", 248, eroll)
+    eroll = rateup("Omurice", 248, eroll)
+    eroll = rateup("Miso Soup", 248, eroll)
+    eroll = rateup("Yellow Wine", 248, eroll)
+    eroll = rateup("Sashimi", 249, eroll)
+    eroll = rateup("Zongzi", 249, eroll)
+    return eroll
+
+def index41entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 11, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Foie Gras", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Peking Duck", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("B-52", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Stargazy Pie", 1, 57, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Raindrop Cake", 1, 15, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Fondant Cake", 2, 48, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Qingtuan", 2, 47, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Mung Bean Soup", 2, 47, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Osmanthus Cake", 2, 47, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Strawberry Daifuku", 4, 37, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll = ratedown("Rum", 2, eroll)
+    eroll = ratedown("Dragon's Beard Candy", 2, eroll)
+    eroll = rateup("Laba Congee", 4, eroll)
+    eroll = rateup("Eggette", 4, eroll)
+    eroll = rateup("Pineapple Cake", 4, eroll)
+    eroll = ratedown("Chocolate", 5, eroll)
+    eroll = ratedown("Sweet Tofu", 5, eroll)
+    eroll = rateup("Bamboo Rice", 5, eroll)
+    eroll = ratedown("Escargot", 6, eroll)
+    eroll = ratedown("Hotdog", 6, eroll)
+    eroll = ratedown("Mango Pudding", 6, eroll)
+    eroll = ratedown("Hamburger", 6, eroll)
+    eroll = ratedown("Steak", 6, eroll)
+    eroll = ratedown("Napoleon Cake", 6, eroll)
+    eroll = ratedown("Salad", 6, eroll)
+    eroll = ratedown("Pastel de nata", 6, eroll)
+    eroll = ratedown("Yuxiang", 6, eroll)
+    eroll = ratedown("Tangyuan", 6, eroll)
+    eroll = ratedown("Sanma", 6, eroll)
+    eroll = ratedown("Sukiyaki", 6, eroll)
+    eroll = ratedown("Gyoza", 6, eroll)
+    eroll = ratedown("Ddeokbokki", 6, eroll)
+    eroll = ratedown("Pineapple Bun", 6, eroll)
+    eroll = rateup("Bibimbap", 6, eroll)
+    eroll = ratedown("Udon", 6, eroll)
+    eroll = ratedown("Brownie", 7, eroll)
+    eroll = ratedown("Red Wine", 7, eroll)
+    eroll = ratedown("Yunnan Noodles", 7, eroll)
+    eroll = ratedown("Milk Tea", 7, eroll)
+    eroll = ratedown("Fried Chicken", 7, eroll)
+    eroll = ratedown("Tiramisu", 7, eroll)
+    eroll = ratedown("Skewer", 9, eroll)
+    eroll = ratedown("Jello", 9, eroll)
+    eroll = ratedown("Pancake", 9, eroll)
+    eroll = ratedown("Popcorn", 10, eroll)
+    eroll = rateup("Crab Long Bao", 40, eroll)
+    eroll = rateup("Gingerbread", 40, eroll)
     return eroll
 
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
@@ -1700,58 +1956,71 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index36entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "37":
         eroll = index37entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "38":
+        eroll = index38entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "39":
+        eroll = index39entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "40":
+        eroll = index40entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "41":
+        eroll = index41entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
 
-def eventlist():
-    sadded = " has been added to the summoning pool"
-    padded = " have been added to the summoning pool"
-    srateup = " has an inceased summoning rate"
-    prateup = " have increased summoning rates"
-    def exclusive(fsclass, foodsouls):
-        exclusive = "This event only contains {} Food Souls, including {}. URs, SRs and Ms are also increased".format(fsclass, foodsouls)
-        return exclusive
-    eventlist = [["0", "Sweet Temptations", "Chocolate and Popcorn" + padded + " permanently; Gingerbread and Chocolate also" + prateup, "25th July to 30th July 2018", "Gingerbread: 0.23% -> 1.2%\nChocolate: 0.83% -> 3.33%\nPopcorn: 0.47%"],
-                 ["1", "Promise of Youth", "Pineapple Cake and Eggette" + padded + " permanently", "August 8th 2018 onwards", "Pineapple Cake: 1.51%\nEggette: 1.50%"],
-                 ["2", "Brewing Fine Wine", "Toso and Sweet Tofu" + padded, "13th August to 19th August 2018", "Toso: 1.50%\nSweet Tofu: 6.61%"],
-                 ["3", "Sakura Falls", "Strawberry Daifuku and Raindrop Cake" + padded, "4th September to 17th September 2018", "Raindrop Cake: 1.20%\nStrawberry Daifuku: 0.31%"],
-                 ["4a", "Autumn Memories", "Milt and Bonito Rice" + padded, "1st October to 14th October 2018", "Milt: 0.48%\nBonito Rice: 0.96%"],
-                 ["4b", "Autumn Memories", "Milt and Bonito Rice" + padded, "17th December to 26th December 2018", "Milt: 1.21%\nBonito Rice: 4.99%"],
-                 ["5a", "Come Have a Chat", "Peking Duck" + srateup, "15th October to 22nd October 2018", "Peking Duck: 0.61% -> 1.50%"],
-                 ["5b", "Let's Chat", "Peking Duck" + srateup, "1st December to 9th December 2018", "Peking Duck: 0.61 -> 1.50%"],
-                 ["6", "Amusement Park Sign Up! I", "Cassata" + sadded + " and B-52" + srateup, "24th October to 26th October 2018", "B-52: 0.61% -> 1.20%\nCassata: 3.32%"],
-                 ["7", "Amusement Park Sign Up! II", "Cassata" + sadded + " and Crab Long Bao" + srateup, "27th October to 29th October 2018", "Crab Long Bao: 0.36% -> 1.2%\nCassata: 3.32%"],
-                 ["8", "Amusement Park Sign Up! III", "Cassata" + sadded + " and Double Scoop" + srateup, "30th October to 1st November 2018", "Double Scoop: 0.05% -> 0.30%\nCassata: 3.32%"],
-                 ["9", "Amusement Park Sign Up! IV", "Cassata" + sadded + " and Bamboo Rice" + srateup, "2nd November to 4th November 2018", "Bamboo Rice: 0.62% -> 1.20%\nCassata: 3.32%"],
-                 ["10", "Amusement Park Sign Up! V", "Toso and Cassata" + padded, "5th November to 7th November 2018", "Toso: 1.20%\nCassata: 3.32%"],
-                 ["11a", "Candy Strike!", "Gingerbread" + srateup, "8th November to 15th November 2018", "Gingerbread: 0.23%% -> 1.50%"],
-                 ["11b", "Candy Strike!", "Gingerbread" + srateup, "27th December 2018 to 2nd January 2019", "Gingerbread: 0.23%% -> 1.50%"],
-                 ["12", "Seaside Moon", "Caviar and Seaweed Soup" + padded, "16th November to 30th November 2018", "Caviar: 1.21%\nSeaweed Soup: 4.98%"],
-                 ["13", "Breezy Snacks", "Raindrop Cake" + sadded + " and Sanma" + srateup, "16th November to 30th November 2018", "Raindrop: 1.21%\nSanma: 0.72% -> 4.98%"],
-                 ["14", "No Spice No Dice", "Sichuan Hotpot and Beer" + padded, "17th December to 26th December 2018", "Sichuan Hotpot: 1.21%\nBeer: 4.99%"]]
-    eventlist2 = [["15", "Flavor Frenzy", "Bibimbap" + sadded + " permanently and" + srateup, "3rd January to 10th January 2019", "Bibimbap: 0.09% -> 1.21%"],
-                  ["16", "Fragrant Garden: Champagne", "Champagne, Raindrop Cake, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Champagne: 1.21%\nRaindrop Cake: 0.50%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
-                  ["17", "Fragrant Garden: Toso", "Toso, Milt, Strawberry Daifuku, Bonito Rice and Beer" + padded + " and URs have an overall increased summoning rate", "11th January to 20 January 2019", "Toso: 1.21%\nMilt: 0.50%\nStrawberry Daifuku: 0.47%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
-                  ["18a", "Flame Storm", "B-52" + srateup, "25th January to 31st January 2019", "B-52: 0.60% -> 1.20%"],
-                  ["18b", "Flame Storm", "B-52" + srateup, "15th March to 21st March 2019", "B-52: 0.60% -> 1.20%"],
-                  ["19", "Memories Revisited: Huangshan Maofeng Tea", "Huangshan Maofeng Tea, Fondant Cake and Osmanthus Cake" + padded, "1st February to 11th February 2019", "Huangshan Maofeng Tea: 1.20%\nFondant Cake: 0.58%\nOsmanthus Cake: 0.57%"],
-                  ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
-                  ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
-                  ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 0.57% -> 3.32%\nKimchi: 0.57% -> 3.32%"],
-                  ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"],
-                  ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"],
-                  ["25", "Snack Time!", "Eclair and Fried Chicken" + padded + " permanently and" + prateup, "21st March to 29th March 2019", "Eclair: 3.73% -> 25.33%\nFried Chicken 0.56% -> 4.98%"],
-                  ["26", "Meaningful Amber", exclusive("Srength", "Raindrop Cake, Osmanthus Cake, Moon Cake and Sushi"), "30th March to 5th April 2019", "Raindrop Cake: 1.34%\nOsmanthus Cake: 3.70%\nMooncake: 3.70%\nSushi: 3.70%\nURs: 3.01% -> 4.00%\nSRs: 16.61% -> 37.00%\nMs: 1.85% -> 3.00%"],
-                  ["27", "Amusement Park Sign Up!: Butter Tea", "Butter Tea and Cassata" + padded, "15th April to 29th April 2019", "Butter Tea: 1.20%\nCassata: 4.97%"],
-                  ["28", "Amusement Park Sign Up!: Huangshan Maofeng Tea", "Huangshan Maofeng Tea and Cassata" + padded, "15th April to 29th April 2019", "Huangshan Maofeng: 1.20%\nCassata: 4.97%"],
-                  ["29", "Crimson Gem", exclusive("Magic", "Sichuan Hotpot, Beer, Sandwich and Pudding"), "2nd May to 8th May 2019", "Sichuan Hotpot: 1.00%\nBeer: 3.70%\nSandwich: 1.00%\nPudding: 1.00%"],
-                  ["30", "Bells Resound", "Butter Tea, Buddha's Temptation, Milt, Green Curry and Mandarin Squirrel Fish" + padded, "31st May to 12th June 2019", "Butter Tea: 1.20%\nMilt: 0.10%\nBuddha's Temptation: 0.10%\nGreen Curry: 4.98%\nMandarin Squirrel Fish: 0.41%"],
-                  ["31", "Golden Pig Arch", "R Food Souls are not in this summoning pool and includes many exclusive food souls such as Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more", "31st May to 12th June 2019", "URs: 5.00%\nSRs: 85.00%\nMs: 10.00%"],
-                  ["32", "Wine In Bottle", "Pineapple Bun, Dragon's Beard Candy and Rum" + padded + " permamently and they" + prateup, "26th June to 2nd July 2019", "Pineapple Bun: 0.53% -> 4.98%\nDragon's Beard Candy: 0.17% -> 0.60%\nRum: 0.17% -> 0.60%"],
-                  ["33", "Shattered Starlight", "Osechi and Fondant Cake" + prateup, "18th July to 31st July 2019", "Osechi: 1.20%, drawing 10 or more will guarantee one Osechi\nFodant Cake: 4.98%"],
-                  ["34", "Apricot Blossom", "Osechi and Unadon" + prateup, "18th July to 31st July 2019", "NOTE: The swapping function is not available.\nOsechi: 1.20%\nUnadon: 4.98%"],
-                  ["35", "Starry Brilliance", "Stargazy Pie and Black Pudding" + padded, "15th August to 25th August 2019", "Stargazy Pie: 1.20%\nBlack Pudding: 4.98%"],
-                  ["36", "Flaming Wings", "Turkey" + sadded, "31st August to 6th September 2019", "Turkey: 1.20%, drawing 10 or more will guarantee one Turkey"],
-                  ["37", "Mellow Memory", "Whisky and Waffle" + padded, "25th September to 1st October 2019", "Whisky: 1.20%\nWaffle: 4.98%"]]
-    return eventlist, eventlist2
+sadded = " has been added to the summoning pool"
+padded = " have been added to the summoning pool"
+srateup = " has an inceased summoning rate"
+prateup = " have increased summoning rates"
+def exclusive(fsclass, foodsouls):
+    exclusive = "This event only contains {} Food Souls, including {}. URs, SRs and Ms are also increased".format(fsclass, foodsouls)
+    return exclusive
+def overall(rarity):
+    overall = " and {}s have an overall increased summoning rate".format(rarity)
+    return overall
+eventlist1 = [["0", "Sweet Temptations", "Chocolate and Popcorn" + padded + " permanently; Gingerbread and Chocolate also" + prateup, "25th July to 30th July 2018", "Gingerbread: 0.23% -> 1.2%\nChocolate: 0.83% -> 3.33%\nPopcorn: 0.47%"],
+             ["1", "Promise of Youth", "Pineapple Cake and Eggette" + padded + " permanently", "August 8th 2018 onwards", "Pineapple Cake: 1.51%\nEggette: 1.50%"],
+             ["2", "Brewing Fine Wine", "Toso and Sweet Tofu" + padded, "13th August to 19th August 2018", "Toso: 1.50%\nSweet Tofu: 6.61%"],
+             ["3", "Sakura Falls", "Strawberry Daifuku and Raindrop Cake" + padded, "4th September to 17th September 2018", "Raindrop Cake: 1.20%\nStrawberry Daifuku: 0.31%"],
+             ["4a", "Autumn Memories", "Milt and Bonito Rice" + padded, "1st October to 14th October 2018", "Milt: 0.48%\nBonito Rice: 0.96%"],
+             ["4b", "Autumn Memories", "Milt and Bonito Rice" + padded, "17th December to 26th December 2018", "Milt: 1.21%\nBonito Rice: 4.99%"],
+             ["5a", "Come Have a Chat", "Peking Duck" + srateup, "15th October to 22nd October 2018", "Peking Duck: 0.61% -> 1.50%"],
+             ["5b", "Let's Chat", "Peking Duck" + srateup, "1st December to 9th December 2018", "Peking Duck: 0.61 -> 1.50%"],
+             ["6", "Amusement Park Sign Up! I", "Cassata" + sadded + " and B-52" + srateup, "24th October to 26th October 2018", "B-52: 0.61% -> 1.20%\nCassata: 3.32%"],
+             ["7", "Amusement Park Sign Up! II", "Cassata" + sadded + " and Crab Long Bao" + srateup, "27th October to 29th October 2018", "Crab Long Bao: 0.36% -> 1.2%\nCassata: 3.32%"],
+             ["8", "Amusement Park Sign Up! III", "Cassata" + sadded + " and Double Scoop" + srateup, "30th October to 1st November 2018", "Double Scoop: 0.05% -> 0.30%\nCassata: 3.32%"],
+             ["9", "Amusement Park Sign Up! IV", "Cassata" + sadded + " and Bamboo Rice" + srateup, "2nd November to 4th November 2018", "Bamboo Rice: 0.62% -> 1.20%\nCassata: 3.32%"],
+             ["10", "Amusement Park Sign Up! V", "Toso and Cassata" + padded, "5th November to 7th November 2018", "Toso: 1.20%\nCassata: 3.32%"],
+             ["11a", "Candy Strike!", "Gingerbread" + srateup, "8th November to 15th November 2018", "Gingerbread: 0.23%% -> 1.50%"],
+             ["11b", "Candy Strike!", "Gingerbread" + srateup, "27th December 2018 to 2nd January 2019", "Gingerbread: 0.23%% -> 1.50%"],
+             ["12", "Seaside Moon", "Caviar and Seaweed Soup" + padded, "16th November to 30th November 2018", "Caviar: 1.21%\nSeaweed Soup: 4.98%"],
+             ["13", "Breezy Snacks", "Raindrop Cake" + sadded + " and Sanma" + srateup, "16th November to 30th November 2018", "Raindrop: 1.21%\nSanma: 0.72% -> 4.98%"],
+             ["14", "No Spice No Dice", "Sichuan Hotpot and Beer" + padded, "17th December to 26th December 2018", "Sichuan Hotpot: 1.21%\nBeer: 4.99%"]]
+eventlist2 = [["15", "Flavor Frenzy", "Bibimbap" + sadded + " permanently and" + srateup, "3rd January to 10th January 2019", "Bibimbap: 0.09% -> 1.21%"],
+              ["16", "Fragrant Garden: Champagne", "Champagne, Raindrop Cake, Bonito Rice and Beer" + padded + overall("UR"), "11th January to 20 January 2019", "Champagne: 1.21%\nRaindrop Cake: 0.50%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
+              ["17", "Fragrant Garden: Toso", "Toso, Milt, Strawberry Daifuku, Bonito Rice and Beer" + padded + overall("UR"), "11th January to 20 January 2019", "Toso: 1.21%\nMilt: 0.50%\nStrawberry Daifuku: 0.47%\nBonito Rice: 0.43%\nBeer: 0.43%\nURs: 3.01% -> 4.01%"],
+              ["18a", "Flame Storm", "B-52" + srateup, "25th January to 31st January 2019", "B-52: 0.60% -> 1.20%"],
+              ["18b", "Flame Storm", "B-52" + srateup, "15th March to 21st March 2019", "B-52: 0.60% -> 1.20%"],
+              ["19", "Memories Revisited: Huangshan Maofeng Tea", "Huangshan Maofeng Tea, Fondant Cake and Osmanthus Cake" + padded, "1st February to 11th February 2019", "Huangshan Maofeng Tea: 1.20%\nFondant Cake: 0.58%\nOsmanthus Cake: 0.57%"],
+              ["20", "Memories Revisited: Caviar", "Caviar, Fondant Cake, Seaweed Soup and Strawberry Daifuku" + padded, "1st February to 11th February 2019", "Caviar: 1.20%\nFondant Cake: 0.58%\nSeaweed Soup: 0.57%\nStrawberry Daifuku: 0.46%"],
+              ["21", "Bamboo Forest Exploration", "Bamboo Rice" + srateup, "12th February to 17th February 2019", "Bamboo Rice: 0.60% -> 1.20%"],
+              ["22", "Savory Feast", "Ddeokbokki and Kimchi" + padded + " permamently and" + prateup, "18th February to 24th February 2019", "Ddeokbokki: 0.57% -> 3.32%\nKimchi: 0.57% -> 3.32%"],
+              ["23", "Training Time!", "Crab Long Bao" + srateup, "25th Feburary to 28th February 2019", "Crab Long Bao: 0.21% -> 1.20%"],
+              ["24", "Spring Feast", "Buddha's Temptation, Butter Tea, Milt, Mandarin Squirrel Fish and Green Curry" + padded, "1st March to 14th March 2019", "Buddha's Temptation: 1.20%\nButter Tea: 0.10%\nMilt: 0.10%\nMandarin Squirrel Fish: 4.98%\nGreen Curry: 0.43%"],
+              ["25", "Snack Time!", "Eclair and Fried Chicken" + padded + " permanently and" + prateup, "21st March to 29th March 2019", "Eclair: 3.73% -> 25.33%\nFried Chicken 0.56% -> 4.98%"],
+              ["26", "Meaningful Amber", exclusive("Srength", "Raindrop Cake, Osmanthus Cake, Moon Cake and Sushi"), "30th March to 5th April 2019", "Raindrop Cake: 1.34%\nOsmanthus Cake: 3.70%\nMooncake: 3.70%\nSushi: 3.70%\nURs: 3.01% -> 4.00%\nSRs: 16.61% -> 37.00%\nMs: 1.85% -> 3.00%"],
+              ["27", "Amusement Park Sign Up!: Butter Tea", "Butter Tea and Cassata" + padded, "15th April to 29th April 2019", "Butter Tea: 1.20%\nCassata: 4.97%"],
+              ["28", "Amusement Park Sign Up!: Huangshan Maofeng Tea", "Huangshan Maofeng Tea and Cassata" + padded, "15th April to 29th April 2019", "Huangshan Maofeng: 1.20%\nCassata: 4.97%"],
+              ["29", "Crimson Gem", exclusive("Magic", "Sichuan Hotpot, Beer, Sandwich and Pudding"), "2nd May to 8th May 2019", "Sichuan Hotpot: 1.00%\nBeer: 3.70%\nSandwich: 1.00%\nPudding: 1.00%"],
+              ["30", "Bells Resound", "Butter Tea, Buddha's Temptation, Milt, Green Curry and Mandarin Squirrel Fish" + padded, "31st May to 12th June 2019", "Butter Tea: 1.20%\nMilt: 0.10%\nBuddha's Temptation: 0.10%\nGreen Curry: 4.98%\nMandarin Squirrel Fish: 0.41%"],
+              ["31", "Golden Pig Arch", "R Food Souls are not in this summoning pool and includes many exclusive food souls such as Sichuan Hotpot, Toso, Caviar, Beer, Cassata, Bonito Rice, and many more", "31st May to 12th June 2019", "URs: 5.00%\nSRs: 85.00%\nMs: 10.00%"],
+              ["32", "Wine In Bottle", "Pineapple Bun, Dragon's Beard Candy and Rum" + padded + " permamently and they" + prateup, "26th June to 2nd July 2019", "Pineapple Bun: 0.53% -> 4.98%\nDragon's Beard Candy: 0.17% -> 0.60%\nRum: 0.17% -> 0.60%"],
+              ["33", "Shattered Starlight", "Osechi and Fondant Cake" + prateup, "18th July to 31st July 2019", "Osechi: 1.20%, drawing 10 or more will guarantee one Osechi\nFodant Cake: 4.98%"],
+              ["34", "Apricot Blossom", "Osechi and Unadon" + prateup, "18th July to 31st July 2019", "NOTE: The swapping function is not available.\nOsechi: 1.20%\nUnadon: 4.98%"],
+              ["35", "Starry Brilliance", "Stargazy Pie and Black Pudding" + padded, "15th August to 25th August 2019", "Stargazy Pie: 1.20%\nBlack Pudding: 4.98%"],
+              ["36", "Flaming Wings", "Turkey" + sadded, "31st August to 6th September 2019", "Turkey: 1.20%, drawing 10 or more will guarantee one Turkey"],
+              ["37", "Mellow Memory", "Whisky and Waffle" + padded, "25th September to 1st October 2019", "Whisky: 1.20%\nWaffle: 4.98%"]]
+eventlist3 = [["38", "Firework World: Milt", "Milt, Stargazy Pie, Raindrop Cake, Qingtuan, Mung Bean Soup and Osmanthus Cake" + padded + overall("UR"), "24th October to 29th October 2019", "Milt: 1.21%\nStargazy Pie: 0.27%\nRaindrop Cake: 0.27%\nQingtuan: 0.49%\nMung Bean Soup: 0.49%\nOsmanthus Cake: 0.49%\nURs: 4.01%"],
+              ["39", "Firework World: Toso", "Toso, Stargazy Pie, Raindrop Cake, Qingtuan, Mung Bean Soup and Osmanthus Cake" + padded + overall("UR"), "24th October to 29th October 2019", "Toso: 1.21%\nStargazy Pie: 0.27%\nRaindrop Cake: 0.27%\nQingtuan: 0.49%\nMung Bean Soup: 0.49%\nOsmanthus Cake: 0.49%\nURs: 4.01%"],
+              ["40", "New Additions", exclusive("Strength and Support", "Mandarin Squirrel Fish") + overall("UR"), "24th October to 3rd November 2019", "Mandarin Squirrel Fish: 2.64%\nURs: 4.00"],
+              ["41", "Star Gaze", "Stargazy Pie, Raindrop Cake, Fondant Cake, Osmanthus Cake, Mung Bean Soup, Qingtuan" + padded, "30th October to 3rd November 2019", "Stargazy Pie: 0.57%\nRaindrop Cake: 0.15%\nFondant Cake: 0.48%\nOsmanthus Cake: 0.47%\nMung Bean Soup: 0.47%\nQingtuan: 0.47%"]]
