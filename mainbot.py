@@ -396,18 +396,28 @@ async def erates(event_index):
         await client.say(embed = embed)
 
 @client.command(name = "eventindex")
-@commands.cooldown(1, 30, commands.BucketType.user)
-async def eventhelp():
-    from erolls import eventlist
-    eventlist, eventlist2 = eventlist()
-    embed = discord.Embed(title = "Event Index List", description = "Use the event index number to input what event you want to summon in!", color = 0x2ecc71)
-    for eventcount in range(len(eventlist)):
-        embed.add_field(name = eventlist[eventcount][0] + ". " + eventlist[eventcount][1], value = eventlist[eventcount][2] + " from " + eventlist[eventcount][3] + ".\n" + eventlist[eventcount][4], inline = False)
-    await client.say(embed = embed)
-    embed = discord.Embed(color = 0x2ecc71)
-    for eventcount2 in range(len(eventlist2)):
-        embed.add_field(name = eventlist2[eventcount2][0] + ". " + eventlist2[eventcount2][1], value = eventlist2[eventcount2][2] + " from " + eventlist2[eventcount2][3] + ".\n" + eventlist2[eventcount2][4], inline = False)
-    await client.say(embed = embed)
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def eventhelp(index):
+    from erolls import eventlist1
+    from erolls import eventlist2
+    from erolls import eventlist3
+    eventlist = ""
+    if index == "1":
+        eventlist = eventlist1
+        timeframe = "July 2018 to December 2018"
+    if index == "2":
+        eventlist = eventlist2
+        timeframe = "January 2019 to September 2019"
+    if index == "3":
+        eventlist = eventlist3
+        timeframe = "October 2019 to present"
+    else:
+        await client.say("Error - Invalid page number")
+    if eventlist != "":
+        embed = discord.Embed(title = "Event Index List Page " + index + " of 3 - " + timeframe, description = "Use the event index number to input what event you want to summon in!", color = 0x2ecc71)
+        for eventcount in range(len(eventlist)):
+            embed.add_field(name = eventlist[eventcount][0] + ". " + eventlist[eventcount][1], value = eventlist[eventcount][2] + " from " + eventlist[eventcount][3] + ".\n" + eventlist[eventcount][4], inline = False)
+        await client.say(embed = embed)
 
 # Dish commands:
 
@@ -480,8 +490,10 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Soft Serve Cone added permanently!", "Soft Serve Cone has been permanently added to the regular summoning pool"]]
-    embed = discord.Embed(title = "Bot Update (v2.36)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Firework World added", "In this event, you can summon Toso/Milt, Stargazy Pie, Qingtuan and more for a limited time!"],
+                  ["Event summoning: New Additions added", "In this event, you can summon only Strength and Support food souls for a limited time!"],
+                  ["Event summoning: Firework World added", "In this event, you can summon Stargazy Pie, Raindrop Cake, Qingtuan and more for a limited time!"]]
+    embed = discord.Embed(title = "Bot Update (v2.37)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
