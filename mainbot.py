@@ -474,7 +474,7 @@ async def help():
     helplist = [["f!summon <amount>", "Summons a desired amount of food souls from the current summoning pool.\nExample: f!summon 100 will summon 100 food souls from the current summoning pool."],
                 ["f!foodsoul <food_soul> <amount>", 'Summons endlessly until a specific food soul of a specified amount has been summoned. Use "." instead of spaces.\nExample: f!foodsoul Bamboo.Rice 2 will summon endlessly until two Bamboo Rice have been summoned.'],
                 ["f!rates", "Checks the probability rates of the food souls in the current summoning pool."],
-                ["f!eventindex", "Shows the event index number to key into f!esummon or f!efoodsoul."],
+                ["f!eventindex <page>", "Shows the event index number to key into f!esummon or f!efoodsoul.\nPage 1: July 2018 to December 2018\nPage 2: January 2019 to September 2019\nPage 3: October 2019 to present"],
                 ["f!esummon <event_index> <amount>", 'Summons a desired amount of food souls from an event. Use f!eventindex to check the event index number\nExample: f!esummon 2 100 will summon 100 times during the "Brewing Fine Wine" event.'],
                 ["f!efoodsoul <event_index> <food_soul> <amount>", 'Summon endlessly from an event until a specific food soul of a specified amount has been summoned. Use f!eventindex to check the event index.\nExample: f!efoodsoul 2 foodsoul sweet.tofu 2 will summon endlessly during the "Brewing Fine Wine" event until it summons 2 Sweet Tofu.'],
                 ["f!erates <event_index>", "Checks the probability rates of the food souls in any summoning event. Check the event index using f!eventindex"],
@@ -492,7 +492,8 @@ async def help():
 async def update():
     updatelist = [["Event summoning: Firework World added", "In this event, you can summon Toso/Milt, Stargazy Pie, Qingtuan and more for a limited time!"],
                   ["Event summoning: New Additions added", "In this event, you can summon only Strength and Support food souls for a limited time!"],
-                  ["Event summoning: Firework World added", "In this event, you can summon Stargazy Pie, Raindrop Cake, Qingtuan and more for a limited time!"]]
+                  ["Event summoning: Firework World added", "In this event, you can summon Stargazy Pie, Raindrop Cake, Qingtuan and more for a limited time!"],
+                  ["Event Index page redone", "The event index function (``f!eventindex``) now requires you to enter a page number due to the overwhelmingly huge blocks of texts it contains. The cooldown also has been reduced from 30s to 5s.\nPage 1: July 2018 to December 2018\nPage 2: January 2019 to September 2019\nPage 3: October 2019 to present\nYou can always check the dates on ``f!help`` or on any event index page."]]
     embed = discord.Embed(title = "Bot Update (v2.37)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
