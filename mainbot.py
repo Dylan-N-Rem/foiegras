@@ -493,7 +493,7 @@ async def update():
     updatelist = [["Event summoning: Firework World added", "In this event, you can summon Toso/Milt, Stargazy Pie, Qingtuan and more for a limited time!"],
                   ["Event summoning: New Additions added", "In this event, you can summon only Strength and Support food souls for a limited time!"],
                   ["Event summoning: Firework World added", "In this event, you can summon Stargazy Pie, Raindrop Cake, Qingtuan and more for a limited time!"],
-                  ["Event Index page redone", "The event index function (``f!eventindex``) now requires you to enter a page number due to the overwhelmingly huge blocks of texts it contains. The cooldown also has been reduced from 30s to 5s.\nPage 1: July 2018 to December 2018\nPage 2: January 2019 to September 2019\nPage 3: October 2019 to present\nYou can always check the dates on ``f!help`` or on any event index page."]]
+                  ["Event Index page redone", "The event index function (``f!eventindex``) now requires you to enter a page number due to the overwhelmingly huge blocks of texts it contains. The command cooldown also has been reduced from 30s to 5s.\nPage 1: July 2018 to December 2018\nPage 2: January 2019 to September 2019\nPage 3: October 2019 to present\nYou can always check the dates on ``f!help`` or on any event index page."]]
     embed = discord.Embed(title = "Bot Update (v2.37)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
