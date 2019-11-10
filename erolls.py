@@ -1871,6 +1871,18 @@ def index41entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll = rateup("Gingerbread", 40, eroll)
     return eroll
 
+def index42entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 12, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll = ratedown("Dragon's Beard Candy", 4, eroll)
+    eroll = ratedown("Crab Long Bao", 5, eroll)
+    eroll = ratedown("Gingerbread", 5, eroll)
+    eroll = ratedown("Foie Gras", 38, eroll)
+    eroll = ratedown("Bamboo Rice", 38, eroll)
+    eroll = ratedown("B-52", 40, eroll)
+    eroll = rateup("Peking Duck", 47, eroll)
+    eroll = rateup("Rum", 83, eroll)
+    return eroll
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -1964,6 +1976,8 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index40entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "41":
         eroll = index41entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "42":
+        eroll = index42entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     else:
         eroll = []
     return eroll
@@ -2023,4 +2037,5 @@ eventlist2 = [["15", "Flavor Frenzy", "Bibimbap" + sadded + " permanently and" +
 eventlist3 = [["38", "Firework World: Milt", "Milt, Stargazy Pie, Raindrop Cake, Qingtuan, Mung Bean Soup and Osmanthus Cake" + padded + overall("UR"), "24th October to 29th October 2019", "Milt: 1.21%\nStargazy Pie: 0.27%\nRaindrop Cake: 0.27%\nQingtuan: 0.49%\nMung Bean Soup: 0.49%\nOsmanthus Cake: 0.49%\nURs: 4.01%"],
               ["39", "Firework World: Toso", "Toso, Stargazy Pie, Raindrop Cake, Qingtuan, Mung Bean Soup and Osmanthus Cake" + padded + overall("UR"), "24th October to 29th October 2019", "Toso: 1.21%\nStargazy Pie: 0.27%\nRaindrop Cake: 0.27%\nQingtuan: 0.49%\nMung Bean Soup: 0.49%\nOsmanthus Cake: 0.49%\nURs: 4.01%"],
               ["40", "New Additions", exclusive("Strength and Support", "Mandarin Squirrel Fish") + overall("UR"), "24th October to 3rd November 2019", "Mandarin Squirrel Fish: 2.64%\nURs: 4.00"],
-              ["41", "Star Gaze", "Stargazy Pie, Raindrop Cake, Fondant Cake, Osmanthus Cake, Mung Bean Soup, Qingtuan" + padded, "30th October to 3rd November 2019", "Stargazy Pie: 0.57%\nRaindrop Cake: 0.15%\nFondant Cake: 0.48%\nOsmanthus Cake: 0.47%\nMung Bean Soup: 0.47%\nQingtuan: 0.47%"]]
+              ["41", "Star Gaze", "Stargazy Pie, Raindrop Cake, Fondant Cake, Osmanthus Cake, Mung Bean Soup, Qingtuan" + padded, "30th October to 3rd November 2019", "Stargazy Pie: 0.57%\nRaindrop Cake: 0.15%\nFondant Cake: 0.48%\nOsmanthus Cake: 0.47%\nMung Bean Soup: 0.47%\nQingtuan: 0.47%"],
+              ["42", "Show Time", "Peking Duck and Rum" + prateup, "4th November to 12th November 2019", "Peking Duck: 0.53 -> 1.00%\nRum: 0.17% -> 1.00%"]]
