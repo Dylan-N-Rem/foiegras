@@ -1896,7 +1896,7 @@ def index43entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eroll, unav_pool = removefs("Soft Serve Cone", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     eroll = rateup("Rum", 1, eroll)
-    eroll = rateup("Dragon's BEard Candy", 1, eroll)
+    eroll = rateup("Dragon's Beard Candy", 1, eroll)
     eroll = rateup("Gingerbread", 3, eroll)
     eroll = rateup("Bibimbap", 9, eroll)
     eroll = ratedown("Ddeokbokki", 12, eroll)
