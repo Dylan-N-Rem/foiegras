@@ -490,8 +490,9 @@ async def help():
 @client.command(name = "update")
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def update():
-    updatelist = [["Event summoning: Show Time added", "In this event, Peking Duck and Rum have their summoning rates up for a limited time!"]]
-    embed = discord.Embed(title = "Bot Update (v2.38)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
+    updatelist = [["Event summoning: Wine & Realgar added", "In this event, you can summon Dragon & Phoenix, Sichuan Hotpot, Realgar Wine, Seaweed Soup and Beer for a limited time!"],
+                  ["Event summoning: Show Time", "In this event, Bamboo Rice and Dragon's Beard Candy is on rate up for a limited time"]]
+    embed = discord.Embed(title = "Bot Update (v2.39)", description = "If there are any problems with the bot, please ping @ディラン (Dylan) and state the problem.", color = 0x3498db)
     for updatecount in range(len(updatelist)):
         embed.add_field(name = updatelist[updatecount][0], value = updatelist[updatecount][1], inline = False)
     await client.say(embed = embed)
