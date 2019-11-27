@@ -1883,6 +1883,65 @@ def index42entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_
     eroll = rateup("Rum", 83, eroll)
     return eroll
 
+def index43entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 12, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, eevent_pool = addfs("Dragon & Phoenix", 1, 69, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Sichuan Hotpot", 1, 69, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Realgar Wine", 2, 166, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Seaweed Soup", 2, 166, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, eevent_pool = addfs("Beer", 2, 166, eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool)
+    eroll, unav_pool = removefs("Foie Gras", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Crab Long Bao", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("B-52", 1, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Kimchi", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll, unav_pool = removefs("Soft Serve Cone", 2, eroll, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll = rateup("Rum", 1, eroll)
+    eroll = rateup("Dragon's BEard Candy", 1, eroll)
+    eroll = rateup("Gingerbread", 3, eroll)
+    eroll = rateup("Bibimbap", 9, eroll)
+    eroll = ratedown("Ddeokbokki", 12, eroll)
+    eroll = ratedown("Mango Pudding", 12, eroll)
+    eroll = ratedown("Escargot", 13, eroll)
+    eroll = ratedown("Fried Chicken", 13, eroll)
+    eroll = ratedown("Hotdog", 13, eroll)
+    eroll = ratedown("Hamburger", 13, eroll)
+    eroll = ratedown("Milk Tea", 13, eroll)
+    eroll = ratedown("Sanma", 13, eroll)
+    eroll = ratedown("Steak", 13, eroll)
+    eroll = ratedown("Tangyuan", 13, eroll)
+    eroll = ratedown("Yunnan Noodles", 13, eroll)
+    eroll = ratedown("Brownie", 14, eroll)
+    eroll = ratedown("Chocolate", 14, eroll)
+    eroll = ratedown("Gyoza", 14, eroll)
+    eroll = ratedown("Napoleon Cake", 14, eroll)
+    eroll = ratedown("Pastel de nata", 14, eroll)
+    eroll = ratedown("Pineapple Bun", 14, eroll)
+    eroll = ratedown("Red Wine", 14, eroll)
+    eroll = ratedown("Salad", 14, eroll)
+    eroll = ratedown("Sukiyaki", 14, eroll)
+    eroll = ratedown("Sweet Tofu", 14, eroll)
+    eroll = ratedown("Tiramisu", 14, eroll)
+    eroll = ratedown("Udon", 14, eroll)
+    eroll = ratedown("Yuxiang", 14, eroll)
+    eroll = ratedown("Bamboo Rice", 14, eroll)
+    eroll = ratedown("Peking Duck", 14, eroll)
+    eroll = ratedown("Eggette", 24, eroll)
+    eroll = ratedown("Pineapple Cake", 24, eroll)
+    eroll = ratedown("Laba Congee", 24, eroll)
+    return eroll
+
+def index44entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
+    eroll, unav_pool = autoroll(eroll, 12, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    eroll = ratedown("Rum", 4, eroll)
+    eroll = ratedown("Crab Long Bao", 5, eroll)
+    eroll = ratedown("Gingerbread", 5, eroll)
+    eroll = ratedown("Foie Gras", 38, eroll)
+    eroll = ratedown("Peking Duck", 38, eroll)
+    eroll = ratedown("B-52", 40, eroll)
+    eroll = rateup("Bamboo Rice", 47, eroll)
+    eroll = rateup("Dragon's Beard Candy", 83, eroll)
+    return eroll
+
 def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool):
     if event_index == "0":
         eroll = index0entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
@@ -1978,6 +2037,11 @@ def eventindexcheck(eroll, event_index, eevent_pool, eur_pool, esr_pool, er_pool
         eroll = index41entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
     elif event_index == "42":
         eroll = index42entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "43":
+        eroll = index43entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    elif event_index == "44":
+        eroll = index44entry(eroll, eevent_pool, eur_pool, esr_pool, er_pool, em_pool, unav_pool)
+    
     else:
         eroll = []
     return eroll
@@ -2038,4 +2102,6 @@ eventlist3 = [["38", "Firework World: Milt", "Milt, Stargazy Pie, Raindrop Cake,
               ["39", "Firework World: Toso", "Toso, Stargazy Pie, Raindrop Cake, Qingtuan, Mung Bean Soup and Osmanthus Cake" + padded + overall("UR"), "24th October to 29th October 2019", "Toso: 1.21%\nStargazy Pie: 0.27%\nRaindrop Cake: 0.27%\nQingtuan: 0.49%\nMung Bean Soup: 0.49%\nOsmanthus Cake: 0.49%\nURs: 4.01%"],
               ["40", "New Additions", exclusive("Strength and Support", "Mandarin Squirrel Fish") + overall("UR"), "24th October to 3rd November 2019", "Mandarin Squirrel Fish: 2.64%\nURs: 4.00"],
               ["41", "Star Gaze", "Stargazy Pie, Raindrop Cake, Fondant Cake, Osmanthus Cake, Mung Bean Soup, Qingtuan" + padded, "30th October to 3rd November 2019", "Stargazy Pie: 0.57%\nRaindrop Cake: 0.15%\nFondant Cake: 0.48%\nOsmanthus Cake: 0.47%\nMung Bean Soup: 0.47%\nQingtuan: 0.47%"],
-              ["42", "Show Time", "Peking Duck and Rum" + prateup, "4th November to 12th November 2019", "Peking Duck: 0.53 -> 1.00%\nRum: 0.17% -> 1.00%"]]
+              ["42", "Show Time", "Peking Duck and Rum" + prateup, "4th November to 12th November 2019", "Peking Duck: 0.53 -> 1.00%\nRum: 0.17% -> 1.00%"],
+              ["43", "Wine & Realgar", "Dragon & Phoenix, Sichuan Hotpot, Realgar Wine, Seaweed Soup and Beer" + padded, "13th November to 19th November 2019", "Dragon & Pheonix: 0.69%\nSichuan Hotpot: 0.69%\nRealgar Wine: 1.66%\nSeaweed Soup: 1.66%\nBeer: 1.66%"],
+              ["44", "Show Time", "Bamboo Rice and Dragon's Beard Candy" + prateup, "20th November to 27th November 2019", "Bamboo Rice: 0.53% -> 1.00%\nDragon's Beard Candy: 0.17% -> 1.00%"]]
